@@ -23,7 +23,7 @@ public class MusicPlayerApp extends javax.swing.JFrame {
     public MusicPlayerApp() {
         
         initComponents();
-        
+        jLabel1.setVisible(false);
     }
 
     /**
@@ -39,6 +39,7 @@ public class MusicPlayerApp extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jFileChooser1 = new javax.swing.JFileChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -68,6 +69,8 @@ public class MusicPlayerApp extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Denis\\Desktop\\giphy.gif")); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -81,6 +84,7 @@ public class MusicPlayerApp extends javax.swing.JFrame {
                         .addComponent(jButton2))
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(97, Short.MAX_VALUE))
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -91,7 +95,9 @@ public class MusicPlayerApp extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jFileChooser1.setBackground(new java.awt.Color(102, 153, 255));
@@ -132,6 +138,7 @@ public class MusicPlayerApp extends javax.swing.JFrame {
             this.playy = new Player(jTextField1.getText(),jTextField1);
             
             playy.playMusic();
+            jLabel1.setVisible(true);
         } catch (Exception ex) {
             jTextField1.setText("CHOOSE MUSIC FILE");
         }
@@ -154,6 +161,7 @@ public class MusicPlayerApp extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         try{playy.stopMusic();
+        jLabel1.setVisible(false);
           } catch (Exception ex) {
             jTextField1.setText("CHOOSE MUSIC FILE");
         }
@@ -200,6 +208,7 @@ public class MusicPlayerApp extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JFileChooser jFileChooser1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
