@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style media="screen">
+body{font-family: monospace; background: #121212; color: #ECECEC;}
+h1{font-size: 40px; text-align: center;}
+h2{font-size: 27px; text-align: center;}
+form{text-align:center; background: black; margin: 0 auto;
+width:500px; font-size: 20px; length: 300px; }
+#comment{width: 400px;border-radius: 5px;}
+#text{border-radius: 5px;}
+#radios{ vertical-align: middle;}
+    </style>
+    <meta charset="utf-8">
+    <title>Slipknot Survey</title>
+  </head>
+  <body>
+    <header>
+<h1>Are you a true Slipknot fan?</h1>
+<h2>Answer the questions and find out.</h2>
+    </header>
+    <main>
+
+<form class="form" action="#" method="post">
+  <br>
+  First name:<br>
+   <input id="text"type="text" name="firstname" required><br><br>
+   Last name:<br>
+   <input id="text"type="text" name="lastname" required><br><br>
+   Age:<br>
+   <input id="text"type="text" name="lastname" required><br><br>
+   Choose one member:<br>
+   <div id="radios">
+   <select required>
+  <option value="Corey">Corey Taylor</option>
+  <option value="Mick">Mick Thompson</option>
+  <option value="Sid">Sid</option>
+  <option value="Joey">Joey</option>
+</select>
+</div><br><br>
+Which state are Slipknot from?<br>
+<input type="radio" name="state" value="iowa" checked>Iowa<br>
+  <input type="radio" name="state" value="califorina">California<br>
+  <input type="radio" name="state" value="alaska">Alaska<br><br>
+  Which of the songs do you prefer:<br>
+  <select required>
+ <option value="Corey">Wait and bleed</option>
+ <option value="Mick">Get this</option>
+ <option value="Sid">Iowa</option>
+ <option value="Joey">People=Shit</option>
+</select><br><br>
+Which of these are Slipknot songs: <br>
+<input type="checkbox" name="gender" value="negative" checked>The Negative One<br>
+  <input type="checkbox" name="gender" value="californication">Californication<br>
+  <input type="checkbox" name="gender" value="psychosocial">Psychosocial<br><br>
+  Any comments?<br>
+  <input id="comment" type="text" name="comments"><br><br>
+    <input type="submit" value="Submit"><br>
+  <br>
+  <br>
+
+
+
+</form>
+
+    </main>
+    <footer>
+    </footer>
+
+  </body>
+</html>
