@@ -1,6 +1,7 @@
 .navbar {
   overflow: hidden;
-
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .navbar a {
@@ -25,6 +26,9 @@
     float: none;
   }
 }
+
+
+
 .picture{
   width: 15%;
  height: auto;
@@ -32,9 +36,7 @@
  margin-left: auto;
  margin-right: 5%;
  width: 50%;
-
 }
-
 
 #projects{
   max-width: 500px;
@@ -168,7 +170,8 @@ background-color: rgba(0,0,0,0.0);
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {background-color: #ddd;
+color: black;}
 
 
 .dropbtn2 {
@@ -221,4 +224,47 @@ margin-left: 42.5%;
 
 .dropdown2:hover .dropdown-content2 {display: block;}
 
-.dropdown2:hover .dropbtn2 {background-color: #3e8e41;}
+.dropdown2:hover .dropbtn2 {background-color: #ddd;
+color: black;}
+
+/* SPECIAL FOR CV PAGE */
+.collapsibleflexbox{
+  display: flex;
+  flex-direction: column;
+padding:5px;
+width: 80%;
+margin-left: 9%;
+}
+
+
+
+
+.collapsible {
+
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+
+
+  outline: none;
+  font-size: 15px;
+  background-color: rgba(0,0,0,0.0);
+  border: 4px solid #ffffff !important;
+ margin:5px;
+
+
+}
+
+.active, .collapsible:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  text-align: center;
+}

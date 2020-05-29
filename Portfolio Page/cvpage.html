@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/webkul-micron@1.1.6/dist/css/micron.min.css" type="text/css" rel="stylesheet">
+    <script src="https://unpkg.com/webkul-micron@1.1.6/dist/script/micron.min.js" type="text/javascript"></script>
+    <link href="vivify.min.css" rel="stylesheet" type="text/css"/>
+    <title>My CV</title>
+  </head>
+  <body>
+
+    <div class="navbar" >
+      <a class="vivify popIn" href="index.html" data-micron="flicker">Home</a>
+      <a class="vivify popIn" href="cvpage.html" >CV</a>
+      <a class="vivify popIn" href="projectspage.html">Projects</a>
+      <a class="vivify popIn" href="#contact">Contact</a>
+      <a class="vivify popIn" href="#contact">Game</a>
+    </div>
+
+    <div style="font-size: 30px;">
+    <h1 data-micron="groove" >My CV</h1>
+    </div>
+
+<div class="collapsibleflexbox">
+  <button type="button" class="collapsible">Personal Information</button>
+  <div class="content">
+    <p>Denislav Berberov | Trakia, Block 259, Plovdiv, 4002, Bulgaria | +359 886616296 | sasdara@gmail.com |
+ Sex: Male | Date of birth: 09.03.2000 | Nationality: Bulgarian
+</p>
+  </div>
+  <button type="button" class="collapsible">Work Experience</button>
+  <div class="content">
+    <p>
+	Intern at an Internet Service Provider Company | ENTRY, Plovdiv, Bulgaria <br><br>
+▪	 Setting up new cable networks <br> <br>
+▪	Working with Optical Fiber Cables and the GEPON system
+</p>
+  </div>
+  <button type="button" class="collapsible">Education and Training</button>
+  <div class="content">
+    <p> “EG Plovdiv” High School, Plovdiv Bulgaria <br>
+•	Advanced German <br>
+•	Advanced English <br>
+•	Bulgarian <br>
+•	Mathematics <br>
+ <br>
+“Saint Patriarch Evtimii” Primary and Secondary School, Plovdiv Bulgaria <br>
+•	Advanced Mathematics Class <br>
+<br>
+Fontys University of Applied Sciences <br>
+•	Software Engineering <br>
+•	Business Informatics<br>
+</p>
+  </div>
+  <button type="button" class="collapsible">Personal Skills</button>
+  <div class="content">
+    <p>
+    <b>Mother tongue:</b><br> Bulgarian <br><br>
+  <b>Other languages:</b> <br>
+  German | C1 | DSD <br>
+  English | C2 | CAE <br>
+  <br>
+  <b>Communication skills:</b> <br>
+  Great communication skills gained through my experience working with colleagues and other people at “ENTRY” and also playing instruments with different people at studios and at charity concerts. I am used to working with people and clients during the software development projects at Fontys.<br>
+  <br>
+  <b>Organisational / managerial skills:</b> <br>
+ As a non-professional musician I learned to work in a team and play a lead role while respecting the opinions of all members of a band.<br>
+ Working on English, German and other group projects has taught me much about the dynamics of teamwork and leadership.<br>
+<br>
+<b>Digital skills:</b> <br>
+Good command of Microsoft Office (Word, Excel, PowerPoint)<br>
+Core coding knowledge and skills ( Java, HTML, CSS, PHP, JavaScript, SQL)<br>
+Good command of Musical production software (FL Studio)<br>
+Good knowledge of online games and their players<br>
+<br>
+<b>Other skills:</b> <br>
+Playing the Guitar, Bass guitar, Ukulele <br>
+Music Production<br>
+Playing Online Games unprofessionally<br>
+
+  </p>
+  </div>
+  <button type="button" class="collapsible">Additional Information</button>
+  <div class="content">
+    <p>
+Official Demonstration of a Court Trial “Court of Plovdiv”<br><br> Project “Uspeh” <br><br>
+
+Piano courses at Youth Center Plovdiv, Guitar courses at “Geo Milev” Cinema<br><br>
+
+“Saint Ivan Rilski” Bulgarian Competition 2009/2010 3rd and 1st place <br><br> “Saint Sofronii Vrachanski” Language and Mathematics Competition 2009 1st place
+</p>
+  </div>
+  <button type="button" class="collapsible">Pictures</button>
+  <div class="content">
+<img id= "denkatasnimka" src="denkata.jpg" alt="denkata">
+  </div>
+</div>
+
+
+
+
+
+
+
+    <footer class="vivify popIn">
+
+
+        <a href="https://www.facebook.com/profile.php?id=100006839268429" class="fa fa-facebook" target="_blank"></a>
+
+
+        <a href="https://www.instagram.com/deniswrynn/?hl=bg" class="fa fa-instagram" target="_blank"></a>
+
+
+        <a href="https://myaccount.google.com/?utm_source=OGB&tab=mk&utm_medium=act&pli=1&gar=1" class="fa fa-google" target="_blank"></a>
+
+
+    </footer>
+
+    <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+  </body>
+</html>
