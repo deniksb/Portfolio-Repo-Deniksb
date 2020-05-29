@@ -26,8 +26,9 @@
     float: none;
   }
 }
-
-
+audio:last-of-type {
+  margin-left: auto;
+}
 
 .picture{
   width: 15%;
@@ -47,7 +48,13 @@
  margin: auto;
 }
 body{
-  background-image: url('background.jpg');
+  background-image: url('background.jpg')  ;
+  background-repeat: no-repeat;
+ background-attachment: fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 p{
   text-indent: 0px;
@@ -129,8 +136,8 @@ background-color: rgba(0,0,0,0.0);
   padding: 16px;
   font-size: 16px;
   border: 4px solid #ffffff !important;
-  width: 20%;
-  border-radius: 30px;
+  width: 85%;
+
   text-decoration: none;
   font-size: 17px;
 
@@ -142,7 +149,9 @@ background-color: rgba(0,0,0,0.0);
   position: relative;
   display: inline-block;
 
-  text-align: center;width: 100%;  position: fixed;
+  text-align: center;
+  width:30%;
+   position: fixed;
   margin-top: 3%;
 }
 
@@ -153,9 +162,9 @@ background-color: rgba(0,0,0,0.0);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  width: 15%;
+  width: 85%;
   text-align: center;
-  margin-left: 42.5%;
+  margin-left: 7.5%;
 
 }
 
@@ -180,8 +189,8 @@ background-color: rgba(0,0,0,0.0);
   padding: 16px;
   font-size: 16px;
   border: 4px solid #ffffff !important;
-  width: 20%;
-  border-radius: 30px;
+  width: 85%;
+
   text-decoration: none;
   font-size: 17px;
 
@@ -194,7 +203,7 @@ background-color: rgba(0,0,0,0.0);
   display: inline-block;
 
   text-align: center;
-  width: 100%;
+  width: 30%;
   position: fixed;
   margin-top: 10%;
 }
@@ -206,9 +215,9 @@ background-color: rgba(0,0,0,0.0);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-width: 15%;
+width: 85%;
 text-align: center;
-margin-left: 42.5%;
+margin-left: 7.5%;
 }
 
 .dropdown-content2 a {
@@ -227,7 +236,16 @@ margin-left: 42.5%;
 .dropdown2:hover .dropbtn2 {background-color: #ddd;
 color: black;}
 
+
+.dropdownflexbox{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 /* SPECIAL FOR CV PAGE */
+
 .collapsibleflexbox{
   display: flex;
   flex-direction: column;
@@ -241,7 +259,7 @@ margin-left: 9%;
 
 .collapsible {
 
-  color: white;
+  color: black;
   cursor: pointer;
   padding: 18px;
   width: 100%;

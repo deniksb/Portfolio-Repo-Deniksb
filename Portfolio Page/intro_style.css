@@ -1,5 +1,11 @@
 body{
-   background-image: url('background.jpg');
+  background-image: url('background.jpg')  ;
+  background-repeat: no-repeat;
+ background-attachment: fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .logo{
