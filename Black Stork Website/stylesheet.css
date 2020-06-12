@@ -1,0 +1,49 @@
+body{
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+ background-attachment: fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+}
+
+.logo{
+  border-radius: 50%;
+  width: 50px;
+
+}
+h2{
+
+  text-align: center;
+  color:white;
+  font-family: 'Russo One', sans-serif;
+}
+.info{
+  margin-top: 3%;
+}
+p{
+  text-align: center;
+  color:white;
+  font-family: 'Russo One', sans-serif;
+}
+.info-text{
+
+
+}
+.info-text-div{
+  text-align: center;
+    width: 60%;
+}
+
+#pictures-home{
+
+
+
+}
+img {
+ margin: 5px;
+}
+
+/* Extra small devices (phones, 600px and down) */
