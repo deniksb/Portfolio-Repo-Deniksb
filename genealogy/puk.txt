@@ -1,0 +1,13 @@
+"java.lang.Object",
+"java.awt.Component",
+"java.awt.image.ImageObserver",
+"java.awt.MenuContainer",
+"java.io.Serializable",
+"java.awt.Container",
+"javax.swing.JComponent",
+"javax.swing.TransferHandler$HasGetTransferHandler",
+"javax.swing.AbstractButton",
+"java.awt.ItemSelectable",
+"javax.swing.SwingConstants",
+"javax.swing.JButton",
+"javax.accessibility.Accessible"
