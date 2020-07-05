@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>travelagency</groupId>
+        <artifactId>travelagencyparent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>..</relativePath>
+    </parent>
+    <artifactId>seasons</artifactId>
+    <packaging>jar</packaging>
+    <name>seasons :: G057</name>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <exec.mainClass>seasons/nl.fontys.sebivenlo.seasons.TravelAgency</exec.mainClass>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>travelagency</groupId>
+            <artifactId>ranges</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>travelagency</groupId>
+            <artifactId>csvobjectstream</artifactId>
+            <version>${project.version}</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId> 
+                <configuration>
+                    <!-- add add-opens lines for all packages in your module that are tested.
+                         For testing it is fine to open your packages for the whole world, which includes
+                         e.g. junit, assertj, mockito, and jacoco.
+                         Also leave ${argLine} because it is set/used by the coverage plugin.
+                    -->
+                    <argLine> 
+                        ${argLine}
+                        --add-opens seasons/nl.fontys.sebivenlo.seasons=ALL-UNNAMED 
+                    </argLine>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>entities/*.*</exclude>
+                        <exclude>**/TravelAgency.*</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <executable>${JAVA_HOME}/bin/java</executable>
+                    <arguments>
+                        <argument>--module-path</argument>
+                        <modulepath/>
+                        <argument>--module</argument>
+                        <argument>${exec.mainClass}</argument>
+                        <!--<argument>${easytext.file}</argument>-->
+                    </arguments>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

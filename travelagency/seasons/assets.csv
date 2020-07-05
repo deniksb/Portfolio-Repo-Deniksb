@@ -1,0 +1,30 @@
+#Descr,shortName,cap,price PD
+Single Room,R1.23,1,6000
+Single Room,R1.24,1,6000
+Single Room,R1.25,1,6000
+Single Room,R2.23,1,6000
+Single Room,R2.24,1,6000
+Single Room,R3.25,1,6000
+Single Room,R3.23,1,6000
+Single Room,R4.24,1,5000
+Single Room,R4.25,1,5000
+Double Room,R1.26,2,10000
+Double Room,R1.27,2,10000
+Double Room,R1.28,2,10000
+Double Room,R1.29,2,10000
+Double Room,R2.26,2,10000
+Double Room,R2.27,2,10000
+Double Room,R2.28,2,10000
+Double Room,R2.29,2,10000
+Double Room,R3.26,2,10000
+Double Room,R3.27,2,10000
+Double Room,R3.28,2,10000
+Double Room,R3.29,2, 10000
+Meeting Room,R1.20,12,20000
+Meeting Room,R2.20,12,20000
+Meeting Room,R3.20,12,20000
+Suite,R1.21,5,20000
+Suite,R2.21,5,20000
+Suite,R3.21,5,20000
+Penthouse,R5.1,7,80000
+Penthouse,R5.2,7,80000

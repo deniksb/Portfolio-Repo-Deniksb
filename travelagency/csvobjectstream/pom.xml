@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>travelagency</groupId>
+        <artifactId>travelagencyparent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>..</relativePath>
+    </parent>
+    <artifactId>csvobjectstream</artifactId>
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <name>csvobjectstream :: G057</name>
+    <description>Read csv file and create objects from them.</description>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId> 
+                <configuration>
+                    <!-- add add-opens lines for all packages in your module that are tested.
+                        For testing it is fine to open your packages for the whole world, which includes
+                        e.g. junit, assertj, mockito, and jacoco.
+                        Also leave ${argLine} because it is set/used by the coverage plugin.
+                    -->
+                    <argLine> 
+                        ${argLine}
+                        --add-opens csvobjectstream/nl.fontys.sebivenlo.csvobjectstream=ALL-UNNAMED 
+                    </argLine>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+pdir=/home/prc2/public_html/exercises/csvobjectstream
+phost=fontysvenlo
+
+if [ ! -d target/site/apidocs ]; then
+    mvn javadoc:javadoc
+fi
+
+rsync -av target/site/apidocs/ ${phost}:${pdir}/

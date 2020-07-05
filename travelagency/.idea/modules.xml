@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/csvobjectstream/csvobjectstream.iml" filepath="$PROJECT_DIR$/csvobjectstream/csvobjectstream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ranges/ranges.iml" filepath="$PROJECT_DIR$/ranges/ranges.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seasons/seasons.iml" filepath="$PROJECT_DIR$/seasons/seasons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/travelagencyparent.iml" filepath="$PROJECT_DIR$/travelagencyparent.iml" />
+    </modules>
+  </component>
+</project>

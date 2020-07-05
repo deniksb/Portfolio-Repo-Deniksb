@@ -1,0 +1,11 @@
+#Descr, Start start, end , price cat
+Mid winter,2020-01-01,2020-02-15,LOW
+Krokus,2020-02-15,2020-03-01,REGULAR
+Early spring,2020-03-01,2020-05-01,LOW
+May vacation,2020-05-01,2020-05-15,REGULAR
+High Season,2020-05-15,2020-06-15,HIGH
+Late Summer,2020-06-15,2020-08-28,REGULAR
+Indian Summer,2020-08-28,2020-09-28,HIGH
+Autumn vacation,2020-09-28,2020-10-05,REGULAR
+Late autumn,2020-10-05,2020-10-12,LOW
+First skies,2020-10-12,2021-01-01,HIGH
