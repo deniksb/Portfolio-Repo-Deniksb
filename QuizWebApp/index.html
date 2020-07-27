@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body class="bg-primary">
+    <div id="part-0">
+        <h1 id="heading" class="">Silicon Valley <br> Quiz </h1>
+
+
+        <div id="start-buttondiv">
+            <button id="start-button" type="button" class="btn btn-info">START</button>
+        </div>
+    </div>
+
+
+    <div id="part-1" style="display: none;">
+        <h2 id="q-1">What is the name of the main character of the show?</h2>
+        <div id="answers-q1" class="answer-options container">
+            <div class="row">
+                <div class="col">
+                    <button id="1" class="correct btn btn-info btn-lg btn-block"
+                        onclick="correctAnswer();checkPoints(this);">Richard</button>
+                </div>
+                <div class="col">
+                    <button id="1" class="false btn btn-info btn-lg btn-block"
+                        onclick="checkPoints(this);">Stefan</button>
+                </div>
+                <div class="w-100"></div>
+                <div class="col">
+                    <button id="1" class="false btn btn-info btn-lg btn-block"
+                        onclick="checkPoints(this);">Gilfoyle</button>
+                </div>
+                <div class="col">
+                    <button id="1" class="false btn btn-info btn-lg btn-block"
+                        onclick="checkPoints(this);">Emil</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="part-2" style="display: none;">
+        <h2 id="q-2">What is the main character's company called?</h2>
+        <div id="answers-q2" class="answer-options container">
+            <div class="row">
+                <div class="col">
+                    <button id="2" class="false btn btn-info btn-lg btn-block"
+                        onclick="checkPoints(this);">Stefan</button>
+                </div>
+                <div class="col">
+                    <button id="2" class="correct btn btn-info btn-lg btn-block"
+                        onclick="correctAnswer();checkPoints(this);">Pied Piper</button>
+                </div>
+                <div class="w-100"></div>
+                <div class="col">
+                    <button id="2" class="false btn btn-info btn-lg btn-block"
+                        onclick="checkPoints(this);">Facebook</button>
+                </div>
+                <div class="col">
+                    <button id="2" class="false btn btn-info btn-lg btn-block"
+                        onclick="checkPoints(this);">Twitter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="part-3" style="display: none;">
+        <h2 id="q-3">How is Gilfoyle's computer called?</h2>
+        <div id="answers-q3" class="answer-options container">
+            <div class="row">
+                <div class="col">
+                    <button id="3" class="false btn btn-info btn-lg btn-block"
+                        onclick="checkPoints(this);">Stefan</button>
+                </div>
+                <div class="col">
+                    <button id="3" class="false btn btn-info btn-lg btn-block"
+                        onclick="checkPoints(this);">Anthony</button>
+                </div>
+                <div class="col">
+                    <button id="3" class="true btn btn-info btn-lg btn-block"
+                        onclick="correctAnswer();checkPoints(this);">Anton</button>
+                </div>
+                <div class="col">
+                    <button id="3" class="false btn btn-info btn-lg btn-block"
+                        onclick="checkPoints(this);">Mitch</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="part-4" style="display: none;">
+        <h2 id="q-4">Where was Richard working in the beginning of the show?</h2>
+        <div id="answers-q4" class="answer-options container">
+            <div class="row">
+                <div class="col">
+                    <button id="4" class="correct btn btn-info btn-lg btn-block"
+                        onclick="correctAnswer();checkPoints(this);">Hooli</button>
+                </div>
+                <div class="col">
+                    <button id="4" class="false btn btn-info btn-lg btn-block" onclick="checkPoints(this);">Pied
+                        Piper</button>
+                </div>
+                <div class="col">
+                    <button id="4" class="false btn btn-info btn-lg btn-block"
+                        onclick="checkPoints(this);">Instagram</button>
+                </div>
+                <div class="col">
+                    <button id="4" class="false btn btn-info btn-lg btn-block"
+                        onclick="checkPoints(this);">Uber</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="part-5" style="display: none;">
+        <h2 id="q-5">From which contry is Jian-Yang from?</h2>
+        <div id="answers-q5" class="answer-options container">
+            <div class="row">
+                <div class="col">
+                    <button id="5" class="false btn btn-info btn-lg btn-block"
+                        onclick="checkPoints(this);">Germany</button>
+                </div>
+                <div class="col">
+                    <button id="5" class="correct btn btn-info btn-lg btn-block"
+                        onclick="checkPoints(this);">Iran</button>
+                </div>
+                <div class="col">
+                    <button id="5" class="false btn btn-info btn-lg btn-block"
+                        onclick="checkPoints(this);">Korea</button>
+                </div>
+                <div class="col">
+                    <button id="5" class="false btn btn-info btn-lg btn-block"
+                        onclick="correctAnswer();checkPoints(this);">China</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <h1 id="points-display"></h1>
+
+    <script src="logic.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
