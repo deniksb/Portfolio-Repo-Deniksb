@@ -1,0 +1,33 @@
+body{
+    text-align: center;
+    font-family: 'Saira', sans-serif;
+    background-color: aliceblue;
+}
+
+
+
+.grid {
+    display: flex;                       /* establish flex container */
+    flex-wrap: wrap;                     /* enable flex items to wrap */
+    justify-content: space-around;
+    width: 400px;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -200px;
+    
+    font-size: 20px;
+    
+    
+    
+  }
+  .cell {
+    flex: 0 0 32%;                       /* don't grow, don't shrink, width */
+    height: 120px;
+    margin-bottom: 5px;
+    background-color: rgba(16, 52, 151, 0.589);
+  }
+  .cell:nth-child(3n) {
+    
+  }
