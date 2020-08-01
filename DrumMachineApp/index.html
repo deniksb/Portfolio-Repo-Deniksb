@@ -13,31 +13,51 @@
 <body>
     <h1>Le Epic Drum Machine</h1>
 
-    <div class="grid">
-        <div id="kick1.wav" class="cell" onmousedown="playSample(0,audio);animateButton(0,animateColor);"
+    <!-- music library -->
+    <div id="firstLibrary" class="grid">
+        <div id="kick1.wav" class="cell"
+            onmousedown="playSample(0,audio,libraryOfChoice);animateButton(0,animateColor);"
             onmouseup=" animateButton(0,normalColor);">Kick 1</div>
-        <div id="kick2.wav" class="cell" onmousedown="playSample(1,audio);animateButton(1,animateColor);"
+        <div id="kick2.wav" class="cell"
+            onmousedown="playSample(1,audio,libraryOfChoice);animateButton(1,animateColor);"
             onmouseup=" animateButton(1,normalColor);">Kick 2</div>
-        <div id="808.wav" class="cell" onmousedown="playSample(2,audioLayered);animateButton(2,animateColor);"
+        <div id="808.wav" class="cell"
+            onmousedown="playSample(2,audioBasses,libraryOfChoice);animateButton(2,animateColor);"
             onmouseup=" animateButton(2,normalColor);">808</div>
-        <div id="rim.wav" class="cell" onmousedown="playSample(3,audio);animateButton(3,animateColor);"
+        <div id="rim.wav" class="cell" onmousedown="playSample(3,audio,libraryOfChoice);animateButton(3,animateColor);"
             onmouseup=" animateButton(3,normalColor);">Rim</div>
-        <div id="snare.wav" class="cell" onmousedown="playSample(4,audio);animateButton(4,animateColor);"
+        <div id="snare.wav" class="cell"
+            onmousedown="playSample(4,audio,libraryOfChoice);animateButton(4,animateColor);"
             onmouseup=" animateButton(4,normalColor);">Snare</div>
-        <div id="openhat.wav" class="cell" onmousedown="playSample(5,audioLayered);animateButton(5,animateColor);"
+        <div id="openhat.wav" class="cell"
+            onmousedown="playSample(5,audioLayered,libraryOfChoice);animateButton(5,animateColor);"
             onmouseup=" animateButton(5,normalColor);">Open Hat</div>
-        <div id="closedhat.wav" class="cell" onmousedown="playSample(6,audioLayered);animateButton(6,animateColor);"
+        <div id="closedhat.wav" class="cell"
+            onmousedown="playSample(6,audioLayered,libraryOfChoice);animateButton(6,animateColor);"
             onmouseup=" animateButton(6,normalColor);">Closed Hat</div>
-        <div id="crash.wav" class="cell" onmousedown="playSample(7,audioLayered);animateButton(7,animateColor);"
+        <div id="crash.wav" class="cell"
+            onmousedown="playSample(7,audioLayered,libraryOfChoice);animateButton(7,animateColor);"
             onmouseup=" animateButton(7,normalColor);">Crash</div>
-        <div id="perc.wav" class="cell" onmousedown="playSample(8,audio);animateButton(8,animateColor);"
+        <div id="perc.wav" class="cell" onmousedown="playSample(8,audio,libraryOfChoice);animateButton(8,animateColor);"
             onmouseup=" animateButton(8,normalColor);">Perc</div>
     </div>
 
 
+    <div id="toggleButton">
+        <label class="switch">
+            <input id="checkbox" type="checkbox" onclick="switchLibrary()">
+            <span class="slider"></span>
+        </label>
+        <p>Switch Library</p>
+    </div>
+
+    <div id="volume-bar" class="slidecontainer">
+    <input id="vol-control" class="volumeSlider" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+    <p>Volume</p>
+    </div>
 
 
-    <script src="logic.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -47,6 +67,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="logic.js"></script>
 </body>
 
 </html>
