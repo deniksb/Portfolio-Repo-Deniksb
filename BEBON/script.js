@@ -9,6 +9,9 @@ var coins = parseInt(localStorage.getItem("Coins"));
 
 var jumpAnimation = "url(player_red_air.gif)";
 var skateAnimation = "url(deni_push_red.gif)";
+
+
+
 //function that shows local storage
 function saveScore() {
 
@@ -88,7 +91,7 @@ var checkDead = setInterval(function () {
         localStorage.setItem("Coins", coins.toString());
 
         alert("Your score is: " + points + " Coins collected: " + coins);
-        startMenu();
+        location.reload();
         document.getElementById("music").pause();
     }
 
@@ -163,12 +166,22 @@ var makeFaster = setInterval(function () {
 function startMenu(){
     document.getElementById("menu").style.display = "block";
     document.getElementById("game").style.display = "none";
+    document.getElementById("shop").style.display = "none";
+    document.getElementById("rules").style.display = "none";
+    document.getElementById("credits").style.display = "none";
+}
+
+//function that opens rules
+function startRules(){
+    document.getElementById("menu").style.display = "none";
+    document.getElementById("rules").style.display = "block";
 }
 
 //function to equip skin
 
 function equipSkin(ele){
     var id = ele.id;
+    if(localStorage.getItem(id) == "true" || id == "0"){
     var storageName = id + " Equipped";
     localStorage.setItem(storageName,"true");
     if(id == "50"){
@@ -208,7 +221,7 @@ function equipSkin(ele){
         alert("Red Deni equipped!");
 
     }
-
+    }
 
 }
 
@@ -240,7 +253,8 @@ function startGame() {
         jumpAnimation = "url(player_black_air.gif)";
     }
     
-
+    points = 0;
+    document.getElementById("points").innerHTML = points;
     document.getElementById("game").style.display = "block";
     document.getElementById("menu").style.display = "none";
     document.getElementById("music").volume = 0.3;
@@ -300,6 +314,27 @@ function buySkin(ele){
        localStorage.setItem(id,"true");
        coins = coins - parseInt(id);
        document.getElementById("coin-display").innerHTML = coins;
+    }
+    
+}
+
+
+//function that changes the song
+var timesSongChanged = 0;
+function changeSong(){
+    if(timesSongChanged%2 == 0 && timesSongChanged != 0){
+        document.getElementById("music").pause();
+        ++timesSongChanged;
+    }
+    else if(document.getElementById("music").getAttribute('src') == 'cigarette_smoker.mp3' ){
+        ++timesSongChanged;
+        document.getElementById("music").setAttribute('src', 'neighbourhood.mp3');
+        document.getElementById("music").volume = 0.3;
+    }
+    else {
+        ++timesSongChanged;
+        document.getElementById("music").setAttribute('src', 'cigarette_smoker.mp3');
+        document.getElementById("music").volume = 0.3;
     }
     
 }
