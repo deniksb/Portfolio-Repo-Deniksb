@@ -7,6 +7,8 @@ var points = 0;
 var speed = 3;
 var coins = parseInt(localStorage.getItem("Coins"));
 
+var jumpAnimation = "url(player_red_air.gif)";
+var skateAnimation = "url(deni_push_red.gif)";
 //function that shows local storage
 function saveScore() {
 
@@ -23,7 +25,16 @@ var checkCoinCatch = setInterval(function () {
     if (coinLeft < 40 && coinLeft > 0 && characterTop <= 290) {
 
         coin.style.display = "none";
-        coins++;
+        if(Number.isInteger(coins)){
+            coins++;
+        }
+        else {
+            localStorage.setItem("Coins","1");
+            coins = parseInt(localStorage.getItem("Coins"));
+        }
+        
+        
+       
     }
 
 
@@ -92,13 +103,13 @@ document.body.onkeyup = function jump(e) {
 
     if (e.keyCode == 32) {
         if (character.classList != "animate") {
-            character.style.content = "url(player_red_air.gif)";
+            character.style.content = jumpAnimation;
             character.classList.add("animate");
         }
 
         setTimeout(function () {
             character.classList.remove("animate");
-            character.style.content = "url(deni_push_red.gif)";
+            character.style.content = skateAnimation;
         }, 500);
     }
 
@@ -154,10 +165,82 @@ function startMenu(){
     document.getElementById("game").style.display = "none";
 }
 
+//function to equip skin
+
+function equipSkin(ele){
+    var id = ele.id;
+    var storageName = id + " Equipped";
+    localStorage.setItem(storageName,"true");
+    if(id == "50"){
+        
+
+        localStorage.setItem("0 Equipped","false");
+        localStorage.setItem("500 Equipped","false");
+        localStorage.setItem("2000 Equipped","false");
+
+        alert("Blonde Deni equipped!");
+    }
+    else if(id == "500"){
+        
+
+        localStorage.setItem("0 Equipped","false");
+        localStorage.setItem("50 Equipped","false");
+        localStorage.setItem("2000 Equipped","false");
+
+        alert("Ginger Deni equipped!");
+    }
+    else if(id == "2000"){
+        
+
+        localStorage.setItem("0 Equipped","false");
+        localStorage.setItem("50 Equipped","false");
+        localStorage.setItem("500 Equipped","false");
+
+        alert("Dark Deni equipped!");
+    }
+    else if(id == "0"){
+        
+
+        localStorage.setItem("2000 Equipped","false");
+        localStorage.setItem("50 Equipped","false");
+        localStorage.setItem("500 Equipped","false");
+
+        alert("Red Deni equipped!");
+
+    }
+
+
+}
+
 
 //function that makes the game start
 
 function startGame() {
+    
+    if(localStorage.getItem("0 Equipped") == "true"){
+        skateAnimation = "url(deni_push_red.gif)";
+        character.style.content = skateAnimation;
+        jumpAnimation = "url(player_red_air.gif)";
+    }
+    else if(localStorage.getItem("50 Equipped") == "true"){
+        skateAnimation = "url(player_blonde_push.gif)";
+        character.style.content = skateAnimation;
+        jumpAnimation = "url(player_blonde_air.gif)";
+
+    }
+    else if(localStorage.getItem("500 Equipped") == "true"){
+        skateAnimation = "url(deni_push_orange.gif)";
+        character.style.content = skateAnimation;
+        jumpAnimation = "url(player_orange_air.gif)";
+
+    }
+    else if(localStorage.getItem("2000 Equipped") == "true"){
+        skateAnimation = "url(deni_push_black.gif)";
+        character.style.content = skateAnimation;
+        jumpAnimation = "url(player_black_air.gif)";
+    }
+    
+
     document.getElementById("game").style.display = "block";
     document.getElementById("menu").style.display = "none";
     document.getElementById("music").volume = 0.3;
@@ -178,6 +261,12 @@ function startCredits() {
 function startShop() {
     if(localStorage.getItem("50") == "true"){
         document.getElementById("50").style.opacity = "100%";
+    }
+    if(localStorage.getItem("500") == "true"){
+        document.getElementById("500").style.opacity = "100%";
+    }
+    if(localStorage.getItem("2000") == "true"){
+        document.getElementById("2000").style.opacity = "100%";
     }
     document.getElementById("coin-display").innerHTML = coins;
     document.getElementById("shop").style.display = "block";
@@ -206,7 +295,7 @@ var intervalId = window.setInterval(function () {
 
 function buySkin(ele){
     var id = ele.id;
-    if(parseInt(id) <= coins && localStorage.getItem("50") != "true"){
+    if(parseInt(id) <= coins && localStorage.getItem(id) != "true"){
        document.getElementById(id).style.opacity = "100%";
        localStorage.setItem(id,"true");
        coins = coins - parseInt(id);
@@ -214,3 +303,5 @@ function buySkin(ele){
     }
     
 }
+
+
