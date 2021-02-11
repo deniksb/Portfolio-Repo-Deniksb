@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Deni's Pro Skater</title>
+</head>
+
+<body>
+    <audio id="music" autoplay loop>
+        <source src="cigarette_smoker.mp3" type="audio/mp3">
+    </audio>
+    <!-- the menu -->
+    <div id="menu">
+        <div id="LOGO"></div>
+        <br>
+        <br>
+        <br>
+        <div id="start-button"><button class="menu-buttons" onclick="startGame()">START GAME</button></div>
+        <br>
+        <div id="shop-button"><button  class="menu-buttons" onclick="startShop()">SHOP</button></div>
+        <br>
+        <div id="rules-button"><button  class="menu-buttons" >RULES</button></div>
+        <br>
+        <div id="rules-button"><button  class="menu-buttons" onclick="startCredits()">CREDITS</button></div>
+    </div>
+
+
+    <!-- shop -->
+    <div id="shop" style="display: none;">
+        <br>
+        <div id="SHOP-LOGO"></div>
+        
+        <h1 id="coin-display">0</h1>
+        <br>
+        <br>
+        <div id="red-skin"><button class="menu-buttons"  >Red Hair Deni</button></div>
+        <br>
+        <div id="blonde-skin"><button style="opacity: 70%;" id="50"  class="menu-buttons" onclick="buySkin(this)">Blonde Hair Deni  50 Coins</button></div>
+        <br>
+        <div id="orange-skin"><button style="opacity: 70%;" id="500" disabled  class="menu-buttons" onclick="buySkin(this)">Ginger Hair Deni  500 Coins</button></div>
+        <br>
+        <div id="dark-skin"><button style="opacity: 70%;" id="2000" disabled  class="menu-buttons" onclick="buySkin(this)">Dark Hair Deni  2000 Coins</button></div>
+
+
+    </div>
+
+
+     <!-- rules -->
+     <div id="rules" >
+
+
+
+    </div>
+
+     <!-- credits -->
+     <div id="credits" >
+        
+
+
+    </div>
+
+
+
+    <!-- the actual game -->
+    <div id="game">
+        <h1 id="points">0</h1>
+        
+        <div id="character" ></div>
+        <!-- <img id="character" onclick="jump()" src="player.png" alt="player"> -->
+        <div id="block-text">
+         <div id="block"></div>    
+        <p id="blocktext"></p>
+
+        <div id="coin"></div>
+         
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
