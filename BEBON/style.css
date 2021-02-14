@@ -5,6 +5,7 @@ body {
     position: relative;
     text-align: center;
     color: aliceblue;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 h1{
     position: absolute;
@@ -23,7 +24,7 @@ h1{
     border: 3px solid beige;
     border-radius: 2%;
     margin-top: 15%;
-    
+    background-color: black;
     
 }
 
@@ -61,7 +62,7 @@ h1{
 }
 
 #block {
-    width: 40px;
+    width: 50px;
     height: 40px;
     content: url(block1.png);
     position: relative;
@@ -83,13 +84,14 @@ h1{
 
 #block-text{
     position: relative;
+    
 }
 
 #blocktext{
     position: absolute;
     width: 40px;
-    height: 40px;
-    top: 260px;
+    height: 50px;
+    top: 230px;
     left: 960px;
     animation: block 3s infinite linear;
 }
@@ -164,7 +166,7 @@ h1{
 #coin-display{
    display: inline-block;
     margin: 0 auto;
-   
+    margin-left: -1.5%;
     
 }
 

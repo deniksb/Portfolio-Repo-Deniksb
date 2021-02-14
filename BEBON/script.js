@@ -314,6 +314,7 @@ function buySkin(ele){
        localStorage.setItem(id,"true");
        coins = coins - parseInt(id);
        document.getElementById("coin-display").innerHTML = coins;
+       localStorage.setItem("Coins",coins.toString());
     }
     
 }
@@ -325,16 +326,19 @@ function changeSong(){
     if(timesSongChanged%2 == 0 && timesSongChanged != 0){
         document.getElementById("music").pause();
         ++timesSongChanged;
+        document.getElementById("start-music-btn").style.backgroundColor = "grey";  
     }
     else if(document.getElementById("music").getAttribute('src') == 'cigarette_smoker.mp3' ){
         ++timesSongChanged;
         document.getElementById("music").setAttribute('src', 'neighbourhood.mp3');
         document.getElementById("music").volume = 0.3;
+        document.getElementById("start-music-btn").style.backgroundColor = "firebrick";
     }
     else {
         ++timesSongChanged;
         document.getElementById("music").setAttribute('src', 'cigarette_smoker.mp3');
         document.getElementById("music").volume = 0.3;
+        document.getElementById("start-music-btn").style.backgroundColor = "blue";
     }
     
 }
