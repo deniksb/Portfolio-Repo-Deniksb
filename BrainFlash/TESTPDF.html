@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <h1>PDF.js</h1>
+
+    <script src="/path/to/pdf.js"></script>
+    <script>
+        var urlPDF = '/path/to/example.pdf';
+        PDFJS.workerSrc = '/path/to/pdf.worker.js';
+
+        PDFJS.getDocument(urlPDF).then(function (pdf) {
+            var pdfDocument = pdf;
+            var pagesPromises = [];
+
+            for (var i = 0; i < pdf.numPages; i++) {
+                // Required to prevent that i is always the total of pages
+                (function (pageNumber) {
+                    pagesPromises.push(getPageText(pageNumber, pdfDocument));
+                })(i + 1);
+            }
+
+            Promise.all(pagesPromises).then(function (pagesText) {
+
+                // Display text of all the pages in the console
+                console.log(pagesText);
+            });
+
+        }, function (reason) {
+            // PDF loading error
+            console.error(reason);
+        });
+
+</script>
+</body>
+
+</html>

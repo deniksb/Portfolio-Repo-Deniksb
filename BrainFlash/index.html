@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+  <title>BrainFlash</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
 <body>
 
-<h1 id="text-input">My First Heading is extremely cool and I would love to see this fucking program work lolz.</h1>
-<p id="display-word">Text will show here!</p>
-<button id="start-button" >START</button>
+  <div id="intro-screen">
+    <h1>BrainFlash<sup style="font-size: 10px;">Alpha</sup></h1>
+
+    <div id="text-input-div">
+      <input type="file" name="" id="text-input">
+    </div>
+  </div>
+  <br>
+  <button id="start-button" disabled>START</button>
+  <div id="main-screen" style="display: none;">
+    <p id="secondary-display-word">Secondary text will show here!</p>
+    <p id="display-word">Text will show here!</p>
+
+    <br>
+    <br>
+
+    <div class="slidecontainer-navigation">
+      <p>Navigate</p>
+      <input type="range" min="1" max="100" value="1" class="slider" id="navigation-range">
+      <p id="slider-nav">1</p>
+    </div>
+      <br>
 
 
-<script src="script.js"></script>
+    <div class="slidecontainer-speed">
+      <p>Delay</p>
+      <input type="range" min="1" max="100" value="50"  id="myRange">
+      <p id="slider-speed">750</p>
+    </div>
+
+  </div>
+
+
+
+  <script src="script.js"></script>
+
+
 </body>
+
 </html>
