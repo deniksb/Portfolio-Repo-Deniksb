@@ -1,10 +1,16 @@
 body {
     text-align: center;
+    color: white;
+    background-color: black;
 }
 
 #secondary-display-word {
     color: lightgray;
     font-size: 10px;
+}
+
+#myRange{
+  background: white;
 }
 
 .slidecontainer {
@@ -13,7 +19,7 @@ body {
   
   .slider {
     -webkit-appearance: none;
-    width: 100%;
+    width: 60%;
     height: 25px;
     background: #d3d3d3;
     outline: none;
@@ -31,7 +37,7 @@ body {
     appearance: none;
     width: 25px;
     height: 25px;
-    background: #4CAF50;
+    background: white;
     cursor: pointer;
   }
   
@@ -41,4 +47,19 @@ body {
     background: #4CAF50;
     cursor: pointer;
   }
+
+
+  .slidecontainer-navigation{
+    width:55%;
+    margin-right:2%;
+    float: left;
+    width:100%;
+}
+.slidecontainer-speed {
+    width:42%;
+    float: left;
+}
+.clearfix{
+    clear:both
+}
 
