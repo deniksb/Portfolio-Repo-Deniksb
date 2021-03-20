@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+    <title>Deni's Pro Skater</title>
+</head>
+
+<body>
+   
+    <!-- the menu -->
+    <div id="menu">
+        <div id="LOGO"></div>
+        <br>
+        <br>
+        <div id="start-button"><button class="menu-buttons" onclick="startGame()">START GAME</button></div>
+        <br>
+        <div id="shop-button"><button  class="menu-buttons" onclick="startShop()">SHOP</button></div>
+        <br>
+        <div id="rules-button"><button  class="menu-buttons" onclick="startRules()">RULES</button></div>
+        <br>
+        <div id="rules-button"><button  class="menu-buttons" onclick="startCredits()">CREDITS</button></div>
+        
+       
+        
+    </div>
+
+
+    <!-- shop -->
+    <div id="shop" style="display: none;">
+        <br>
+        <div id="SHOP-LOGO"></div>
+        
+        <h1 id="coin-display">0</h1>
+        <br>
+        <br>
+        <div id="red-skin"><button class="menu-buttons" id="0" onclick="equipSkin(this)">Red Hair Deni</button></div>
+        <br>
+        <div id="blonde-skin"><button style="opacity: 70%;" id="50"  class="menu-buttons" onclick="buySkin(this);equipSkin(this)">Blonde Hair Deni  50 Coins</button></div>
+        <br>
+        <div id="orange-skin"><button style="opacity: 70%;" id="500"   class="menu-buttons" onclick="buySkin(this);equipSkin(this)">Ginger Hair Deni  500 Coins</button></div>
+        <br>    
+        <div id="dark-skin"><button style="opacity: 70%;" id="2000"   class="menu-buttons" onclick="buySkin(this);equipSkin(this)">Dark Hair Deni  2000 Coins</button></div>
+        <br>
+        <br>
+        <div id="return-div"><button  id="return-button"  class="menu-buttons" onclick="startMenu()">Back to Menu</button></div>
+
+
+    </div>
+
+
+     <!-- rules -->
+     <div id="rules" style="display: none;  font-size: 40px;" >
+        <br>
+        
+        <h2>T A P</h2>
+        <br><br>
+        <p>Tap to jump over the obstacles and collect crystals to buy skins.</p>
+        <br>
+        <br>
+        <div id="return-div"><button  id="return-button"  class="menu-buttons" onclick="startMenu()">Back to Menu</button></div>
+
+    </div>
+
+     <!-- credits -->
+     <div id="credits" style="display: none; font-size: 40px;" >
+        <br>
+        <br>
+        <p>Made with HTML, CSS, JavaScript and Android Studio.<br> Denislav Berberov</p>
+        <br>
+        <br>
+        <div id="return-div"><button  id="return-button"  class="menu-buttons" onclick="startMenu()">Back to Menu</button></div>
+    </div>
+
+
+
+    <!-- the actual game -->
+    <div id="game">
+        <h1 id="points">0</h1>
+        
+        <div id="character" ></div>
+        <!-- <img id="character" onclick="jump()" src="player.png" alt="player"> -->
+        <div id="block-text">
+         <div id="block"></div>    
+        <p id="blocktext"></p>
+
+        <div id="coin"></div>
+         
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

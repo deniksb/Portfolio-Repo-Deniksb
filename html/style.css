@@ -1,0 +1,173 @@
+body {
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    color: aliceblue;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+h1{
+    position: absolute;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#game {
+    display: none;
+    margin: auto;
+    width: 1000px;
+    height: 400px;
+    border: 3px solid beige;
+    border-radius: 2%;
+    
+    background-color: black;
+    
+}
+
+#character {
+    width: 100px;
+    height: 100px;
+    content: url(deni_push_red.gif);
+    /* background-color: red; */
+    position: relative;
+    top: 300px;
+
+}
+
+/* class to use to add the animation to the character with js */
+.animate {
+    animation: jump 500ms;
+}
+
+@keyframes jump {
+    0% {
+        top: 300px;
+    }
+
+    30% {
+        top: 200px;
+    }
+
+    70% {
+        top: 200px;
+    }
+
+    100% {
+        top: 300px;
+    }
+}
+
+#block {
+    width: 50px;
+    height: 40px;
+    content: url(block1.png);
+    position: relative;
+    top: 260px;
+    left: 960px;
+    animation: block 3s infinite linear;
+}
+
+@keyframes block {
+    0% {
+        left: 960px;
+    }
+
+    100% {
+        left: -80px;
+    }
+}
+
+
+#block-text{
+    position: relative;
+    
+}
+
+#blocktext{
+    position: absolute;
+    width: 40px;
+    height: 50px;
+    top: 230px;
+    left: 960px;
+    animation: block 3s infinite linear;
+    font-size: 30px;
+}
+@keyframes blocktext {
+    0% {
+        left: 960px;
+    }
+
+    100% {
+        left: -80px; 
+    }
+}
+
+
+#LOGO{
+    margin: auto;
+    content: url(LOGO.gif);
+}
+
+#menu{
+    margin: auto;
+    
+}
+
+.menu-buttons {
+    width: 200px;
+    opacity: 90%;
+    border-radius: 20%;
+    background-color:firebrick; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 3px solid rgb(73, 14, 14);
+  }
+
+  .menu-buttons:hover{
+    background-color:rgb(180, 77, 77);
+    cursor: pointer;
+  }
+
+
+  #coin {
+    width: 40px;
+    height: 40px;
+    content: url(coin.gif);
+    position: relative;
+    top: 100px;
+    left: 960px;
+    animation: block 3.5s infinite linear;
+    display: none;
+}
+
+@keyframes coin {
+    0% {
+        left: 960px;
+    }
+
+    100% {
+        left: -80px;
+    }
+}
+
+#SHOP-LOGO{
+    margin: auto;
+    content: url(shop-logo.gif);
+}
+
+#coin-display{
+   display: inline-block;
+    margin: 0 auto;
+    margin-left: -1.5%;
+    
+}
+
