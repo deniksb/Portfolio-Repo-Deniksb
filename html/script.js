@@ -100,6 +100,16 @@ var checkDead = setInterval(function () {
         // startMenu();
         
     }
+    
+    if(blockLeft <= 0 ) {
+        block.style.display = "none";
+        blockText.style.display = "none";
+        console.log(blockLeft);
+    }
+    else if (blockLeft > 0 && block.style.display == "none") {
+        block.style.display = "block";
+        blockText.style.display = "block";
+    }
 
 
 
