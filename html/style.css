@@ -6,7 +6,17 @@ body {
     text-align: center;
     color: aliceblue;
     font-family: "Lucida Console", "Courier New", monospace;
+
 }
+
+
+.flip-horizontal{
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
 h1{
     position: absolute;
 }

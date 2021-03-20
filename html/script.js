@@ -90,8 +90,14 @@ var checkDead = setInterval(function () {
 
         localStorage.setItem("Coins", coins.toString());
 
-        alert("Your score is: " + points + " Coins collected: " + coins);
-        startMenu();
+        // alert("Your score is: " + points + " Coins collected: " + coins);
+        document.getElementById("game").style.display = "none";
+        document.getElementById("death-score").style.display = "block";
+        document.getElementById("death-score-points").innerHTML = points;
+
+        
+
+        // startMenu();
         
     }
 
@@ -179,6 +185,7 @@ function startMenu(){
     document.getElementById("shop").style.display = "none";
     document.getElementById("rules").style.display = "none";
     document.getElementById("credits").style.display = "none";
+    document.getElementById("death-score").style.display = "none";
 }
 
 //function that opens rules
@@ -354,6 +361,26 @@ function changeSong(){
         document.getElementById("start-music-btn").style.backgroundColor = "blue";
     }
     
+}
+
+
+function reverseMode(){
+    let game =   document.getElementById("game").classList;
+    if(game.contains('flip-horizontal')){
+        game.remove('flip-horizontal');
+        document.getElementById("points").classList.remove('flip-horizontal');
+        document.getElementById("blocktext").classList.remove('flip-horizontal');
+        document.getElementById("rev-butt").style.backgroundColor = "red";
+        document.getElementById("rev-butt").innerHTML = "REVERSE";
+    }
+    else {
+        game.add('flip-horizontal');
+        document.getElementById("points").classList.add('flip-horizontal');
+        document.getElementById("blocktext").classList.add('flip-horizontal');
+        document.getElementById("rev-butt").style.backgroundColor = "blue";
+        document.getElementById("rev-butt").innerHTML = "NORMAL";
+    }
+   
 }
 
 
