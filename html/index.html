@@ -16,13 +16,24 @@
     <br><br><br>
         <div id="return-div" ><button  id="return-button"  class="menu-buttons" style="margin-left: 20px;" onclick="startMenu()">Back to Menu</button></div>
     </div>
+
+    <div id="difficulty" style="display: none">
+        <div id="LOGO"></div>
+        <br>
+        <br>
+        <div id="easy"><button id="easy-button" class="menu-buttons" onclick="startGame(this)">EASY</button></div>
+        <div id="normal"><button  id="normal-button" class="menu-buttons" onclick="startGame(this)">MEDIUM</button></div>
+        <div id="hard"><button id="hard-button" class="menu-buttons" onclick="startGame(this)">HARD</button></div>
+
+
+    </div>
     
     <!-- the menu -->
     <div id="menu">
         <div id="LOGO"></div>
         <br>
         <br>
-        <div id="start-button"><button class="menu-buttons" onclick="startGame()">START GAME</button></div>
+        <div id="start-button"><button class="menu-buttons" onclick="choseDifficulty()">START GAME</button></div>
         
         <div id="shop-button"><button  class="menu-buttons" onclick="startShop()">SHOP</button></div>
         
@@ -86,7 +97,7 @@
 
 
     <!-- the actual game -->
-    
+    <br><br>
     <div id="game">
         <h1 id="points">0</h1>
         

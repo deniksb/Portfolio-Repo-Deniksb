@@ -40,6 +40,15 @@ var checkCoinCatch = setInterval(function () {
        
     }
 
+    if(coinLeft <= -5 ) {
+        coin.style.display = "none";
+        
+       
+        
+
+    }
+    
+
 
 
 }, 10);
@@ -101,7 +110,7 @@ var checkDead = setInterval(function () {
         
     }
     
-    if(blockLeft <= 5 ) {
+    if(blockLeft <= -5 ) {
         block.style.display = "none";
         blockText.style.display = "none";
         console.log(speed);
@@ -176,15 +185,16 @@ function changeBlockSprite() {
 
 //getting text speed
 var textSpeed = 3;
+//how much we are going to subtract with every obstacle to make it faster
+var difficultyIndex;
 var makeFaster = setInterval(function () {
     //making text speed faster
-    textSpeed = textSpeed - 0.01;
+    textSpeed = textSpeed - difficultyIndex;
     blockText.style.animationDuration = textSpeed + "s";
     //making block speed faster
-    speed = speed - 0.01;
+    speed = speed - difficultyIndex;
     block.style.animationDuration = speed + "s";
     blockTeleportTimer();
-
 
 
 
@@ -254,10 +264,28 @@ function equipSkin(ele){
 
 }
 
+//function that lets player choose difficulty
+function choseDifficulty(){
+    document.getElementById("menu").style.display = "none";
+    document.getElementById("difficulty").style.display = "block";
+}
+
 
 //function that makes the game start
 
-function startGame() {
+function startGame(ele) {
+
+    if(ele.id == "easy-button"){
+        difficultyIndex = 0.01;
+    }
+    else if(ele.id == "normal-button"){
+        difficultyIndex = 0.05;
+    }
+    else if(ele.id == "hard-button"){
+        difficultyIndex = 0.1;
+    }
+
+
     
     if(localStorage.getItem("0 Equipped") == "true"){
         skateAnimation = "url(deni_push_red.gif)";
@@ -290,7 +318,7 @@ function startGame() {
     document.getElementById("points").innerHTML = points;
     document.getElementById("game").style.display = "block";
     document.getElementById("menu").style.display = "none";
-    
+    document.getElementById("difficulty").style.display = "none";
 
 }
 
