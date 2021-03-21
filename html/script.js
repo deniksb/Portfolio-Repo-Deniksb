@@ -101,10 +101,12 @@ var checkDead = setInterval(function () {
         
     }
     
-    if(blockLeft <= 0 ) {
+    if(blockLeft <= 5 ) {
         block.style.display = "none";
         blockText.style.display = "none";
-        console.log(blockLeft);
+        console.log(speed);
+        
+
     }
     else if (blockLeft > 0 && block.style.display == "none") {
         block.style.display = "block";
@@ -380,14 +382,14 @@ function reverseMode(){
         game.remove('flip-horizontal');
         document.getElementById("points").classList.remove('flip-horizontal');
         document.getElementById("blocktext").classList.remove('flip-horizontal');
-        document.getElementById("rev-butt").style.backgroundColor = "red";
+        document.getElementById("rev-butt").style.backgroundColor = "rgb(251, 194, 107)";
         document.getElementById("rev-butt").innerHTML = "REVERSE";
     }
     else {
         game.add('flip-horizontal');
         document.getElementById("points").classList.add('flip-horizontal');
         document.getElementById("blocktext").classList.add('flip-horizontal');
-        document.getElementById("rev-butt").style.backgroundColor = "blue";
+        document.getElementById("rev-butt").style.backgroundColor = "rgb(255, 176, 57)";
         document.getElementById("rev-butt").innerHTML = "NORMAL";
     }
    
