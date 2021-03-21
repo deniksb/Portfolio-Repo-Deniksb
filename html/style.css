@@ -27,12 +27,13 @@ h1{
 }
 
 #game {
+    
     display: none;
     margin: auto;
     width: 1000px;
     height: 400px;
     border: 3px solid beige;
-    border-radius: 2%;
+    border-radius: 0%;
     
     /* background-color: black; */
     
