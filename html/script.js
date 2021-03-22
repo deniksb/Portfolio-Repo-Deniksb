@@ -2,6 +2,7 @@ var character = document.getElementById("character");
 var block = document.getElementById("block");
 var blockText = document.getElementById("blocktext");
 var coin = document.getElementById("coin");
+var flyingBlock = document.getElementById("flying-block");
 var points = 0;
 
 var speed = 3;
@@ -42,14 +43,10 @@ var checkCoinCatch = setInterval(function () {
 
     if(coinLeft <= -5 ) {
         coin.style.display = "none";
-        
-       
-        
+            
 
     }
     
-
-
 
 }, 10);
 
@@ -58,10 +55,11 @@ var checkCoinCatch = setInterval(function () {
 document.addEventListener("click", function(){
     var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+    var flyingBlockLeft = parseInt(window.getComputedStyle(flyingBlock).getPropertyValue("left"));
 
     var pointMeter = document.getElementById("points");
 
-    if (blockLeft < 150 && blockLeft > 0 ) {
+    if ((blockLeft < 150 && blockLeft > 0) ) {
         ++points;
         addedPoint = true;
         
@@ -120,9 +118,9 @@ function getRandomInt(max) {
 var checkDead = setInterval(function () {
     var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+    var flyingBlockLeft = parseInt(window.getComputedStyle(flyingBlock).getPropertyValue("left"));
 
-
-    if (blockLeft < 40 && blockLeft > 0 && characterTop >= 290) {
+    if ((blockLeft < 40 && blockLeft > 0 && characterTop >= 290)  || (flyingBlockLeft < 40 && flyingBlockLeft > 0 && characterTop <= 210)) {
 
         // block.style.animation = "none";
         // block.style.display = "none";
@@ -403,11 +401,48 @@ function stopCoin(duration) {
 
 //function for calling the coin
 var intervalId = window.setInterval(function () {
+    if(flyingBlock.style.display == "none"){
     var randomSpeed = getRandomInt(3);
     coin.style.animationDuration = randomSpeed + "s";
     coin.style.display = "block";
     stopCoin(randomSpeed * 1000);
+    }
+    else{
+        var randomSpeed = getRandomInt(3);
+        coin.style.animationDuration = randomSpeed + "s";
+        coin.style.display = "block";
+        stopCoin(randomSpeed * 0);
+    }
 }, 10000);
+
+
+
+var flyingBlock = document.getElementById("flying-block");
+//stopping the flying block
+function stopFlying(duration) {
+    setTimeout(function () {
+        flyingBlock.style.display = "none"
+    }, duration);
+}
+
+
+//function for calling the flying block
+var intervalIdBlock = window.setInterval(function () {
+    if(coin.style.display == "none"){
+         var randomSpeed = Math.random() * (1500 - 500) + 500;
+    flyingBlock.style.animationDuration = randomSpeed + "ms";
+    flyingBlock.style.display = "block";
+    stopFlying(randomSpeed );
+    }
+   
+}, 6000);
+
+
+
+
+
+
+
 
 //function to buy skin
 

@@ -174,6 +174,28 @@ h1{
     }
 }
 
+
+#flying-block {
+    width: 40px;
+    height: 40px;
+    content: url(flying.png);
+    position: relative;
+    top: 100px;
+    left: 960px;
+    animation: block 3.5s infinite linear;
+    display: none;
+}
+
+@keyframes flying-block {
+    0% {
+        left:  860px;
+    }
+
+    100% {
+        left: -80px;
+    }
+}
+
 #SHOP-LOGO{
     margin: auto;
     content: url(shop-logo.png);
