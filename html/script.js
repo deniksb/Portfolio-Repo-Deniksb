@@ -429,7 +429,7 @@ function stopFlying(duration) {
 //function for calling the flying block
 var intervalIdBlock = window.setInterval(function () {
     var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-    if(coin.style.display == "none" &&  blockLeft < 430){
+    if(coin.style.display == "none" &&  blockLeft > 430){
          var randomSpeed = Math.random() * (1500 - 500) + 500;
     flyingBlock.style.animationDuration = randomSpeed + "ms";
     flyingBlock.style.display = "block";
