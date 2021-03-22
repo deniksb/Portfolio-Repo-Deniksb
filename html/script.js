@@ -53,22 +53,62 @@ var checkCoinCatch = setInterval(function () {
 
 }, 10);
 
-var checkPoint = setInterval(function () {
+
+//check point
+document.addEventListener("click", function(){
     var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
 
     var pointMeter = document.getElementById("points");
 
-    if (blockLeft < 40 && blockLeft > 0 && characterTop < 260) {
+    if (blockLeft < 150 && blockLeft > 0 ) {
         ++points;
+        addedPoint = true;
+        
         pointMeter.innerHTML = points;
 
     }
 
 
+});
 
 
-}, 100);
+
+
+// var addedPoint = false; //variable that goes true when a point is added so it can wait a bit until another one is added
+// var waitTime = 200;
+// var checkPoint = setInterval(function () {
+//     var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+//     var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+
+//     var pointMeter = document.getElementById("points");
+
+//     if (blockLeft < 40 && blockLeft > 0 && characterTop < 260 && addedPoint == false) {
+//         ++points;
+//         addedPoint = true;
+        
+//         pointMeter.innerHTML = points;
+
+//     }
+
+    
+// }, 50);
+
+// var subtracted = false;
+// var enablePoint = setInterval(function () {
+    
+//     if(addedPoint == true && points > 0){
+//         addedPoint = false;
+//         console.log(waitTime);
+//     }
+//     if(subtracted == false && speed > 1.5 && speed < 2){
+//         addedPoint = false;
+//         waitTime = waitTime - 120;
+//         subtracted = true;
+//         console.log(waitTime);
+//     }
+    
+// },waitTime);
 
 
 //function to get random number in range from 0 to max-1
@@ -128,15 +168,18 @@ var checkDead = setInterval(function () {
 
 
 document.addEventListener("click", function(){
-    if (character.classList != "animate") {
+    if (!(character.classList.contains("animate")) ) {
         character.style.content = jumpAnimation;
         character.classList.add("animate");
     }
+ 
 
     setTimeout(function () {
         character.classList.remove("animate");
         character.style.content = skateAnimation;
     }, 500);
+
+    
 });
 
 document.body.onkeyup = function jump(e) {
@@ -208,6 +251,7 @@ function startMenu(){
     document.getElementById("rules").style.display = "none";
     document.getElementById("credits").style.display = "none";
     document.getElementById("death-score").style.display = "none";
+    document.getElementById("difficulty").style.display = "none";
 }
 
 //function that opens rules
