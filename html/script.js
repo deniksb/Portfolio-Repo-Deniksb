@@ -24,47 +24,57 @@ function saveScore() {
 var checkCoinCatch = setInterval(function () {
     var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     var coinLeft = parseInt(window.getComputedStyle(coin).getPropertyValue("left"));
-
+    var flyingBlockLeft = parseInt(window.getComputedStyle(flyingBlock).getPropertyValue("left"));
 
     if (coinLeft < 40 && coinLeft > 0 && characterTop <= 290) {
 
         coin.style.display = "none";
-        if(Number.isInteger(coins)){
+        if (Number.isInteger(coins)) {
             coins++;
         }
         else {
-            localStorage.setItem("Coins","1");
+            localStorage.setItem("Coins", "1");
             coins = parseInt(localStorage.getItem("Coins"));
         }
-        
-        
-       
+
+
+
     }
 
-    if(coinLeft <= -5 ) {
+    if (coinLeft <= -5) {
         coin.style.display = "none";
-            
+
 
     }
-    
+    if (flyingBlockLeft <= -5) {
+        flyingBlock.style.display = "none";
+
+    }
+
 
 }, 10);
 
 
 //check point
-document.addEventListener("click", function(){
+document.addEventListener("click", function () {
     var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     var flyingBlockLeft = parseInt(window.getComputedStyle(flyingBlock).getPropertyValue("left"));
 
     var pointMeter = document.getElementById("points");
 
-    if ((blockLeft < 150 && blockLeft > 0) ) {
+    if ((blockLeft < 150 && blockLeft > 0)) {
+        ++points;
+        addedPoint = true;
+
+        pointMeter.innerHTML = points;
+
+    }
+    else if(blockLeft > 0&& blockLeft < 400 && speed < 2.1){
         ++points;
         addedPoint = true;
         
         pointMeter.innerHTML = points;
-
     }
 
 
@@ -84,17 +94,17 @@ document.addEventListener("click", function(){
 //     if (blockLeft < 40 && blockLeft > 0 && characterTop < 260 && addedPoint == false) {
 //         ++points;
 //         addedPoint = true;
-        
+
 //         pointMeter.innerHTML = points;
 
 //     }
 
-    
+
 // }, 50);
 
 // var subtracted = false;
 // var enablePoint = setInterval(function () {
-    
+
 //     if(addedPoint == true && points > 0){
 //         addedPoint = false;
 //         console.log(waitTime);
@@ -105,7 +115,7 @@ document.addEventListener("click", function(){
 //         subtracted = true;
 //         console.log(waitTime);
 //     }
-    
+
 // },waitTime);
 
 
@@ -120,7 +130,7 @@ var checkDead = setInterval(function () {
     var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     var flyingBlockLeft = parseInt(window.getComputedStyle(flyingBlock).getPropertyValue("left"));
 
-    if ((blockLeft < 40 && blockLeft > 0 && characterTop >= 290)  || (flyingBlockLeft < 40 && flyingBlockLeft > 0 && characterTop <= 210)) {
+    if ((blockLeft < 40 && blockLeft > 0 && characterTop >= 290) || (flyingBlockLeft < 40 && flyingBlockLeft > 0 && characterTop <= 210)) {
 
         // block.style.animation = "none";
         // block.style.display = "none";
@@ -142,17 +152,17 @@ var checkDead = setInterval(function () {
         document.getElementById("death-score").style.display = "block";
         document.getElementById("death-score-points").innerHTML = points;
 
-        
+
 
         // startMenu();
-        
+
     }
-    
-    if(blockLeft <= -5 ) {
+
+    if (blockLeft <= -5) {
         block.style.display = "none";
         blockText.style.display = "none";
         console.log(speed);
-        
+
 
     }
     else if (blockLeft > 0 && block.style.display == "none") {
@@ -165,19 +175,19 @@ var checkDead = setInterval(function () {
 }, 10);
 
 
-document.addEventListener("click", function(){
-    if (!(character.classList.contains("animate")) ) {
+document.addEventListener("click", function () {
+    if (!(character.classList.contains("animate"))) {
         character.style.content = jumpAnimation;
         character.classList.add("animate");
     }
- 
+
 
     setTimeout(function () {
         character.classList.remove("animate");
         character.style.content = skateAnimation;
     }, 500);
 
-    
+
 });
 
 document.body.onkeyup = function jump(e) {
@@ -242,7 +252,7 @@ var makeFaster = setInterval(function () {
 }, 5000);
 
 //function that opens menu
-function startMenu(){
+function startMenu() {
     document.getElementById("menu").style.display = "block";
     document.getElementById("game").style.display = "none";
     document.getElementById("shop").style.display = "none";
@@ -253,61 +263,61 @@ function startMenu(){
 }
 
 //function that opens rules
-function startRules(){
+function startRules() {
     document.getElementById("menu").style.display = "none";
     document.getElementById("rules").style.display = "block";
 }
 
 //function to equip skin
 
-function equipSkin(ele){
+function equipSkin(ele) {
     var id = ele.id;
-    if(localStorage.getItem(id) == "true" || id == "0"){
-    var storageName = id + " Equipped";
-    localStorage.setItem(storageName,"true");
-    if(id == "50"){
-        
+    if (localStorage.getItem(id) == "true" || id == "0") {
+        var storageName = id + " Equipped";
+        localStorage.setItem(storageName, "true");
+        if (id == "50") {
 
-        localStorage.setItem("0 Equipped","false");
-        localStorage.setItem("500 Equipped","false");
-        localStorage.setItem("2000 Equipped","false");
 
-        alert("Blonde Deni equipped!");
-    }
-    else if(id == "500"){
-        
+            localStorage.setItem("0 Equipped", "false");
+            localStorage.setItem("500 Equipped", "false");
+            localStorage.setItem("2000 Equipped", "false");
 
-        localStorage.setItem("0 Equipped","false");
-        localStorage.setItem("50 Equipped","false");
-        localStorage.setItem("2000 Equipped","false");
+            alert("Blonde Deni equipped!");
+        }
+        else if (id == "500") {
 
-        alert("Ginger Deni equipped!");
-    }
-    else if(id == "2000"){
-        
 
-        localStorage.setItem("0 Equipped","false");
-        localStorage.setItem("50 Equipped","false");
-        localStorage.setItem("500 Equipped","false");
+            localStorage.setItem("0 Equipped", "false");
+            localStorage.setItem("50 Equipped", "false");
+            localStorage.setItem("2000 Equipped", "false");
 
-        alert("Dark Deni equipped!");
-    }
-    else if(id == "0"){
-        
+            alert("Ginger Deni equipped!");
+        }
+        else if (id == "2000") {
 
-        localStorage.setItem("2000 Equipped","false");
-        localStorage.setItem("50 Equipped","false");
-        localStorage.setItem("500 Equipped","false");
 
-        alert("Red Deni equipped!");
+            localStorage.setItem("0 Equipped", "false");
+            localStorage.setItem("50 Equipped", "false");
+            localStorage.setItem("500 Equipped", "false");
 
-    }
+            alert("Dark Deni equipped!");
+        }
+        else if (id == "0") {
+
+
+            localStorage.setItem("2000 Equipped", "false");
+            localStorage.setItem("50 Equipped", "false");
+            localStorage.setItem("500 Equipped", "false");
+
+            alert("Red Deni equipped!");
+
+        }
     }
 
 }
 
 //function that lets player choose difficulty
-function choseDifficulty(){
+function choseDifficulty() {
     document.getElementById("menu").style.display = "none";
     document.getElementById("difficulty").style.display = "block";
 }
@@ -317,41 +327,41 @@ function choseDifficulty(){
 
 function startGame(ele) {
 
-    if(ele.id == "easy-button"){
+    if (ele.id == "easy-button") {
         difficultyIndex = 0.01;
     }
-    else if(ele.id == "normal-button"){
+    else if (ele.id == "normal-button") {
         difficultyIndex = 0.05;
     }
-    else if(ele.id == "hard-button"){
+    else if (ele.id == "hard-button") {
         difficultyIndex = 0.1;
     }
 
 
-    
-    if(localStorage.getItem("0 Equipped") == "true"){
+
+    if (localStorage.getItem("0 Equipped") == "true") {
         skateAnimation = "url(deni_push_red.gif)";
         character.style.content = skateAnimation;
         jumpAnimation = "url(player_red_air.gif)";
     }
-    else if(localStorage.getItem("50 Equipped") == "true"){
+    else if (localStorage.getItem("50 Equipped") == "true") {
         skateAnimation = "url(player_blonde_push.gif)";
         character.style.content = skateAnimation;
         jumpAnimation = "url(player_blonde_air.gif)";
 
     }
-    else if(localStorage.getItem("500 Equipped") == "true"){
+    else if (localStorage.getItem("500 Equipped") == "true") {
         skateAnimation = "url(deni_push_orange.gif)";
         character.style.content = skateAnimation;
         jumpAnimation = "url(player_orange_air.gif)";
 
     }
-    else if(localStorage.getItem("2000 Equipped") == "true"){
+    else if (localStorage.getItem("2000 Equipped") == "true") {
         skateAnimation = "url(deni_push_black.gif)";
         character.style.content = skateAnimation;
         jumpAnimation = "url(player_black_air.gif)";
     }
-    
+
     points = 0;
     speed = 3;
     textSpeed = 3;
@@ -375,13 +385,13 @@ function startCredits() {
 
 //function tha opens up shop
 function startShop() {
-    if(localStorage.getItem("50") == "true"){
+    if (localStorage.getItem("50") == "true") {
         document.getElementById("50").style.opacity = "100%";
     }
-    if(localStorage.getItem("500") == "true"){
+    if (localStorage.getItem("500") == "true") {
         document.getElementById("500").style.opacity = "100%";
     }
-    if(localStorage.getItem("2000") == "true"){
+    if (localStorage.getItem("2000") == "true") {
         document.getElementById("2000").style.opacity = "100%";
     }
     document.getElementById("coin-display").innerHTML = coins;
@@ -401,13 +411,13 @@ function stopCoin(duration) {
 
 //function for calling the coin
 var intervalId = window.setInterval(function () {
-    if(flyingBlock.style.display == "none"){
-    var randomSpeed = getRandomInt(3);
-    coin.style.animationDuration = randomSpeed + "s";
-    coin.style.display = "block";
-    stopCoin(randomSpeed * 1000);
+    if (flyingBlock.style.display == "none") {
+        var randomSpeed = getRandomInt(3);
+        coin.style.animationDuration = randomSpeed + "s";
+        coin.style.display = "block";
+        stopCoin(randomSpeed * 1000);
     }
-    else{
+    else {
         var randomSpeed = getRandomInt(3);
         coin.style.animationDuration = randomSpeed + "s";
         coin.style.display = "block";
@@ -429,13 +439,13 @@ function stopFlying(duration) {
 //function for calling the flying block
 var intervalIdBlock = window.setInterval(function () {
     var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-    if(coin.style.display == "none" &&  blockLeft > 430){
-         var randomSpeed = Math.random() * (1500 - 500) + 500;
-    flyingBlock.style.animationDuration = randomSpeed + "ms";
-    flyingBlock.style.display = "block";
-    stopFlying(randomSpeed );
+    if (coin.style.display == "none" && blockLeft > 430) {
+        var randomSpeed = Math.random() * (1500 - 500) + 500;
+        flyingBlock.style.animationDuration = randomSpeed + "ms";
+        flyingBlock.style.display = "block";
+        stopFlying(randomSpeed);
     }
-   
+
 }, 6000);
 
 
@@ -447,28 +457,28 @@ var intervalIdBlock = window.setInterval(function () {
 
 //function to buy skin
 
-function buySkin(ele){
+function buySkin(ele) {
     var id = ele.id;
-    if(parseInt(id) <= coins && localStorage.getItem(id) != "true"){
-       document.getElementById(id).style.opacity = "100%";
-       localStorage.setItem(id,"true");
-       coins = coins - parseInt(id);
-       document.getElementById("coin-display").innerHTML = coins;
-       localStorage.setItem("Coins",coins.toString());
+    if (parseInt(id) <= coins && localStorage.getItem(id) != "true") {
+        document.getElementById(id).style.opacity = "100%";
+        localStorage.setItem(id, "true");
+        coins = coins - parseInt(id);
+        document.getElementById("coin-display").innerHTML = coins;
+        localStorage.setItem("Coins", coins.toString());
     }
-    
+
 }
 
 
 //function that changes the song
 var timesSongChanged = 0;
-function changeSong(){
-    if(timesSongChanged%2 == 0 && timesSongChanged != 0){
+function changeSong() {
+    if (timesSongChanged % 2 == 0 && timesSongChanged != 0) {
         document.getElementById("music").pause();
         ++timesSongChanged;
-        document.getElementById("start-music-btn").style.backgroundColor = "grey";  
+        document.getElementById("start-music-btn").style.backgroundColor = "grey";
     }
-    else if(document.getElementById("music").getAttribute('src') == 'cigarette_smoker.mp3' ){
+    else if (document.getElementById("music").getAttribute('src') == 'cigarette_smoker.mp3') {
         ++timesSongChanged;
         document.getElementById("music").setAttribute('src', 'neighbourhood.mp3');
         document.getElementById("music").volume = 0.3;
@@ -480,13 +490,13 @@ function changeSong(){
         document.getElementById("music").volume = 0.3;
         document.getElementById("start-music-btn").style.backgroundColor = "blue";
     }
-    
+
 }
 
 
-function reverseMode(){
-    let game =   document.getElementById("game").classList;
-    if(game.contains('flip-horizontal')){
+function reverseMode() {
+    let game = document.getElementById("game").classList;
+    if (game.contains('flip-horizontal')) {
         game.remove('flip-horizontal');
         document.getElementById("points").classList.remove('flip-horizontal');
         document.getElementById("blocktext").classList.remove('flip-horizontal');
@@ -500,7 +510,7 @@ function reverseMode(){
         document.getElementById("rev-butt").style.backgroundColor = "rgb(255, 176, 57)";
         document.getElementById("rev-butt").innerHTML = "NORMAL";
     }
-   
+
 }
 
 
