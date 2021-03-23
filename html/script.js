@@ -215,7 +215,8 @@ function blockTeleportTimer() {
         if (timer != 1) {
             blockText.innerHTML = timer;
             timer--;
-        } else {
+        }
+         else {
             blockText.innerHTML = timer;
             timer = 5;
         }
@@ -342,24 +343,32 @@ function startGame(ele) {
     if (localStorage.getItem("0 Equipped") == "true") {
         skateAnimation = "url(deni_push_red.gif)";
         character.style.content = skateAnimation;
-        jumpAnimation = "url(player_red_air.gif)";
+        jumpAnimation = "url(player_red_air.png)";
+        document.getElementById("character").style.height = "100px";
+        document.getElementById("character").style.width = "100px";
     }
     else if (localStorage.getItem("50 Equipped") == "true") {
         skateAnimation = "url(player_blonde_push.gif)";
         character.style.content = skateAnimation;
-        jumpAnimation = "url(player_blonde_air.gif)";
+        jumpAnimation = "url(player_blonde_air.png)";
+        document.getElementById("character").style.height = "95px";
+        document.getElementById("character").style.width = "100px";
 
     }
     else if (localStorage.getItem("500 Equipped") == "true") {
         skateAnimation = "url(deni_push_orange.gif)";
         character.style.content = skateAnimation;
-        jumpAnimation = "url(player_orange_air.gif)";
+        jumpAnimation = "url(player_orange_air.png)";
+        document.getElementById("character").style.height = "95px";
+        document.getElementById("character").style.width = "100px";
 
     }
     else if (localStorage.getItem("2000 Equipped") == "true") {
         skateAnimation = "url(deni_push_black.gif)";
         character.style.content = skateAnimation;
-        jumpAnimation = "url(player_black_air.gif)";
+        jumpAnimation = "url(player_black_air.png)";
+        document.getElementById("character").style.height = "95px";
+        document.getElementById("character").style.width = "100px";
     }
 
     points = 0;
@@ -500,15 +509,15 @@ function reverseMode() {
         game.remove('flip-horizontal');
         document.getElementById("points").classList.remove('flip-horizontal');
         document.getElementById("blocktext").classList.remove('flip-horizontal');
-        document.getElementById("rev-butt").style.backgroundColor = "rgb(251, 194, 107)";
-        document.getElementById("rev-butt").innerHTML = "REVERSE";
+        document.getElementById("rev-butt").style.backgroundColor = "rgb(64, 102, 21)";
+        document.getElementById("rev-butt").innerHTML = "NORMAL";
     }
     else {
         game.add('flip-horizontal');
         document.getElementById("points").classList.add('flip-horizontal');
         document.getElementById("blocktext").classList.add('flip-horizontal');
-        document.getElementById("rev-butt").style.backgroundColor = "rgb(255, 176, 57)";
-        document.getElementById("rev-butt").innerHTML = "NORMAL";
+        document.getElementById("rev-butt").style.backgroundColor = "rgb(97, 175, 33)";
+        document.getElementById("rev-butt").innerHTML = "REVERSED";
     }
 
 }
