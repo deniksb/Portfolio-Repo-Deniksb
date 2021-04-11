@@ -13,6 +13,7 @@ var skateAnimation = "url(deni_push_red.gif)";
 
 
 
+
 //function that shows local storage
 function saveScore() {
 
@@ -319,6 +320,29 @@ function equipSkin(ele) {
 
 //function that lets player choose difficulty
 function choseDifficulty() {
+
+    //getting the highest scores
+    var easyScore = localStorage.getItem("easyScore");
+    var medScore = localStorage.getItem("medScore");
+    var hardScore = localStorage.getItem("hardScore");
+
+    var easyButt = document.getElementById("easy-button").innerHTML;
+    var normButt = document.getElementById("normal-button").innerHTML;
+    var hardButt = document.getElementById("hard-button").innerHTML;
+
+    var val1 = easyButt.split(" ");
+    var val2 = easyButt.split(" ");
+    var val3 = easyButt.split(" ");
+
+    easyButt.replace(val1[1],easyScore);
+    normButt.replace(val2[1],medScore);
+    hardButt.replace(val3[1],hardScore);
+
+    document.getElementById("easy-button").innerHTML = easyButt;
+    document.getElementById("normal-button").innerHTML = normButt;
+    document.getElementById("hard-button").innerHTML = hardButt;
+
+
     document.getElementById("menu").style.display = "none";
     document.getElementById("difficulty").style.display = "block";
 }
@@ -521,5 +545,16 @@ function reverseMode() {
     }
 
 }
+
+//set high scores
+window.onload(function() {
+var easyScore = localStorage.getItem("easyScore");
+var medScore = localStorage.getItem("medScore");
+var hardScore = localStorage.getItem("hardScore");
+
+
+
+
+});
 
 
