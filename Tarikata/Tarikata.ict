@@ -141,6 +141,8 @@ types:
       this.canShoot = true;
 
 
+      this.health = 3;
+
     onstep: |+
       if(ct.actions.MoveLeft.down){
            if(this.x > 0){
@@ -160,6 +162,14 @@ types:
       }
 
 
+      //промяна при изтичане на точките кръв на player
+      if(this.health <= 0){
+          //Placeholder
+         ct.rooms.clear(); 
+      }
+
+
+
 
 
     ondraw: ''
@@ -168,7 +178,7 @@ types:
     extends:
       ctype: Player
     uid: 6d3ce01e-5415-4ad8-9e72-1be07a769019
-    lastmod: 1623921333995
+    lastmod: 1623940381179
   - name: Coin
     depth: 1
     oncreate: ''
@@ -187,7 +197,7 @@ types:
     extends:
       ctype: Coin
     uid: af5f6e5d-7981-478b-8120-b4fc8c9527c8
-    lastmod: 1623920719905
+    lastmod: 1623940396627
   - name: Enemy
     depth: 1
     oncreate: ''
@@ -198,7 +208,11 @@ types:
       //Проверка за колизия с играча
       if(ct.place.occupied(this,'Player')){
           this.kill = true;
-          console.log("Колизия регистрирана (PLACEHOLDER)");
+          //намаляне на точките кръв на player при колизия с enemy
+          for (var player of ct.types.list['Player']) {
+          player.health--;
+          console.log(player.health);
+      }
       }
 
 
@@ -219,7 +233,7 @@ types:
     extends:
       ctype: Enemy
     uid: 9dfe3b72-2e5a-4b7e-b735-dedd837c7551
-    lastmod: 1623921693372
+    lastmod: 1623940509088
   - name: GameController
     depth: 0
     oncreate: |+
@@ -276,7 +290,7 @@ types:
     texture: 40b7f7c3-03eb-416a-9746-5ffee4194488
     extends: {}
     uid: 685dbace-e814-4fbd-819a-84e99ce4f3aa
-    lastmod: 1623921284492
+    lastmod: 1623940406141
   - name: Bullet
     depth: 1
     oncreate: |-
