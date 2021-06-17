@@ -107,6 +107,7 @@ textures:
     bottom: 64
     uid: 40b7f7c3-03eb-416a-9746-5ffee4194488
     padding: 1
+    lastmod: 1623917723356
   - name: Bullet
     untill: 0
     grid:
@@ -219,9 +220,10 @@ types:
     depth: 0
     oncreate: |+
       //таймер за спаунването на Enemy
-      this.valueToReduce = 1;
-      this.timerReduction = 100;
-      this.enemyTimer = this.timerReduction;
+      this.originalValueEnemyTimer = 85;
+      this.enemyTimer = this.originalValueEnemyTimer;
+
+      this.gameTimer = 2000;
 
 
       //таймер за дилей на стрелянето на патрони
@@ -232,12 +234,20 @@ types:
       let x = Math.floor(Math.random()* 350) ;
 
       this.enemyTimer -= ct.delta;
+      this.gameTimer -= ct.delta;
+
+      if(this.gameTimer <= 0){
+        this.gameTimer = 2000;
+        if(this.originalValueEnemyTimer > 20){
+           this.originalValueEnemyTimer-=2;
+        }
+       
+      }
 
       if(this.enemyTimer <= 0){
         ct.types.copy('Enemy',x,780);  
-        this.valueToReduce -= 0.005;
-        this.timerReduction -= this.valueToReduce;
-        this.enemyTimer = this.timerReduction;
+        this.enemyTimer = this.originalValueEnemyTimer;
+        console.log(this.enemyTimer);
       }
 
 
@@ -257,7 +267,7 @@ types:
     texture: 40b7f7c3-03eb-416a-9746-5ffee4194488
     extends: {}
     uid: 685dbace-e814-4fbd-819a-84e99ce4f3aa
-    lastmod: 1623883320715
+    lastmod: 1623919032850
   - name: Bullet
     depth: 1
     oncreate: |-
@@ -307,10 +317,6 @@ rooms:
         'y': 0
         uid: 685dbace-e814-4fbd-819a-84e99ce4f3aa
         exts: {}
-      - x: 128
-        'y': 768
-        uid: af5f6e5d-7981-478b-8120-b4fc8c9527c8
-        exts: {}
     tiles:
       - depth: -10
         tiles: []
@@ -320,7 +326,7 @@ rooms:
     extends: {}
     gridX: 64
     gridY: 64
-    lastmod: 1623869048227
+    lastmod: 1623917704517
 actions:
   - name: MoveLeft
     methods:
