@@ -35,6 +35,7 @@ textures:
     bottom: 64
     uid: a8beef41-ee44-47ce-9425-6f321cec9cf7
     padding: 1
+    lastmod: 1623921471795
   - name: Enemy
     untill: 0
     grid:
@@ -136,7 +137,10 @@ skeletons: []
 types:
   - name: Player
     depth: 1
-    oncreate: this.canShoot = true;
+    oncreate: |+
+      this.canShoot = true;
+
+
     onstep: |+
       if(ct.actions.MoveLeft.down){
            if(this.x > 0){
@@ -164,7 +168,7 @@ types:
     extends:
       ctype: Player
     uid: 6d3ce01e-5415-4ad8-9e72-1be07a769019
-    lastmod: 1623882696817
+    lastmod: 1623921333995
   - name: Coin
     depth: 1
     oncreate: ''
@@ -183,13 +187,13 @@ types:
     extends:
       ctype: Coin
     uid: af5f6e5d-7981-478b-8120-b4fc8c9527c8
-    lastmod: 1623883351430
+    lastmod: 1623920719905
   - name: Enemy
     depth: 1
     oncreate: ''
     onstep: |+
       //Движение на елемента към играча
-      this.y -=5;
+      this.y -=4;
 
       //Проверка за колизия с играча
       if(ct.place.occupied(this,'Player')){
@@ -215,7 +219,7 @@ types:
     extends:
       ctype: Enemy
     uid: 9dfe3b72-2e5a-4b7e-b735-dedd837c7551
-    lastmod: 1623883102648
+    lastmod: 1623921693372
   - name: GameController
     depth: 0
     oncreate: |+
@@ -229,6 +233,8 @@ types:
       //таймер за дилей на стрелянето на патрони
       this.shootTimer = 30;
 
+
+
     onstep: |+
       //Спаунване на Enemy на случайно място през определено време
       let x = Math.floor(Math.random()* 350) ;
@@ -237,10 +243,13 @@ types:
       this.gameTimer -= ct.delta;
 
       if(this.gameTimer <= 0){
+        //увеличаваме скоростта на spawnване на enemy
         this.gameTimer = 2000;
         if(this.originalValueEnemyTimer > 20){
-           this.originalValueEnemyTimer-=2;
+           this.originalValueEnemyTimer-=3;
         }
+        //spawnваме монета
+        ct.types.copy('Coin',x,780); 
        
       }
 
@@ -267,7 +276,7 @@ types:
     texture: 40b7f7c3-03eb-416a-9746-5ffee4194488
     extends: {}
     uid: 685dbace-e814-4fbd-819a-84e99ce4f3aa
-    lastmod: 1623919032850
+    lastmod: 1623921284492
   - name: Bullet
     depth: 1
     oncreate: |-
@@ -296,8 +305,13 @@ types:
     extends:
       ctype: Bullet
     uid: c4b0f05c-b8bb-4a75-9323-7f0d6678c1cc
-    lastmod: 1623882730361
-sounds: []
+    lastmod: 1623919516300
+sounds:
+  - name: 10 Bonbona
+    uid: 0b5ca979-36fe-43ad-bcdb-a8b044652f6b
+    isMusic: true
+    origname: s0b5ca979-36fe-43ad-bcdb-a8b044652f6b.mp3
+    lastmod: 1623921180305
 styles: []
 rooms:
   - name: Main Room
@@ -326,7 +340,7 @@ rooms:
     extends: {}
     gridX: 64
     gridY: 64
-    lastmod: 1623917704517
+    lastmod: 1623919454160
 actions:
   - name: MoveLeft
     methods:
