@@ -1,0 +1,368 @@
+ctjsVersion: 1.5.1
+notes: /* empty */
+libs:
+  place:
+    gridX: 1024
+    gridY: 1024
+  fittoscreen:
+    mode: scaleFit
+  mouse: {}
+  keyboard: {}
+  keyboard.polyfill: {}
+  sound.howler: {}
+textures:
+  - name: Player
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: 'ia8beef41-ee44-47ce-9425-6f321cec9cf7.png}'
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: a8beef41-ee44-47ce-9425-6f321cec9cf7
+    padding: 1
+  - name: Enemy
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: 'i39eb477b-86f6-4d64-b082-7a26463933dd.png}'
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: 39eb477b-86f6-4d64-b082-7a26463933dd
+    padding: 1
+  - name: Coin
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: 'i9eb1353f-f733-4601-9fca-079c1e95738d.png}'
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: 9eb1353f-f733-4601-9fca-079c1e95738d
+    padding: 1
+  - name: GameController
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: 'i40b7f7c3-03eb-416a-9746-5ffee4194488.png}'
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: 40b7f7c3-03eb-416a-9746-5ffee4194488
+    padding: 1
+  - name: Bullet
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 8
+    imgHeight: 16
+    width: 8
+    height: 16
+    offx: 0
+    offy: 0
+    origname: 'i9de3c8b6-5ac5-48d5-8e0e-c6cb7f8b6304.png}'
+    shape: rect
+    left: 0
+    right: 8
+    top: 0
+    bottom: 16
+    uid: 9de3c8b6-5ac5-48d5-8e0e-c6cb7f8b6304
+    padding: 1
+skeletons: []
+types:
+  - name: Player
+    depth: 1
+    oncreate: this.canShoot = true;
+    onstep: |+
+      if(ct.actions.MoveLeft.down){
+           if(this.x > 0){
+          this.x -= 10;
+           }
+      }
+      else if(ct.actions.MoveRight.down){
+          if(this.x < 318){
+              this.x += 10; 
+          }
+         
+      }
+
+      //Стреляне
+      if(ct.actions.Shoot.down && this.canShoot == true){
+          ct.types.copy('Bullet',this.x+32,this.y);
+      }
+
+
+
+
+    ondraw: ''
+    ondestroy: ''
+    texture: a8beef41-ee44-47ce-9425-6f321cec9cf7
+    extends:
+      ctype: Player
+    uid: 6d3ce01e-5415-4ad8-9e72-1be07a769019
+    lastmod: 1623882696817
+  - name: Coin
+    depth: 1
+    oncreate: ''
+    onstep: |-
+      //Движение на елемента към играча
+      this.y -=2.5;
+
+      //Проверка за колизия с играча
+      if(ct.place.occupied(this,'Player')){
+          this.kill = true;
+          console.log("Колизия регистрирана (PLACEHOLDER)");
+      }
+    ondraw: ''
+    ondestroy: ''
+    texture: 9eb1353f-f733-4601-9fca-079c1e95738d
+    extends:
+      ctype: Coin
+    uid: af5f6e5d-7981-478b-8120-b4fc8c9527c8
+    lastmod: 1623883351430
+  - name: Enemy
+    depth: 1
+    oncreate: ''
+    onstep: |+
+      //Движение на елемента към играча
+      this.y -=5;
+
+      //Проверка за колизия с играча
+      if(ct.place.occupied(this,'Player')){
+          this.kill = true;
+          console.log("Колизия регистрирана (PLACEHOLDER)");
+      }
+
+
+      //Унищожаване при излизане от видимост
+      if(this.y < -20){
+          this.kill = true;
+          console.log("Destroyed");
+      }
+
+      //Проверка за колизия с Bullet
+      if(ct.place.occupied(this,'Bullet')){
+          this.kill = true;
+      }
+
+    ondraw: ''
+    ondestroy: ''
+    texture: 39eb477b-86f6-4d64-b082-7a26463933dd
+    extends:
+      ctype: Enemy
+    uid: 9dfe3b72-2e5a-4b7e-b735-dedd837c7551
+    lastmod: 1623883102648
+  - name: GameController
+    depth: 0
+    oncreate: |+
+      //таймер за спаунването на Enemy
+      this.valueToReduce = 1;
+      this.timerReduction = 100;
+      this.enemyTimer = this.timerReduction;
+
+
+      //таймер за дилей на стрелянето на патрони
+      this.shootTimer = 30;
+
+    onstep: |+
+      //Спаунване на Enemy на случайно място през определено време
+      let x = Math.floor(Math.random()* 350) ;
+
+      this.enemyTimer -= ct.delta;
+
+      if(this.enemyTimer <= 0){
+        ct.types.copy('Enemy',x,780);  
+        this.valueToReduce -= 0.005;
+        this.timerReduction -= this.valueToReduce;
+        this.enemyTimer = this.timerReduction;
+      }
+
+
+      //активиране на стрелянето след изтичане на таймера
+      this.shootTimer--;
+      if(this.shootTimer <= 0){
+        this.shootTimer = 30;
+        for (var player of ct.types.list['Player']) {
+          player.canShoot = true;
+      }
+      }
+
+
+
+    ondraw: ''
+    ondestroy: ''
+    texture: 40b7f7c3-03eb-416a-9746-5ffee4194488
+    extends: {}
+    uid: 685dbace-e814-4fbd-819a-84e99ce4f3aa
+    lastmod: 1623883320715
+  - name: Bullet
+    depth: 1
+    oncreate: |-
+      //спиране на стрелянето 
+      for (var player of ct.types.list['Player']) {
+          player.canShoot = false;
+      }
+    onstep: |-
+      //Проверка за колизия с Enemy
+      if(ct.place.occupied(this,'Enemy')){
+          console.log("Колизия с Enemy");
+          this.kill = true;
+      }
+
+      //Движение
+      this.y+=6;
+
+
+      //Проверка дали е извън обсега
+      if(this.y > 780){
+          this.kill = true;
+      }
+    ondraw: ''
+    ondestroy: ''
+    texture: 9de3c8b6-5ac5-48d5-8e0e-c6cb7f8b6304
+    extends:
+      ctype: Bullet
+    uid: c4b0f05c-b8bb-4a75-9323-7f0d6678c1cc
+    lastmod: 1623882730361
+sounds: []
+styles: []
+rooms:
+  - name: Main Room
+    oncreate: ''
+    onstep: ''
+    ondraw: ''
+    onleave: ''
+    width: 384
+    height: 768
+    backgrounds: []
+    copies:
+      - x: 128
+        'y': 0
+        uid: 6d3ce01e-5415-4ad8-9e72-1be07a769019
+        exts: {}
+      - x: 448
+        'y': 0
+        uid: 685dbace-e814-4fbd-819a-84e99ce4f3aa
+        exts: {}
+      - x: 128
+        'y': 768
+        uid: af5f6e5d-7981-478b-8120-b4fc8c9527c8
+        exts: {}
+    tiles:
+      - depth: -10
+        tiles: []
+        extends: {}
+    uid: 054e2b8b-8fa7-45ad-889d-bb6ee7186947
+    thumbnail: bb6ee7186947
+    extends: {}
+    gridX: 64
+    gridY: 64
+    lastmod: 1623869048227
+actions:
+  - name: MoveLeft
+    methods:
+      - code: keyboard.KeyA
+      - code: keyboard.ArrowLeft
+  - name: MoveRight
+    methods:
+      - code: keyboard.ArrowRight
+      - code: keyboard.KeyD
+  - name: Shoot
+    methods:
+      - code: keyboard.KeyW
+emitterTandems: []
+scripts: []
+starting: 0
+settings:
+  authoring:
+    author: ''
+    site: ''
+    title: Tarikata
+    version:
+      - 0
+      - 0
+      - 0
+    versionPostfix: ''
+  rendering:
+    usePixiLegacy: true
+    maxFPS: 60
+    pixelatedrender: false
+    highDensity: true
+    desktopMode: maximized
+  export:
+    windows: true
+    linux: true
+    mac: true
+    functionWrap: false
+    codeModifier: none
+  branding:
+    icon: -1
+    accent: '#446adb'
+    invertPreloaderScheme: true
+  fps: 30
+fonts: []
+startroom: 054e2b8b-8fa7-45ad-889d-bb6ee7186947
+palette: []
