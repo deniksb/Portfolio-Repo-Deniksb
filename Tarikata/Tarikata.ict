@@ -143,6 +143,10 @@ types:
 
       this.health = 3;
 
+      this.score = 0;
+
+      this.coins = 0;
+
     onstep: |+
       if(ct.actions.MoveLeft.down){
            if(this.x > 0){
@@ -178,18 +182,27 @@ types:
     extends:
       ctype: Player
     uid: 6d3ce01e-5415-4ad8-9e72-1be07a769019
-    lastmod: 1623940381179
+    lastmod: 1623941806967
   - name: Coin
     depth: 1
     oncreate: ''
-    onstep: |-
+    onstep: >-
       //Движение на елемента към играча
+
       this.y -=2.5;
 
-      //Проверка за колизия с играча
+
+      //Проверка за колизия с играча и добавяне на придобитите Coins в
+      player.coins
+
       if(ct.place.occupied(this,'Player')){
           this.kill = true;
           console.log("Колизия регистрирана (PLACEHOLDER)");
+          //добавяне на придобитите Coins в player.coins
+          for (var player of ct.types.list['Player']) {
+          player.coins += 500;
+      }
+
       }
     ondraw: ''
     ondestroy: ''
@@ -197,7 +210,7 @@ types:
     extends:
       ctype: Coin
     uid: af5f6e5d-7981-478b-8120-b4fc8c9527c8
-    lastmod: 1623940396627
+    lastmod: 1623941495946
   - name: Enemy
     depth: 1
     oncreate: ''
@@ -222,9 +235,15 @@ types:
           console.log("Destroyed");
       }
 
-      //Проверка за колизия с Bullet
+      //Проверка за колизия с Bullet и добавяне на точка при убит Enemy
       if(ct.place.occupied(this,'Bullet')){
           this.kill = true;
+
+          //добавяне на точка при убит Enemy
+          for (var player of ct.types.list['Player']) {
+              player.score++;
+      }
+
       }
 
     ondraw: ''
@@ -233,7 +252,7 @@ types:
     extends:
       ctype: Enemy
     uid: 9dfe3b72-2e5a-4b7e-b735-dedd837c7551
-    lastmod: 1623940509088
+    lastmod: 1623941333691
   - name: GameController
     depth: 0
     oncreate: |+
@@ -290,7 +309,7 @@ types:
     texture: 40b7f7c3-03eb-416a-9746-5ffee4194488
     extends: {}
     uid: 685dbace-e814-4fbd-819a-84e99ce4f3aa
-    lastmod: 1623940406141
+    lastmod: 1623941812802
   - name: Bullet
     depth: 1
     oncreate: |-
@@ -319,7 +338,7 @@ types:
     extends:
       ctype: Bullet
     uid: c4b0f05c-b8bb-4a75-9323-7f0d6678c1cc
-    lastmod: 1623919516300
+    lastmod: 1623941254667
 sounds:
   - name: 10 Bonbona
     uid: 0b5ca979-36fe-43ad-bcdb-a8b044652f6b
@@ -329,9 +348,53 @@ sounds:
 styles: []
 rooms:
   - name: Main Room
-    oncreate: ''
-    onstep: ''
-    ondraw: ''
+    oncreate: >+
+      //надпис със събраните точки за една игра
+
+      this.score = 0;
+
+
+      this.scoreLabel = new PIXI.Text('Score: ' + this.score,{fontFamily :
+      'Arial', fontSize: 24, fill : 0xff1010, align : 'center'});
+
+
+      this.addChild(this.scoreLabel);
+
+      this.scoreLabel.x = 0;
+
+      this.scoreLabel.y = 0;
+
+      this.scoreLabel.depth = 1000;
+
+
+
+      //надпис със събраните coins за една игра
+
+
+      this.coins = 0;
+
+
+      this.coinsLabel = new PIXI.Text(this.coins + '€',{fontFamily : 'Arial',
+      fontSize: 24, fill : 0xff1010, align : 'center'});
+
+
+      this.addChild(this.coinsLabel);
+
+      this.coinsLabel.x = 270;
+
+      this.coinsLabel.y = 0;
+
+      this.coinsLabel.depth = 1000;
+
+    onstep: |2
+         for (var player of ct.types.list['Player']) {
+             this.score = player.score;
+             this.coins = player.coins;
+      }
+    ondraw: |-
+      this.scoreLabel.text = 'Score: ' + this.score;
+
+      this.coinsLabel.text = this.coins + '€';
     onleave: ''
     width: 384
     height: 768
@@ -354,7 +417,7 @@ rooms:
     extends: {}
     gridX: 64
     gridY: 64
-    lastmod: 1623919454160
+    lastmod: 1623940693698
 actions:
   - name: MoveLeft
     methods:
