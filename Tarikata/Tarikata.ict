@@ -135,6 +135,7 @@ textures:
     bottom: 32
     uid: a8b24e7c-8e08-4770-99b2-b441c6cd95cb
     padding: 1
+    lastmod: 1624445944117
   - name: IshWave
     untill: 0
     grid:
@@ -208,6 +209,30 @@ textures:
     bottom: 32
     uid: d2a15885-57ca-476e-a2ab-52bf78892a12
     padding: 1
+  - name: Boost
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: 'iba6e72f8-2e92-44f3-926a-fe5c332e0ac1.png}'
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: ba6e72f8-2e92-44f3-926a-fe5c332e0ac1
+    padding: 1
 skeletons: []
 types:
   - name: Player
@@ -265,7 +290,7 @@ types:
     extends:
       ctype: Player
     uid: 6d3ce01e-5415-4ad8-9e72-1be07a769019
-    lastmod: 1624390536963
+    lastmod: 1624446934455
   - name: Coin
     depth: 1
     oncreate: ''
@@ -293,7 +318,7 @@ types:
     extends:
       ctype: Coin
     uid: af5f6e5d-7981-478b-8120-b4fc8c9527c8
-    lastmod: 1624376945495
+    lastmod: 1624445826813
   - name: Enemy
     depth: 1
     oncreate: ''
@@ -339,7 +364,7 @@ types:
     extends:
       ctype: Enemy
     uid: 9dfe3b72-2e5a-4b7e-b735-dedd837c7551
-    lastmod: 1624390371267
+    lastmod: 1624446067727
   - name: GameController
     depth: 0
     oncreate: >+
@@ -405,7 +430,9 @@ types:
       //активиране на стрелянето след изтичане на таймера
       this.shootTimer--;
       if(this.shootTimer <= 0){
-        this.shootTimer = 30;
+           this.shootTimer = 30;
+
+
         for (var player of ct.types.list['Player']) {
           player.canShoot = true;
       }
@@ -418,7 +445,7 @@ types:
     texture: 40b7f7c3-03eb-416a-9746-5ffee4194488
     extends: {}
     uid: 685dbace-e814-4fbd-819a-84e99ce4f3aa
-    lastmod: 1624434472175
+    lastmod: 1624446883063
   - name: Bullet
     depth: 1
     oncreate: |-
@@ -476,7 +503,7 @@ types:
     extends:
       ctype: PowerUp
     uid: bd7010e0-d277-48af-8e34-11defb0828ee
-    lastmod: 1624379347780
+    lastmod: 1624446258850
   - name: IshWave
     depth: 1
     oncreate: ''
@@ -497,17 +524,7 @@ types:
     extends:
       ctype: IshWave
     uid: a5500971-2a34-4982-b547-69c1b7ec05e4
-    lastmod: 1624378540829
-  - name: NewType
-    depth: 0
-    oncreate: ''
-    onstep: this.move();
-    ondraw: ''
-    ondestroy: ''
-    texture: -1
-    extends: {}
-    uid: 538f7af0-3976-4858-9536-228b693ff471
-    lastmod: 1624389937873
+    lastmod: 1624445804103
   - name: EnemySmall
     depth: 1
     oncreate: ''
@@ -553,7 +570,7 @@ types:
       ctype: Enemy
       visible: true
     uid: 6ff48342-0cbc-48ab-9a0c-f385068caf05
-    lastmod: 1624389974669
+    lastmod: 1624445817394
 sounds:
   - name: 10 Bonbona
     uid: 0b5ca979-36fe-43ad-bcdb-a8b044652f6b
@@ -627,10 +644,6 @@ rooms:
         'y': 0
         uid: 685dbace-e814-4fbd-819a-84e99ce4f3aa
         exts: {}
-      - x: 192
-        'y': 768
-        uid: bd7010e0-d277-48af-8e34-11defb0828ee
-        exts: {}
     tiles:
       - depth: -10
         tiles: []
@@ -640,7 +653,7 @@ rooms:
     extends: {}
     gridX: 64
     gridY: 64
-    lastmod: 1624380886655
+    lastmod: 1624446404429
 actions:
   - name: MoveLeft
     methods:
