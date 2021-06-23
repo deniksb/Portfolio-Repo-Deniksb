@@ -10,6 +10,7 @@ libs:
   keyboard: {}
   keyboard.polyfill: {}
   sound.howler: {}
+  random: {}
 textures:
   - name: Player
     untill: 0
@@ -35,31 +36,7 @@ textures:
     bottom: 64
     uid: a8beef41-ee44-47ce-9425-6f321cec9cf7
     padding: 1
-    lastmod: 1623921471795
-  - name: Enemy
-    untill: 0
-    grid:
-      - 1
-      - 1
-    axis:
-      - 0
-      - 0
-    marginx: 0
-    marginy: 0
-    imgWidth: 32
-    imgHeight: 32
-    width: 32
-    height: 32
-    offx: 0
-    offy: 0
-    origname: 'i39eb477b-86f6-4d64-b082-7a26463933dd.png}'
-    shape: rect
-    left: 0
-    right: 32
-    top: 0
-    bottom: 32
-    uid: 39eb477b-86f6-4d64-b082-7a26463933dd
-    padding: 1
+    lastmod: 1624379345680
   - name: Coin
     untill: 0
     grid:
@@ -84,6 +61,7 @@ textures:
     bottom: 32
     uid: 9eb1353f-f733-4601-9fca-079c1e95738d
     padding: 1
+    lastmod: 1624375647028
   - name: GameController
     untill: 0
     grid:
@@ -133,6 +111,103 @@ textures:
     bottom: 16
     uid: 9de3c8b6-5ac5-48d5-8e0e-c6cb7f8b6304
     padding: 1
+  - name: PowerUp
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: 'ia8b24e7c-8e08-4770-99b2-b441c6cd95cb.png}'
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: a8b24e7c-8e08-4770-99b2-b441c6cd95cb
+    padding: 1
+  - name: IshWave
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 380
+    imgHeight: 16
+    width: 380
+    height: 16
+    offx: 0
+    offy: 0
+    origname: 'ia6c0fd93-e722-4e45-8e09-1463cfdadc1a.png}'
+    shape: rect
+    left: 0
+    right: 380
+    top: 0
+    bottom: 16
+    uid: a6c0fd93-e722-4e45-8e09-1463cfdadc1a
+    padding: 1
+  - name: Enemy
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 52
+    imgHeight: 52
+    width: 52
+    height: 52
+    offx: 0
+    offy: 0
+    origname: 'i27d130ce-e4a6-4373-aa96-9efa07cc72fe.png}'
+    shape: rect
+    left: 0
+    right: 52
+    top: 0
+    bottom: 52
+    uid: 27d130ce-e4a6-4373-aa96-9efa07cc72fe
+    padding: 1
+    lastmod: 1624389876478
+  - name: EnemySmall
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: 'id2a15885-57ca-476e-a2ab-52bf78892a12.png}'
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: d2a15885-57ca-476e-a2ab-52bf78892a12
+    padding: 1
 skeletons: []
 types:
   - name: Player
@@ -146,6 +221,8 @@ types:
       this.score = 0;
 
       this.coins = 0;
+
+      this.music = false;
 
     onstep: |+
       if(ct.actions.MoveLeft.down){
@@ -163,6 +240,12 @@ types:
       //Стреляне
       if(ct.actions.Shoot.down && this.canShoot == true){
           ct.types.copy('Bullet',this.x+32,this.y);
+          //временно слагаме soundtrack play тук защото трябва да има интеракция със страницата преди да има звук
+          if(this.music == false){
+          ct.sound.spawn('10 Bonbona');
+          this.music = true;
+          }
+          
       }
 
 
@@ -182,7 +265,7 @@ types:
     extends:
       ctype: Player
     uid: 6d3ce01e-5415-4ad8-9e72-1be07a769019
-    lastmod: 1623941806967
+    lastmod: 1624390536963
   - name: Coin
     depth: 1
     oncreate: ''
@@ -210,13 +293,13 @@ types:
     extends:
       ctype: Coin
     uid: af5f6e5d-7981-478b-8120-b4fc8c9527c8
-    lastmod: 1623941495946
+    lastmod: 1624376945495
   - name: Enemy
     depth: 1
     oncreate: ''
     onstep: |+
       //Движение на елемента към играча
-      this.y -=4;
+      this.y -=6;
 
       //Проверка за колизия с играча
       if(ct.place.occupied(this,'Player')){
@@ -232,11 +315,15 @@ types:
       //Унищожаване при излизане от видимост
       if(this.y < -20){
           this.kill = true;
+          //намаляме healtth на player когато пропусне enemy
+          for (var player of ct.types.list['Player']) {
+          player.health--;
+      }
           console.log("Destroyed");
       }
 
       //Проверка за колизия с Bullet и добавяне на точка при убит Enemy
-      if(ct.place.occupied(this,'Bullet')){
+      if(ct.place.occupied(this,'Bullet') || ct.place.occupied(this,'IshWave')){
           this.kill = true;
 
           //добавяне на точка при убит Enemy
@@ -248,29 +335,40 @@ types:
 
     ondraw: ''
     ondestroy: ''
-    texture: 39eb477b-86f6-4d64-b082-7a26463933dd
+    texture: 27d130ce-e4a6-4373-aa96-9efa07cc72fe
     extends:
       ctype: Enemy
     uid: 9dfe3b72-2e5a-4b7e-b735-dedd837c7551
-    lastmod: 1623941333691
+    lastmod: 1624390371267
   - name: GameController
     depth: 0
-    oncreate: |+
+    oncreate: >+
       //таймер за спаунването на Enemy
+
       this.originalValueEnemyTimer = 85;
+
       this.enemyTimer = this.originalValueEnemyTimer;
+
 
       this.gameTimer = 2000;
 
 
+
       //таймер за дилей на стрелянето на патрони
+
       this.shootTimer = 30;
+
+
+      //променлива която ще умножаваме по -1, за да спаунваме Powerup на всяко
+      второ изтичане на gameTimera
+
+      this.powerup = -1;
 
 
 
     onstep: |+
       //Спаунване на Enemy на случайно място през определено време
-      let x = Math.floor(Math.random()* 350) ;
+      let x = Math.floor(Math.random()* 330) ;
 
       this.enemyTimer -= ct.delta;
       this.gameTimer -= ct.delta;
@@ -281,13 +379,24 @@ types:
         if(this.originalValueEnemyTimer > 20){
            this.originalValueEnemyTimer-=3;
         }
+        //намаляме таймера за стреляне за да не стане невъзможно за убиване на всички enemyтта когато са много бързи
+        if(this.shootTimer > 5){
+          this.shootTimer--;
+        }
         //spawnваме монета
         ct.types.copy('Coin',x,780); 
-       
+
+        // за spawnване на Powerup
+        this.powerup = this.powerup * -1; //на всяко изтичане на таймера сменяме знака, а на всяко второ той е + и спаунваме powerup
+          if(this.powerup > 0){
+            ct.types.copy('PowerUp',Math.floor(Math.random()* 350),780);
+          
+        }
       }
 
+
       if(this.enemyTimer <= 0){
-        ct.types.copy('Enemy',x,780);  
+        ct.types.copy(ct.random.dice('Enemy','EnemySmall'),x,780);  
         this.enemyTimer = this.originalValueEnemyTimer;
         console.log(this.enemyTimer);
       }
@@ -309,7 +418,7 @@ types:
     texture: 40b7f7c3-03eb-416a-9746-5ffee4194488
     extends: {}
     uid: 685dbace-e814-4fbd-819a-84e99ce4f3aa
-    lastmod: 1623941812802
+    lastmod: 1624434472175
   - name: Bullet
     depth: 1
     oncreate: |-
@@ -338,13 +447,123 @@ types:
     extends:
       ctype: Bullet
     uid: c4b0f05c-b8bb-4a75-9323-7f0d6678c1cc
-    lastmod: 1623941254667
+    lastmod: 1624390527318
+  - name: PowerUp
+    depth: 1
+    oncreate: ''
+    onstep: >-
+      //Движение на елемента към играча
+
+      this.y -=2;
+
+
+      //Проверка за колизия с играча и добавяне на придобитите Coins в
+      player.coins
+
+      if(ct.place.occupied(this,'Player')){
+          this.kill = true;
+          console.log("Колизия регистрирана (PLACEHOLDER)");
+          //включване на специален ефект при интеракция на player с powerup
+          ct.sound.spawn('ISH');
+          ct.types.copy('IshWave',0,-400);
+          ct.types.copy('IshWave',0,-200);
+          ct.types.copy('IshWave',0,0);
+
+      }
+    ondraw: ''
+    ondestroy: ''
+    texture: a8b24e7c-8e08-4770-99b2-b441c6cd95cb
+    extends:
+      ctype: PowerUp
+    uid: bd7010e0-d277-48af-8e34-11defb0828ee
+    lastmod: 1624379347780
+  - name: IshWave
+    depth: 1
+    oncreate: ''
+    onstep: |-
+
+
+      //Движение
+      this.y+=10;
+
+
+      //Проверка дали е извън обсега
+      if(this.y > 780){
+          this.kill = true;
+      }
+    ondraw: ''
+    ondestroy: ''
+    texture: a6c0fd93-e722-4e45-8e09-1463cfdadc1a
+    extends:
+      ctype: IshWave
+    uid: a5500971-2a34-4982-b547-69c1b7ec05e4
+    lastmod: 1624378540829
+  - name: NewType
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: -1
+    extends: {}
+    uid: 538f7af0-3976-4858-9536-228b693ff471
+    lastmod: 1624389937873
+  - name: EnemySmall
+    depth: 1
+    oncreate: ''
+    onstep: |-
+      //Движение на елемента към играча
+      this.y -=4;
+
+      //Проверка за колизия с играча
+      if(ct.place.occupied(this,'Player')){
+          this.kill = true;
+          //намаляне на точките кръв на player при колизия с enemy
+          for (var player of ct.types.list['Player']) {
+          player.health--;
+          console.log(player.health);
+      }
+      }
+
+
+      //Унищожаване при излизане от видимост
+      if(this.y < -20){
+          this.kill = true;
+          //намаляме healtth на player когато пропусне enemy
+          for (var player of ct.types.list['Player']) {
+          player.health--;
+      }
+          console.log("Destroyed");
+      }
+
+      //Проверка за колизия с Bullet и добавяне на точка при убит Enemy
+      if(ct.place.occupied(this,'Bullet') || ct.place.occupied(this,'IshWave')){
+          this.kill = true;
+
+          //добавяне на точка при убит Enemy
+          for (var player of ct.types.list['Player']) {
+              player.score++;
+      }
+
+      }
+    ondraw: ''
+    ondestroy: ''
+    texture: d2a15885-57ca-476e-a2ab-52bf78892a12
+    extends:
+      ctype: Enemy
+      visible: true
+    uid: 6ff48342-0cbc-48ab-9a0c-f385068caf05
+    lastmod: 1624389974669
 sounds:
   - name: 10 Bonbona
     uid: 0b5ca979-36fe-43ad-bcdb-a8b044652f6b
     isMusic: true
     origname: s0b5ca979-36fe-43ad-bcdb-a8b044652f6b.mp3
     lastmod: 1623921180305
+  - name: ISH
+    uid: c977a744-d1c2-46bb-96e9-3effa5e1d4b4
+    origname: sc977a744-d1c2-46bb-96e9-3effa5e1d4b4.wav
+    lastmod: 1624379090979
 styles: []
 rooms:
   - name: Main Room
@@ -408,6 +627,10 @@ rooms:
         'y': 0
         uid: 685dbace-e814-4fbd-819a-84e99ce4f3aa
         exts: {}
+      - x: 192
+        'y': 768
+        uid: bd7010e0-d277-48af-8e34-11defb0828ee
+        exts: {}
     tiles:
       - depth: -10
         tiles: []
@@ -417,7 +640,7 @@ rooms:
     extends: {}
     gridX: 64
     gridY: 64
-    lastmod: 1623940693698
+    lastmod: 1624380886655
 actions:
   - name: MoveLeft
     methods:
