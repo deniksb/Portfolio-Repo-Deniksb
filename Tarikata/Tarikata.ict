@@ -233,6 +233,30 @@ textures:
     bottom: 32
     uid: ba6e72f8-2e92-44f3-926a-fe5c332e0ac1
     padding: 1
+  - name: StartButton
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 256
+    imgHeight: 64
+    width: 256
+    height: 64
+    offx: 0
+    offy: 0
+    origname: ia8f1b3b1-6daa-47ef-80e6-f34716bd4141.png
+    shape: rect
+    left: 0
+    right: 256
+    top: 0
+    bottom: 64
+    uid: a8f1b3b1-6daa-47ef-80e6-f34716bd4141
+    padding: 1
 skeletons: []
 types:
   - name: Player
@@ -276,6 +300,14 @@ types:
 
       //промяна при изтичане на точките кръв на player
       if(this.health <= 0){
+
+         //запазваме score и coins в localstorage
+         if(Number(localStorage.getItem(this.score)) < this.score){
+             localStorage.setItem('Score',JSON.stringify(this.score));
+         }
+          var savedCoins = Number(localStorage.getItem('Coins'));
+          localStorage.setItem('Coins',JSON.stringify(this.coins + savedCoins));
+
           //Placeholder
          ct.rooms.clear(); 
       }
@@ -290,7 +322,7 @@ types:
     extends:
       ctype: Player
     uid: 6d3ce01e-5415-4ad8-9e72-1be07a769019
-    lastmod: 1624446934455
+    lastmod: 1624552607589
   - name: Coin
     depth: 1
     oncreate: ''
@@ -401,6 +433,20 @@ types:
 
 
 
+      //проверка дали има запзени неща вече в localStorage
+
+
+      if(localStorage.getItem('Coins') == undefined){
+          localStorage.setItem('Coins','0');
+      }
+
+      if(localStorage.getItem('Score') == undefined){
+          localStorage.setItem('Score','0');
+      }
+
+
+
+
     onstep: >+
       //Спаунване на Enemy на случайно място през определено време
 
@@ -487,7 +533,7 @@ types:
     texture: 40b7f7c3-03eb-416a-9746-5ffee4194488
     extends: {}
     uid: 685dbace-e814-4fbd-819a-84e99ce4f3aa
-    lastmod: 1624538880186
+    lastmod: 1624552418316
   - name: Bullet
     depth: 1
     oncreate: |-
@@ -641,6 +687,20 @@ types:
       ctype: Boost
     uid: b3fa3791-ab90-4386-bd0c-d75927c4e707
     lastmod: 1624538736242
+  - name: StartButton
+    depth: 0
+    oncreate: ''
+    onstep: |-
+      if(ct.actions.Click.down){
+          ct.rooms.switch('Main Room');
+      }
+    ondraw: ''
+    ondestroy: ''
+    texture: a8f1b3b1-6daa-47ef-80e6-f34716bd4141
+    extends:
+      ctype: StartButton
+    uid: 0fa0110b-7a35-450a-85a3-069bad6e3c0e
+    lastmod: 1624551968847
 sounds:
   - name: 10 Bonbona
     uid: 0b5ca979-36fe-43ad-bcdb-a8b044652f6b
@@ -723,7 +783,30 @@ rooms:
     extends: {}
     gridX: 64
     gridY: 64
-    lastmod: 1624446404429
+    lastmod: 1624552117237
+  - name: Menu
+    oncreate: ''
+    onstep: ''
+    ondraw: ''
+    onleave: ''
+    width: 384
+    height: 768
+    backgrounds: []
+    copies:
+      - x: 64
+        'y': 256
+        uid: 0fa0110b-7a35-450a-85a3-069bad6e3c0e
+        exts: {}
+    tiles:
+      - depth: -10
+        tiles: []
+        extends: {}
+    uid: 6b97ed73-285d-445c-b67c-2596275e38a7
+    thumbnail: 2596275e38a7
+    extends: {}
+    gridX: 64
+    gridY: 64
+    lastmod: 1624551980137
 actions:
   - name: MoveLeft
     methods:
@@ -736,6 +819,9 @@ actions:
   - name: Shoot
     methods:
       - code: keyboard.KeyW
+  - name: Click
+    methods:
+      - code: mouse.Left
 emitterTandems: []
 scripts: []
 starting: 0
@@ -768,5 +854,6 @@ settings:
     hideLoadingLogo: true
   fps: 30
 fonts: []
-startroom: 054e2b8b-8fa7-45ad-889d-bb6ee7186947
+startroom: 6b97ed73-285d-445c-b67c-2596275e38a7
 palette: []
+styletick: .nan
