@@ -714,10 +714,6 @@ rooms:
         'y': 0
         uid: 685dbace-e814-4fbd-819a-84e99ce4f3aa
         exts: {}
-      - x: 192
-        'y': 768
-        uid: b3fa3791-ab90-4386-bd0c-d75927c4e707
-        exts: {}
     tiles:
       - depth: -10
         tiles: []
@@ -769,6 +765,7 @@ settings:
     icon: -1
     accent: '#446adb'
     invertPreloaderScheme: true
+    hideLoadingLogo: true
   fps: 30
 fonts: []
 startroom: 054e2b8b-8fa7-45ad-889d-bb6ee7186947
