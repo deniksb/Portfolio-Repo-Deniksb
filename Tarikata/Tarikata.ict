@@ -36,7 +36,7 @@ textures:
     bottom: 64
     uid: a8beef41-ee44-47ce-9425-6f321cec9cf7
     padding: 1
-    lastmod: 1624379345680
+    lastmod: 1624918009225
   - name: Coin
     untill: 0
     grid:
@@ -111,7 +111,7 @@ textures:
     bottom: 16
     uid: 9de3c8b6-5ac5-48d5-8e0e-c6cb7f8b6304
     padding: 1
-    lastmod: 1624903001743
+    lastmod: 1624913445124
   - name: PowerUp
     untill: 0
     grid:
@@ -136,7 +136,7 @@ textures:
     bottom: 32
     uid: a8b24e7c-8e08-4770-99b2-b441c6cd95cb
     padding: 1
-    lastmod: 1624445944117
+    lastmod: 1624914511681
   - name: IshWave
     untill: 0
     grid:
@@ -161,6 +161,7 @@ textures:
     bottom: 16
     uid: a6c0fd93-e722-4e45-8e09-1463cfdadc1a
     padding: 1
+    lastmod: 1624913013236
   - name: Enemy
     untill: 0
     grid:
@@ -185,7 +186,7 @@ textures:
     bottom: 52
     uid: 27d130ce-e4a6-4373-aa96-9efa07cc72fe
     padding: 1
-    lastmod: 1624389876478
+    lastmod: 1624918005141
   - name: EnemySmall
     untill: 0
     grid:
@@ -210,6 +211,7 @@ textures:
     bottom: 32
     uid: d2a15885-57ca-476e-a2ab-52bf78892a12
     padding: 1
+    lastmod: 1624915945507
   - name: Boost
     untill: 0
     grid:
@@ -336,7 +338,133 @@ textures:
     uid: ce83a076-44c9-44e4-a8d0-9757c8a405e3
     padding: 1
     source: 'C:\Users\Denis\Desktop\Aseprite.v1.2.21\Aseprite\nuni.png'
-    lastmod: 1624902802544
+    lastmod: 1624914890112
+  - name: notebig
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 16
+    imgHeight: 32
+    width: 16
+    height: 32
+    offx: 0
+    offy: 0
+    origname: i36144723-5912-4089-afc4-f9c76ad3fbc8.png
+    shape: rect
+    left: 0
+    right: 16
+    top: 0
+    bottom: 32
+    uid: 36144723-5912-4089-afc4-f9c76ad3fbc8
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Aseprite.v1.2.21\Aseprite\notebig.png'
+  - name: bombom
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 42
+    imgHeight: 42
+    width: 42
+    height: 42
+    offx: 0
+    offy: 0
+    origname: if1549002-7fcb-4463-a3da-b26d6061e765.png
+    shape: rect
+    left: 0
+    right: 42
+    top: 0
+    bottom: 42
+    uid: f1549002-7fcb-4463-a3da-b26d6061e765
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Aseprite.v1.2.21\Aseprite\bombom.png'
+  - name: tariket1
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: i6a5762d1-474c-4c0c-b775-492e007a2e48.png
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: 6a5762d1-474c-4c0c-b775-492e007a2e48
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\tariket1.png'
+  - name: tariket2
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: if770eff8-46b3-41f6-9d94-8dfa67502bef.png
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: f770eff8-46b3-41f6-9d94-8dfa67502bef
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\tariket2.png'
+  - name: tariket3
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: i52cf149e-6970-4d73-acc0-6de70b28f71d.png
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: 52cf149e-6970-4d73-acc0-6de70b28f71d
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\tariket3.png'
+    lastmod: 1624920616597
 skeletons: []
 types:
   - name: Player
@@ -368,13 +496,18 @@ types:
 
       //Стреляне
       if(ct.actions.Shoot.down && this.canShoot == true){
-          ct.types.copy('Bullet',this.x+32,this.y);
+          ct.types.copy('Bullet',this.x+20,this.y+50);
           //временно слагаме soundtrack play тук защото трябва да има интеракция със страницата преди да има звук
           if(this.music == false){
           ct.sound.spawn('10 Bonbona');
           this.music = true;
           }
+          this.tex = 'tariket2';
           
+      }
+
+      if(ct.actions.Shoot.released){
+      this.tex = 'tariket1';
       }
 
 
@@ -398,11 +531,11 @@ types:
 
     ondraw: ''
     ondestroy: ''
-    texture: a8beef41-ee44-47ce-9425-6f321cec9cf7
+    texture: 6a5762d1-474c-4c0c-b775-492e007a2e48
     extends:
       ctype: Player
     uid: 6d3ce01e-5415-4ad8-9e72-1be07a769019
-    lastmod: 1624552607589
+    lastmod: 1624920523061
   - name: Coin
     depth: 1
     oncreate: ''
@@ -421,6 +554,7 @@ types:
           //добавяне на придобитите Coins в player.coins
           for (var player of ct.types.list['Player']) {
           player.coins += 500;
+          player.tex = 'tariket3';
       }
 
       }
@@ -638,11 +772,11 @@ types:
       }
     ondraw: ''
     ondestroy: ''
-    texture: 9de3c8b6-5ac5-48d5-8e0e-c6cb7f8b6304
+    texture: 36144723-5912-4089-afc4-f9c76ad3fbc8
     extends:
       ctype: Bullet
     uid: c4b0f05c-b8bb-4a75-9323-7f0d6678c1cc
-    lastmod: 1624390527318
+    lastmod: 1624913556945
   - name: PowerUp
     depth: 1
     oncreate: ''
@@ -692,7 +826,7 @@ types:
     extends:
       ctype: IshWave
     uid: a5500971-2a34-4982-b547-69c1b7ec05e4
-    lastmod: 1624445804103
+    lastmod: 1624912386212
   - name: EnemySmall
     depth: 1
     oncreate: ''
@@ -733,12 +867,12 @@ types:
       }
     ondraw: ''
     ondestroy: ''
-    texture: d2a15885-57ca-476e-a2ab-52bf78892a12
+    texture: f1549002-7fcb-4463-a3da-b26d6061e765
     extends:
       ctype: Enemy
       visible: true
     uid: 6ff48342-0cbc-48ab-9a0c-f385068caf05
-    lastmod: 1624445817394
+    lastmod: 1624916116272
   - name: Boost
     depth: 1
     oncreate: ''
@@ -801,7 +935,7 @@ rooms:
 
 
       this.scoreLabel = new PIXI.Text('Score: ' + this.score,{fontFamily :
-      'Arial', fontSize: 24, fill : 0xff1010, align : 'center'});
+      'Arial', fontSize: 24, fill : 0xF5F5F5, align : 'center'});
 
 
       this.addChild(this.scoreLabel);
@@ -821,7 +955,7 @@ rooms:
 
 
       this.coinsLabel = new PIXI.Text(this.coins + '€',{fontFamily : 'Arial',
-      fontSize: 24, fill : 0xff1010, align : 'center'});
+      fontSize: 24, fill : 0xF5F5F5, align : 'center'});
 
 
       this.addChild(this.coinsLabel);
@@ -850,13 +984,13 @@ rooms:
         extends:
           repeat: no-repeat
     copies:
-      - x: 128
-        'y': 0
-        uid: 6d3ce01e-5415-4ad8-9e72-1be07a769019
-        exts: {}
       - x: 448
         'y': 0
         uid: 685dbace-e814-4fbd-819a-84e99ce4f3aa
+        exts: {}
+      - x: 158
+        'y': 32
+        uid: 6d3ce01e-5415-4ad8-9e72-1be07a769019
         exts: {}
     tiles:
       - depth: -10
@@ -865,9 +999,9 @@ rooms:
     uid: 054e2b8b-8fa7-45ad-889d-bb6ee7186947
     thumbnail: bb6ee7186947
     extends: {}
-    gridX: 64
-    gridY: 64
-    lastmod: 1624901635205
+    gridX: 0
+    gridY: 0
+    lastmod: 1624920496426
   - name: Menu
     oncreate: ''
     onstep: ''
