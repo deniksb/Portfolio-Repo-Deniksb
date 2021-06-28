@@ -1,0 +1,701 @@
+ctjsVersion: 1.5.1
+notes: /* empty */
+libs:
+  place:
+    gridX: 1024
+    gridY: 1024
+  fittoscreen:
+    mode: scaleFit
+  mouse: {}
+  keyboard: {}
+  keyboard.polyfill: {}
+  sound.howler: {}
+  random: {}
+textures:
+  - name: Player
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: 'ia8beef41-ee44-47ce-9425-6f321cec9cf7.png}'
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: a8beef41-ee44-47ce-9425-6f321cec9cf7
+    padding: 1
+    lastmod: 1624379345680
+  - name: Coin
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: 'i9eb1353f-f733-4601-9fca-079c1e95738d.png}'
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: 9eb1353f-f733-4601-9fca-079c1e95738d
+    padding: 1
+    lastmod: 1624375647028
+  - name: GameController
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: 'i40b7f7c3-03eb-416a-9746-5ffee4194488.png}'
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: 40b7f7c3-03eb-416a-9746-5ffee4194488
+    padding: 1
+    lastmod: 1623917723356
+  - name: Bullet
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 8
+    imgHeight: 16
+    width: 8
+    height: 16
+    offx: 0
+    offy: 0
+    origname: 'i9de3c8b6-5ac5-48d5-8e0e-c6cb7f8b6304.png}'
+    shape: rect
+    left: 0
+    right: 8
+    top: 0
+    bottom: 16
+    uid: 9de3c8b6-5ac5-48d5-8e0e-c6cb7f8b6304
+    padding: 1
+  - name: PowerUp
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: 'ia8b24e7c-8e08-4770-99b2-b441c6cd95cb.png}'
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: a8b24e7c-8e08-4770-99b2-b441c6cd95cb
+    padding: 1
+    lastmod: 1624445944117
+  - name: IshWave
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 380
+    imgHeight: 16
+    width: 380
+    height: 16
+    offx: 0
+    offy: 0
+    origname: 'ia6c0fd93-e722-4e45-8e09-1463cfdadc1a.png}'
+    shape: rect
+    left: 0
+    right: 380
+    top: 0
+    bottom: 16
+    uid: a6c0fd93-e722-4e45-8e09-1463cfdadc1a
+    padding: 1
+  - name: Enemy
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 52
+    imgHeight: 52
+    width: 52
+    height: 52
+    offx: 0
+    offy: 0
+    origname: 'i27d130ce-e4a6-4373-aa96-9efa07cc72fe.png}'
+    shape: rect
+    left: 0
+    right: 52
+    top: 0
+    bottom: 52
+    uid: 27d130ce-e4a6-4373-aa96-9efa07cc72fe
+    padding: 1
+    lastmod: 1624389876478
+  - name: EnemySmall
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: 'id2a15885-57ca-476e-a2ab-52bf78892a12.png}'
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: d2a15885-57ca-476e-a2ab-52bf78892a12
+    padding: 1
+  - name: Boost
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: 'iba6e72f8-2e92-44f3-926a-fe5c332e0ac1.png}'
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: ba6e72f8-2e92-44f3-926a-fe5c332e0ac1
+    padding: 1
+skeletons: []
+types:
+  - name: Player
+    depth: 1
+    oncreate: |+
+      this.canShoot = true;
+
+
+      this.health = 3;
+
+      this.score = 0;
+
+      this.coins = 0;
+
+      this.music = false;
+
+    onstep: |+
+      if(ct.actions.MoveLeft.down){
+           if(this.x > 0){
+          this.x -= 10;
+           }
+      }
+      else if(ct.actions.MoveRight.down){
+          if(this.x < 318){
+              this.x += 10; 
+          }
+         
+      }
+
+      //Стреляне
+      if(ct.actions.Shoot.down && this.canShoot == true){
+          ct.types.copy('Bullet',this.x+32,this.y);
+          //временно слагаме soundtrack play тук защото трябва да има интеракция със страницата преди да има звук
+          if(this.music == false){
+          ct.sound.spawn('10 Bonbona');
+          this.music = true;
+          }
+          
+      }
+
+
+      //промяна при изтичане на точките кръв на player
+      if(this.health <= 0){
+          //Placeholder
+         ct.rooms.clear(); 
+      }
+
+
+
+
+
+    ondraw: ''
+    ondestroy: ''
+    texture: a8beef41-ee44-47ce-9425-6f321cec9cf7
+    extends:
+      ctype: Player
+    uid: 6d3ce01e-5415-4ad8-9e72-1be07a769019
+    lastmod: 1624446934455
+  - name: Coin
+    depth: 1
+    oncreate: ''
+    onstep: >-
+      //Движение на елемента към играча
+
+      this.y -=2.5;
+
+
+      //Проверка за колизия с играча и добавяне на придобитите Coins в
+      player.coins
+
+      if(ct.place.occupied(this,'Player')){
+          this.kill = true;
+          console.log("Колизия регистрирана (PLACEHOLDER)");
+          //добавяне на придобитите Coins в player.coins
+          for (var player of ct.types.list['Player']) {
+          player.coins += 500;
+      }
+
+      }
+    ondraw: ''
+    ondestroy: ''
+    texture: 9eb1353f-f733-4601-9fca-079c1e95738d
+    extends:
+      ctype: Coin
+    uid: af5f6e5d-7981-478b-8120-b4fc8c9527c8
+    lastmod: 1624445826813
+  - name: Enemy
+    depth: 1
+    oncreate: ''
+    onstep: |+
+      //Движение на елемента към играча
+      this.y -=6;
+
+      //Проверка за колизия с играча
+      if(ct.place.occupied(this,'Player')){
+          this.kill = true;
+          //намаляне на точките кръв на player при колизия с enemy
+          for (var player of ct.types.list['Player']) {
+          player.health--;
+          console.log(player.health);
+      }
+      }
+
+
+      //Унищожаване при излизане от видимост
+      if(this.y < -20){
+          this.kill = true;
+          //намаляме healtth на player когато пропусне enemy
+          for (var player of ct.types.list['Player']) {
+          player.health--;
+      }
+          console.log("Destroyed");
+      }
+
+      //Проверка за колизия с Bullet и добавяне на точка при убит Enemy
+      if(ct.place.occupied(this,'Bullet') || ct.place.occupied(this,'IshWave')){
+          this.kill = true;
+
+          //добавяне на точка при убит Enemy
+          for (var player of ct.types.list['Player']) {
+              player.score++;
+      }
+
+      }
+
+    ondraw: ''
+    ondestroy: ''
+    texture: 27d130ce-e4a6-4373-aa96-9efa07cc72fe
+    extends:
+      ctype: Enemy
+    uid: 9dfe3b72-2e5a-4b7e-b735-dedd837c7551
+    lastmod: 1624446067727
+  - name: GameController
+    depth: 0
+    oncreate: >+
+      //таймер за спаунването на Enemy
+
+      this.originalValueEnemyTimer = 85;
+
+      this.enemyTimer = this.originalValueEnemyTimer;
+
+
+      this.gameTimer = 2000;
+
+
+
+      //таймер за дилей на стрелянето на патрони
+
+      this.shootTimer = 30;
+
+
+      //променлива която ще умножаваме по -1, за да спаунваме Powerup на всяко
+      второ изтичане на gameTimera
+
+      this.powerup = -1;
+
+
+
+    onstep: |+
+      //Спаунване на Enemy на случайно място през определено време
+      let x = Math.floor(Math.random()* 330) ;
+
+      this.enemyTimer -= ct.delta;
+      this.gameTimer -= ct.delta;
+
+      if(this.gameTimer <= 0){
+        //увеличаваме скоростта на spawnване на enemy
+        this.gameTimer = 2000;
+        if(this.originalValueEnemyTimer > 20){
+           this.originalValueEnemyTimer-=3;
+        }
+        //намаляме таймера за стреляне за да не стане невъзможно за убиване на всички enemyтта когато са много бързи
+        if(this.shootTimer > 5){
+          this.shootTimer--;
+        }
+        //spawnваме монета
+        ct.types.copy('Coin',x,780); 
+
+        // за spawnване на Powerup
+        this.powerup = this.powerup * -1; //на всяко изтичане на таймера сменяме знака, а на всяко второ той е + и спаунваме powerup
+          if(this.powerup > 0){
+            ct.types.copy('PowerUp',Math.floor(Math.random()* 350),780);
+          
+        }
+      }
+
+
+      if(this.enemyTimer <= 0){
+        ct.types.copy(ct.random.dice('Enemy','EnemySmall'),x,780);  
+        this.enemyTimer = this.originalValueEnemyTimer;
+        console.log(this.enemyTimer);
+      }
+
+
+      //активиране на стрелянето след изтичане на таймера
+      this.shootTimer--;
+      if(this.shootTimer <= 0){
+           this.shootTimer = 30;
+
+
+        for (var player of ct.types.list['Player']) {
+          player.canShoot = true;
+      }
+      }
+
+
+
+    ondraw: ''
+    ondestroy: ''
+    texture: 40b7f7c3-03eb-416a-9746-5ffee4194488
+    extends: {}
+    uid: 685dbace-e814-4fbd-819a-84e99ce4f3aa
+    lastmod: 1624446883063
+  - name: Bullet
+    depth: 1
+    oncreate: |-
+      //спиране на стрелянето 
+      for (var player of ct.types.list['Player']) {
+          player.canShoot = false;
+      }
+    onstep: |-
+      //Проверка за колизия с Enemy
+      if(ct.place.occupied(this,'Enemy')){
+          console.log("Колизия с Enemy");
+          this.kill = true;
+      }
+
+      //Движение
+      this.y+=6;
+
+
+      //Проверка дали е извън обсега
+      if(this.y > 780){
+          this.kill = true;
+      }
+    ondraw: ''
+    ondestroy: ''
+    texture: 9de3c8b6-5ac5-48d5-8e0e-c6cb7f8b6304
+    extends:
+      ctype: Bullet
+    uid: c4b0f05c-b8bb-4a75-9323-7f0d6678c1cc
+    lastmod: 1624390527318
+  - name: PowerUp
+    depth: 1
+    oncreate: ''
+    onstep: >-
+      //Движение на елемента към играча
+
+      this.y -=2;
+
+
+      //Проверка за колизия с играча и добавяне на придобитите Coins в
+      player.coins
+
+      if(ct.place.occupied(this,'Player')){
+          this.kill = true;
+          console.log("Колизия регистрирана (PLACEHOLDER)");
+          //включване на специален ефект при интеракция на player с powerup
+          ct.sound.spawn('ISH');
+          ct.types.copy('IshWave',0,-400);
+          ct.types.copy('IshWave',0,-200);
+          ct.types.copy('IshWave',0,0);
+
+      }
+    ondraw: ''
+    ondestroy: ''
+    texture: a8b24e7c-8e08-4770-99b2-b441c6cd95cb
+    extends:
+      ctype: PowerUp
+    uid: bd7010e0-d277-48af-8e34-11defb0828ee
+    lastmod: 1624446258850
+  - name: IshWave
+    depth: 1
+    oncreate: ''
+    onstep: |-
+
+
+      //Движение
+      this.y+=10;
+
+
+      //Проверка дали е извън обсега
+      if(this.y > 780){
+          this.kill = true;
+      }
+    ondraw: ''
+    ondestroy: ''
+    texture: a6c0fd93-e722-4e45-8e09-1463cfdadc1a
+    extends:
+      ctype: IshWave
+    uid: a5500971-2a34-4982-b547-69c1b7ec05e4
+    lastmod: 1624445804103
+  - name: EnemySmall
+    depth: 1
+    oncreate: ''
+    onstep: |-
+      //Движение на елемента към играча
+      this.y -=4;
+
+      //Проверка за колизия с играча
+      if(ct.place.occupied(this,'Player')){
+          this.kill = true;
+          //намаляне на точките кръв на player при колизия с enemy
+          for (var player of ct.types.list['Player']) {
+          player.health--;
+          console.log(player.health);
+      }
+      }
+
+
+      //Унищожаване при излизане от видимост
+      if(this.y < -20){
+          this.kill = true;
+          //намаляме healtth на player когато пропусне enemy
+          for (var player of ct.types.list['Player']) {
+          player.health--;
+      }
+          console.log("Destroyed");
+      }
+
+      //Проверка за колизия с Bullet и добавяне на точка при убит Enemy
+      if(ct.place.occupied(this,'Bullet') || ct.place.occupied(this,'IshWave')){
+          this.kill = true;
+
+          //добавяне на точка при убит Enemy
+          for (var player of ct.types.list['Player']) {
+              player.score++;
+      }
+
+      }
+    ondraw: ''
+    ondestroy: ''
+    texture: d2a15885-57ca-476e-a2ab-52bf78892a12
+    extends:
+      ctype: Enemy
+      visible: true
+    uid: 6ff48342-0cbc-48ab-9a0c-f385068caf05
+    lastmod: 1624445817394
+sounds:
+  - name: 10 Bonbona
+    uid: 0b5ca979-36fe-43ad-bcdb-a8b044652f6b
+    isMusic: true
+    origname: s0b5ca979-36fe-43ad-bcdb-a8b044652f6b.mp3
+    lastmod: 1623921180305
+  - name: ISH
+    uid: c977a744-d1c2-46bb-96e9-3effa5e1d4b4
+    origname: sc977a744-d1c2-46bb-96e9-3effa5e1d4b4.wav
+    lastmod: 1624379090979
+styles: []
+rooms:
+  - name: Main Room
+    oncreate: >+
+      //надпис със събраните точки за една игра
+
+      this.score = 0;
+
+
+      this.scoreLabel = new PIXI.Text('Score: ' + this.score,{fontFamily :
+      'Arial', fontSize: 24, fill : 0xff1010, align : 'center'});
+
+
+      this.addChild(this.scoreLabel);
+
+      this.scoreLabel.x = 0;
+
+      this.scoreLabel.y = 0;
+
+      this.scoreLabel.depth = 1000;
+
+
+
+      //надпис със събраните coins за една игра
+
+
+      this.coins = 0;
+
+
+      this.coinsLabel = new PIXI.Text(this.coins + '€',{fontFamily : 'Arial',
+      fontSize: 24, fill : 0xff1010, align : 'center'});
+
+
+      this.addChild(this.coinsLabel);
+
+      this.coinsLabel.x = 270;
+
+      this.coinsLabel.y = 0;
+
+      this.coinsLabel.depth = 1000;
+
+    onstep: |2
+         for (var player of ct.types.list['Player']) {
+             this.score = player.score;
+             this.coins = player.coins;
+      }
+    ondraw: |-
+      this.scoreLabel.text = 'Score: ' + this.score;
+
+      this.coinsLabel.text = this.coins + '€';
+    onleave: ''
+    width: 384
+    height: 768
+    backgrounds: []
+    copies:
+      - x: 128
+        'y': 0
+        uid: 6d3ce01e-5415-4ad8-9e72-1be07a769019
+        exts: {}
+      - x: 448
+        'y': 0
+        uid: 685dbace-e814-4fbd-819a-84e99ce4f3aa
+        exts: {}
+    tiles:
+      - depth: -10
+        tiles: []
+        extends: {}
+    uid: 054e2b8b-8fa7-45ad-889d-bb6ee7186947
+    thumbnail: bb6ee7186947
+    extends: {}
+    gridX: 64
+    gridY: 64
+    lastmod: 1624446404429
+actions:
+  - name: MoveLeft
+    methods:
+      - code: keyboard.KeyA
+      - code: keyboard.ArrowLeft
+  - name: MoveRight
+    methods:
+      - code: keyboard.ArrowRight
+      - code: keyboard.KeyD
+  - name: Shoot
+    methods:
+      - code: keyboard.KeyW
+emitterTandems: []
+scripts: []
+starting: 0
+settings:
+  authoring:
+    author: ''
+    site: ''
+    title: Tarikata
+    version:
+      - 0
+      - 0
+      - 0
+    versionPostfix: ''
+  rendering:
+    usePixiLegacy: true
+    maxFPS: 60
+    pixelatedrender: false
+    highDensity: true
+    desktopMode: maximized
+  export:
+    windows: true
+    linux: true
+    mac: true
+    functionWrap: false
+    codeModifier: none
+  branding:
+    icon: -1
+    accent: '#446adb'
+    invertPreloaderScheme: true
+  fps: 30
+fonts: []
+startroom: 054e2b8b-8fa7-45ad-889d-bb6ee7186947
+palette: []
