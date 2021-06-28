@@ -1,4 +1,4 @@
-ctjsVersion: 1.7.0
+ctjsVersion: 1.5.1
 notes: /* empty */
 libs:
   place:
@@ -61,7 +61,7 @@ textures:
     bottom: 32
     uid: 9eb1353f-f733-4601-9fca-079c1e95738d
     padding: 1
-    lastmod: 1624375647028
+    lastmod: 1624902056757
   - name: GameController
     untill: 0
     grid:
@@ -111,6 +111,7 @@ textures:
     bottom: 16
     uid: 9de3c8b6-5ac5-48d5-8e0e-c6cb7f8b6304
     padding: 1
+    lastmod: 1624903001743
   - name: PowerUp
     untill: 0
     grid:
@@ -257,6 +258,85 @@ textures:
     bottom: 64
     uid: a8f1b3b1-6daa-47ef-80e6-f34716bd4141
     padding: 1
+  - name: Background
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 384
+    imgHeight: 768
+    width: 384
+    height: 768
+    offx: 0
+    offy: 0
+    origname: i1cfd8d0d-afe6-4674-8c03-c252ebecd1bf.gif
+    shape: rect
+    left: 0
+    right: 384
+    top: 0
+    bottom: 768
+    uid: 1cfd8d0d-afe6-4674-8c03-c252ebecd1bf
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Aseprite.v1.2.21\Aseprite\Sprite-0001.gif'
+    tiled: true
+    r: 192
+    lastmod: 1624901622478
+  - name: euro
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: i59bec035-7804-484e-a59f-7bac714e1cd2.png
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: 59bec035-7804-484e-a59f-7bac714e1cd2
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Aseprite.v1.2.21\Aseprite\euro.png'
+  - name: nuni
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: ice83a076-44c9-44e4-a8d0-9757c8a405e3.png
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: ce83a076-44c9-44e4-a8d0-9757c8a405e3
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Aseprite.v1.2.21\Aseprite\nuni.png'
+    lastmod: 1624902802544
 skeletons: []
 types:
   - name: Player
@@ -346,11 +426,11 @@ types:
       }
     ondraw: ''
     ondestroy: ''
-    texture: 9eb1353f-f733-4601-9fca-079c1e95738d
+    texture: 59bec035-7804-484e-a59f-7bac714e1cd2
     extends:
       ctype: Coin
     uid: af5f6e5d-7981-478b-8120-b4fc8c9527c8
-    lastmod: 1624445826813
+    lastmod: 1624902073528
   - name: Enemy
     depth: 1
     oncreate: ''
@@ -587,11 +667,11 @@ types:
       }
     ondraw: ''
     ondestroy: ''
-    texture: a8b24e7c-8e08-4770-99b2-b441c6cd95cb
+    texture: ce83a076-44c9-44e4-a8d0-9757c8a405e3
     extends:
       ctype: PowerUp
     uid: bd7010e0-d277-48af-8e34-11defb0828ee
-    lastmod: 1624538683800
+    lastmod: 1624902792945
   - name: IshWave
     depth: 1
     oncreate: ''
@@ -764,7 +844,11 @@ rooms:
     onleave: ''
     width: 384
     height: 768
-    backgrounds: []
+    backgrounds:
+      - depth: 0
+        texture: 1cfd8d0d-afe6-4674-8c03-c252ebecd1bf
+        extends:
+          repeat: no-repeat
     copies:
       - x: 128
         'y': 0
@@ -783,7 +867,7 @@ rooms:
     extends: {}
     gridX: 64
     gridY: 64
-    lastmod: 1624552117237
+    lastmod: 1624901635205
   - name: Menu
     oncreate: ''
     onstep: ''
