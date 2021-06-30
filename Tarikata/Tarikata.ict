@@ -260,6 +260,7 @@ textures:
     bottom: 64
     uid: a8f1b3b1-6daa-47ef-80e6-f34716bd4141
     padding: 1
+    lastmod: 1625067020324
   - name: Background
     untill: 0
     grid:
@@ -490,6 +491,31 @@ textures:
     bottom: 20
     uid: 5eb228fd-19ae-4528-a30b-49765e9f8c3a
     padding: 1
+  - name: play
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: ia37f9b57-7fcb-4b33-8c33-6e76d036773b.png
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: a37f9b57-7fcb-4b33-8c33-6e76d036773b
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Aseprite.v1.2.21\Aseprite\play.png'
 skeletons: []
 types:
   - name: Player
@@ -952,7 +978,7 @@ types:
     uid: b3fa3791-ab90-4386-bd0c-d75927c4e707
     lastmod: 1624922462145
   - name: StartButton
-    depth: 0
+    depth: 1
     oncreate: ''
     onstep: |-
       if(ct.actions.Click.down){
@@ -960,11 +986,11 @@ types:
       }
     ondraw: ''
     ondestroy: ''
-    texture: a8f1b3b1-6daa-47ef-80e6-f34716bd4141
+    texture: a37f9b57-7fcb-4b33-8c33-6e76d036773b
     extends:
       ctype: StartButton
     uid: 0fa0110b-7a35-450a-85a3-069bad6e3c0e
-    lastmod: 1624551968847
+    lastmod: 1625068439435
   - name: Health
     depth: 1
     oncreate: ''
@@ -1081,10 +1107,14 @@ rooms:
     onleave: ''
     width: 384
     height: 768
-    backgrounds: []
+    backgrounds:
+      - depth: 0
+        texture: 1cfd8d0d-afe6-4674-8c03-c252ebecd1bf
+        extends:
+          repeat: no-repeat
     copies:
-      - x: 64
-        'y': 256
+      - x: 160
+        'y': 512
         uid: 0fa0110b-7a35-450a-85a3-069bad6e3c0e
         exts: {}
     tiles:
@@ -1094,9 +1124,9 @@ rooms:
     uid: 6b97ed73-285d-445c-b67c-2596275e38a7
     thumbnail: 2596275e38a7
     extends: {}
-    gridX: 64
-    gridY: 64
-    lastmod: 1625065937713
+    gridX: 32
+    gridY: 32
+    lastmod: 1625068498645
   - name: Death Screen
     oncreate: >
       //надпис със събраните точки за една игра
@@ -1164,7 +1194,11 @@ rooms:
         texture: 1cfd8d0d-afe6-4674-8c03-c252ebecd1bf
         extends:
           repeat: no-repeat
-    copies: []
+    copies:
+      - x: 160
+        'y': 512
+        uid: 0fa0110b-7a35-450a-85a3-069bad6e3c0e
+        exts: {}
     tiles:
       - depth: -10
         tiles: []
@@ -1172,9 +1206,9 @@ rooms:
     uid: 99db4e59-db90-41a0-9e62-b6d954610e22
     thumbnail: b6d954610e22
     extends: {}
-    gridX: 64
-    gridY: 64
-    lastmod: 1625066668840
+    gridX: 32
+    gridY: 32
+    lastmod: 1625068570753
 actions:
   - name: MoveLeft
     methods:
