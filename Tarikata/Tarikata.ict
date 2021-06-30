@@ -1,4 +1,4 @@
-ctjsVersion: 1.5.1
+ctjsVersion: 1.7.0
 notes: /* empty */
 libs:
   place:
@@ -547,7 +547,8 @@ types:
           localStorage.setItem('Coins',JSON.stringify(this.coins + savedCoins));
 
           //Placeholder
-         ct.rooms.clear(); 
+          localStorage.setItem('CurrentScore', JSON.stringify(this.score));
+         ct.rooms.switch('Death Screen');
       }
 
 
@@ -560,7 +561,7 @@ types:
     extends:
       ctype: Player
     uid: 6d3ce01e-5415-4ad8-9e72-1be07a769019
-    lastmod: 1624922299328
+    lastmod: 1625066159729
   - name: Coin
     depth: 1
     oncreate: ''
@@ -786,7 +787,7 @@ types:
     texture: 40b7f7c3-03eb-416a-9746-5ffee4194488
     extends: {}
     uid: 685dbace-e814-4fbd-819a-84e99ce4f3aa
-    lastmod: 1624552418316
+    lastmod: 1625066056368
   - name: Bullet
     depth: 1
     oncreate: |-
@@ -1072,7 +1073,7 @@ rooms:
     extends: {}
     gridX: 8
     gridY: 8
-    lastmod: 1624920496426
+    lastmod: 1625066689196
   - name: Menu
     oncreate: ''
     onstep: ''
@@ -1095,7 +1096,85 @@ rooms:
     extends: {}
     gridX: 64
     gridY: 64
-    lastmod: 1624551980137
+    lastmod: 1625065937713
+  - name: Death Screen
+    oncreate: >
+      //надпис със събраните точки за една игра
+
+      this.score = localStorage.getItem('CurrentScore');
+
+
+      this.scoreLabel = new PIXI.Text('Score:' + this.score,{fontFamily :
+      'Lucida Console', fontSize: 40, fill : 0xF5F5F5, align : 'center'});
+
+
+      this.addChild(this.scoreLabel);
+
+      this.scoreLabel.x = 0;
+
+      this.scoreLabel.y = 100;
+
+      this.scoreLabel.depth = 1000;
+
+
+      //надпис с най-високия резултат
+
+      this.scoreHigh = localStorage.getItem('Score');
+
+
+      this.highscoreLabel = new PIXI.Text('High Score:' +
+      this.scoreHigh,{fontFamily : 'Lucida Console', fontSize: 40, fill :
+      0xF5F5F5, align : 'center'});
+
+
+      this.addChild(this.highscoreLabel);
+
+      this.highscoreLabel.x = 0;
+
+      this.highscoreLabel.y = 200;
+
+      this.highscoreLabel.depth = 1000;
+
+
+
+      //надпис с парите
+
+
+      this.coins = localStorage.getItem('Coins');
+
+
+      this.coinsLabel = new PIXI.Text(this.coins + '€',{fontFamily : 'Lucida
+      Console', fontSize: 40, fill : 0xF5F5F5, align : 'center'});
+
+
+      this.addChild(this.coinsLabel);
+
+      this.coinsLabel.x = 0;
+
+      this.coinsLabel.y = 300;
+
+      this.coinsLabel.depth = 1000;
+    onstep: ''
+    ondraw: ''
+    onleave: ''
+    width: 384
+    height: 768
+    backgrounds:
+      - depth: 0
+        texture: 1cfd8d0d-afe6-4674-8c03-c252ebecd1bf
+        extends:
+          repeat: no-repeat
+    copies: []
+    tiles:
+      - depth: -10
+        tiles: []
+        extends: {}
+    uid: 99db4e59-db90-41a0-9e62-b6d954610e22
+    thumbnail: b6d954610e22
+    extends: {}
+    gridX: 64
+    gridY: 64
+    lastmod: 1625066668840
 actions:
   - name: MoveLeft
     methods:
