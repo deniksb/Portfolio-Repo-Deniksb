@@ -620,11 +620,15 @@ types:
       }
 
       //Стреляне
-      if(this.canShoot == true){
+      if(ct.actions.Shoot.down && this.canShoot == true){
           ct.types.copy('Bullet',this.x+20,this.y+50);
 
           this.tex = 'tariket2';
           
+      }
+
+      if(ct.actions.Shoot.released){
+      this.tex = 'tariket1';
       }
 
 
@@ -657,7 +661,7 @@ types:
     extends:
       ctype: Player
     uid: 6d3ce01e-5415-4ad8-9e72-1be07a769019
-    lastmod: 1625181022550
+    lastmod: 1625182446978
   - name: Coin
     depth: 1
     oncreate: ''
@@ -1095,44 +1099,6 @@ types:
       visible: true
     uid: 21e2642c-a76b-4103-bf7c-18cf891177b4
     lastmod: 1625180496904
-  - name: LeftTouchPanel
-    depth: 1
-    oncreate: ''
-    onstep: |-
-      if(ct.place.occupied(this,'Cursor')){
-               for (var player of ct.types.list['Player']) {
-               if(player.x > 0){
-          player.x -= 10;
-           }
-      }
-
-      }
-    ondraw: ''
-    ondestroy: ''
-    texture: 6ffa9d6e-e5ea-449d-94b9-d698c2770439
-    extends:
-      ctype: LeftTouchPanel
-    uid: e9997230-3a70-4739-a0aa-a0caff1f2327
-    lastmod: 1625181027368
-  - name: RightTouchPanel
-    depth: 1
-    oncreate: ''
-    onstep: |-
-      if(ct.place.occupied(this,'Cursor')){
-          for (var player of ct.types.list['Player']) {
-          if(player.x < 318){
-              player.x += 10; 
-          }
-      }
-
-      }
-    ondraw: ''
-    ondestroy: ''
-    texture: fd4c17ed-c5cc-4d51-afdb-99bca1e35f50
-    extends:
-      ctype: RightTouchPanel
-    uid: c8feb518-11c1-43d1-9daf-3bee7e371c4b
-    lastmod: 1625181031037
 sounds:
   - name: 10 Bonbona
     uid: 0b5ca979-36fe-43ad-bcdb-a8b044652f6b
@@ -1210,21 +1176,9 @@ rooms:
         'y': 32
         uid: 6d3ce01e-5415-4ad8-9e72-1be07a769019
         exts: {}
-      - x: 704
-        'y': 64
-        uid: c8feb518-11c1-43d1-9daf-3bee7e371c4b
-        exts: {}
       - x: 192
         'y': 128
         uid: 21e2642c-a76b-4103-bf7c-18cf891177b4
-        exts: {}
-      - x: 192
-        'y': 0
-        uid: c8feb518-11c1-43d1-9daf-3bee7e371c4b
-        exts: {}
-      - x: 0
-        'y': 0
-        uid: e9997230-3a70-4739-a0aa-a0caff1f2327
         exts: {}
     tiles:
       - depth: -10
@@ -1360,6 +1314,7 @@ actions:
   - name: Click
     methods:
       - code: mouse.Left
+      - code: mouse.Right
 emitterTandems: []
 scripts: []
 starting: 0
