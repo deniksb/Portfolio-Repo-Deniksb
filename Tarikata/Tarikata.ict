@@ -1,4 +1,4 @@
-ctjsVersion: 1.7.0
+ctjsVersion: 1.5.1
 notes: /* empty */
 libs:
   place:
@@ -516,6 +516,80 @@ textures:
     uid: a37f9b57-7fcb-4b33-8c33-6e76d036773b
     padding: 1
     source: 'C:\Users\Denis\Desktop\Aseprite.v1.2.21\Aseprite\play.png'
+  - name: Cursor
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 4
+    imgHeight: 4
+    width: 4
+    height: 4
+    offx: 0
+    offy: 0
+    origname: 'ice79eb65-049d-4f83-86aa-8646dfd642ba.png}'
+    shape: rect
+    left: 0
+    right: 4
+    top: 0
+    bottom: 4
+    uid: ce79eb65-049d-4f83-86aa-8646dfd642ba
+    padding: 1
+    lastmod: 1625179677051
+  - name: RightTouchPanel
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 192
+    imgHeight: 768
+    width: 192
+    height: 768
+    offx: 0
+    offy: 0
+    origname: 'ifd4c17ed-c5cc-4d51-afdb-99bca1e35f50.png}'
+    shape: rect
+    left: 0
+    right: 192
+    top: 0
+    bottom: 768
+    uid: fd4c17ed-c5cc-4d51-afdb-99bca1e35f50
+    padding: 1
+    lastmod: 1625180999367
+  - name: LeftTouchPanel
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 192
+    imgHeight: 768
+    width: 192
+    height: 768
+    offx: 0
+    offy: 0
+    origname: 'i6ffa9d6e-e5ea-449d-94b9-d698c2770439.png}'
+    shape: rect
+    left: 0
+    right: 192
+    top: 0
+    bottom: 768
+    uid: 6ffa9d6e-e5ea-449d-94b9-d698c2770439
+    padding: 1
 skeletons: []
 types:
   - name: Player
@@ -524,7 +598,7 @@ types:
       this.canShoot = true;
 
 
-      this.health = 3;
+      this.health = 1;
 
       this.score = 0;
 
@@ -546,20 +620,15 @@ types:
       }
 
       //Стреляне
-      if(ct.actions.Shoot.down && this.canShoot == true){
+      if(this.canShoot == true){
           ct.types.copy('Bullet',this.x+20,this.y+50);
-          //временно слагаме soundtrack play тук защото трябва да има интеракция със страницата преди да има звук
-          if(this.music == false){
-          ct.sound.spawn('10 Bonbona');
-          this.music = true;
-          }
+
           this.tex = 'tariket2';
           
       }
 
-      if(ct.actions.Shoot.released){
-      this.tex = 'tariket1';
-      }
+
+
 
 
       //промяна при изтичане на точките кръв на player
@@ -574,6 +643,7 @@ types:
 
           //Placeholder
           localStorage.setItem('CurrentScore', JSON.stringify(this.score));
+          ct.sound.stop('10 Bonbona');
          ct.rooms.switch('Death Screen');
       }
 
@@ -587,7 +657,7 @@ types:
     extends:
       ctype: Player
     uid: 6d3ce01e-5415-4ad8-9e72-1be07a769019
-    lastmod: 1625066159729
+    lastmod: 1625181022550
   - name: Coin
     depth: 1
     oncreate: ''
@@ -676,7 +746,7 @@ types:
     extends:
       ctype: Enemy
     uid: 9dfe3b72-2e5a-4b7e-b735-dedd837c7551
-    lastmod: 1624922459120
+    lastmod: 1625179749218
   - name: GameController
     depth: 0
     oncreate: >+
@@ -813,7 +883,7 @@ types:
     texture: 40b7f7c3-03eb-416a-9746-5ffee4194488
     extends: {}
     uid: 685dbace-e814-4fbd-819a-84e99ce4f3aa
-    lastmod: 1625066056368
+    lastmod: 1625178759473
   - name: Bullet
     depth: 1
     oncreate: |-
@@ -842,7 +912,7 @@ types:
     extends:
       ctype: Bullet
     uid: c4b0f05c-b8bb-4a75-9323-7f0d6678c1cc
-    lastmod: 1624913556945
+    lastmod: 1625178164701
   - name: PowerUp
     depth: 1
     oncreate: ''
@@ -976,12 +1046,15 @@ types:
     extends:
       ctype: Boost
     uid: b3fa3791-ab90-4386-bd0c-d75927c4e707
-    lastmod: 1624922462145
+    lastmod: 1625179458791
   - name: StartButton
     depth: 1
     oncreate: ''
-    onstep: |-
-      if(ct.actions.Click.down){
+    onstep: |
+      if(ct.actions.Click.down ){
+          //стартираме музиката
+          ct.sound.spawn('10 Bonbona');
+
           ct.rooms.switch('Main Room');
       }
     ondraw: ''
@@ -990,7 +1063,7 @@ types:
     extends:
       ctype: StartButton
     uid: 0fa0110b-7a35-450a-85a3-069bad6e3c0e
-    lastmod: 1625068439435
+    lastmod: 1625179144885
   - name: Health
     depth: 1
     oncreate: ''
@@ -1001,6 +1074,65 @@ types:
     extends: {}
     uid: c62a49b2-b2e7-4386-89af-b0693e596f05
     lastmod: 1624922233691
+  - name: Cursor
+    depth: 1
+    oncreate: ''
+    onstep: |+
+      if(ct.mouse.down){
+        this.x = ct.mouse.x;  
+        this.y = ct.mouse.y;
+      }
+      else {
+          this.x = -20;
+          this.y = -20;
+      }
+
+    ondraw: ''
+    ondestroy: ''
+    texture: 9de3c8b6-5ac5-48d5-8e0e-c6cb7f8b6304
+    extends:
+      ctype: Cursor
+      visible: true
+    uid: 21e2642c-a76b-4103-bf7c-18cf891177b4
+    lastmod: 1625180496904
+  - name: LeftTouchPanel
+    depth: 1
+    oncreate: ''
+    onstep: |-
+      if(ct.place.occupied(this,'Cursor')){
+               for (var player of ct.types.list['Player']) {
+               if(player.x > 0){
+          player.x -= 10;
+           }
+      }
+
+      }
+    ondraw: ''
+    ondestroy: ''
+    texture: 6ffa9d6e-e5ea-449d-94b9-d698c2770439
+    extends:
+      ctype: LeftTouchPanel
+    uid: e9997230-3a70-4739-a0aa-a0caff1f2327
+    lastmod: 1625181027368
+  - name: RightTouchPanel
+    depth: 1
+    oncreate: ''
+    onstep: |-
+      if(ct.place.occupied(this,'Cursor')){
+          for (var player of ct.types.list['Player']) {
+          if(player.x < 318){
+              player.x += 10; 
+          }
+      }
+
+      }
+    ondraw: ''
+    ondestroy: ''
+    texture: fd4c17ed-c5cc-4d51-afdb-99bca1e35f50
+    extends:
+      ctype: RightTouchPanel
+    uid: c8feb518-11c1-43d1-9daf-3bee7e371c4b
+    lastmod: 1625181031037
 sounds:
   - name: 10 Bonbona
     uid: 0b5ca979-36fe-43ad-bcdb-a8b044652f6b
@@ -1078,17 +1210,21 @@ rooms:
         'y': 32
         uid: 6d3ce01e-5415-4ad8-9e72-1be07a769019
         exts: {}
-      - x: 152
-        'y': -0.0
-        uid: c62a49b2-b2e7-4386-89af-b0693e596f05
+      - x: 704
+        'y': 64
+        uid: c8feb518-11c1-43d1-9daf-3bee7e371c4b
         exts: {}
-      - x: 176
-        'y': -0.0
-        uid: c62a49b2-b2e7-4386-89af-b0693e596f05
+      - x: 192
+        'y': 128
+        uid: 21e2642c-a76b-4103-bf7c-18cf891177b4
         exts: {}
-      - x: 200
-        'y': -0.0
-        uid: c62a49b2-b2e7-4386-89af-b0693e596f05
+      - x: 192
+        'y': 0
+        uid: c8feb518-11c1-43d1-9daf-3bee7e371c4b
+        exts: {}
+      - x: 0
+        'y': 0
+        uid: e9997230-3a70-4739-a0aa-a0caff1f2327
         exts: {}
     tiles:
       - depth: -10
@@ -1097,9 +1233,9 @@ rooms:
     uid: 054e2b8b-8fa7-45ad-889d-bb6ee7186947
     thumbnail: bb6ee7186947
     extends: {}
-    gridX: 8
-    gridY: 8
-    lastmod: 1625066689196
+    gridX: 64
+    gridY: 64
+    lastmod: 1625180157841
   - name: Menu
     oncreate: ''
     onstep: ''

@@ -1,0 +1,4105 @@
+ctjsVersion: 1.5.1
+notes: /* empty */
+libs:
+  place:
+    gridX: 1024
+    gridY: 1024
+  fittoscreen:
+    mode: scaleFit
+  mouse: {}
+  keyboard: {}
+  keyboard.polyfill: {}
+  sound.howler: {}
+textures:
+  - name: AppleLabel
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: 'ia8b68844-bbd4-467a-bc12-ca22beb5aef2.png}'
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: a8b68844-bbd4-467a-bc12-ca22beb5aef2
+    padding: 1
+    lastmod: 1617794308033
+  - name: BreadLabel
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: 'ic4dc718f-586a-48c7-b68c-90735e62d6eb.png}'
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: c4dc718f-586a-48c7-b68c-90735e62d6eb
+    padding: 1
+    lastmod: 1617794312226
+  - name: TomatoLabel
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: 'i5511cf1b-509f-4ef8-b5ab-e44b3be065e1.png}'
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: 5511cf1b-509f-4ef8-b5ab-e44b3be065e1
+    padding: 1
+    lastmod: 1617794316299
+  - name: Clock
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: 'id6e4a031-9835-474a-a055-44ae4673ba92.png}'
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: d6e4a031-9835-474a-a055-44ae4673ba92
+    padding: 1
+    lastmod: 1617979171612
+  - name: shelf
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 128
+    imgHeight: 128
+    width: 128
+    height: 128
+    offx: 0
+    offy: 0
+    origname: ic6fc2ee2-afa1-4541-8baa-ff0648c19551.png
+    shape: rect
+    left: 0
+    right: 128
+    top: 0
+    bottom: 128
+    uid: c6fc2ee2-afa1-4541-8baa-ff0648c19551
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\shelf.png'
+  - name: fridge
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 22
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 128
+    imgHeight: 128
+    width: 128
+    height: 128
+    offx: 0
+    offy: 0
+    origname: i09f0c6f0-f945-4bf3-856b-a8b901957f4f.png
+    shape: rect
+    left: 0
+    right: 85
+    top: 0
+    bottom: 127
+    uid: 09f0c6f0-f945-4bf3-856b-a8b901957f4f
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\fridge.png'
+    lastmod: 1617790886419
+  - name: oven
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 128
+    imgHeight: 128
+    width: 128
+    height: 128
+    offx: 0
+    offy: 0
+    origname: i0b407511-7cd7-4a50-bfdc-5de8983526ae.png
+    shape: rect
+    left: 0
+    right: 128
+    top: 0
+    bottom: 128
+    uid: 0b407511-7cd7-4a50-bfdc-5de8983526ae
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\oven.png'
+    lastmod: 1617745621681
+  - name: cursor
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 6.4375
+      - -0.25
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: ia7ea379a-44c3-4c4a-8bbf-751becc13ff4.png
+    shape: rect
+    left: 0
+    right: 18
+    top: 0
+    bottom: 17
+    uid: a7ea379a-44c3-4c4a-8bbf-751becc13ff4
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\cursor.png'
+    lastmod: 1617978186215
+  - name: heart
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: iecad7779-d143-45d1-a50a-9aa1ac30b87a.png
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: ecad7779-d143-45d1-a50a-9aa1ac30b87a
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\heart.png'
+  - name: bg
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 640
+    imgHeight: 320
+    width: 640
+    height: 320
+    offx: 0
+    offy: 0
+    origname: i0196e9b3-3e32-4541-98df-e8d5bfad693c.png
+    shape: rect
+    left: 0
+    right: 640
+    top: 0
+    bottom: 320
+    uid: 0196e9b3-3e32-4541-98df-e8d5bfad693c
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\bg.png'
+    tiled: true
+    lastmod: 1617745203532
+  - name: BG_INVISIBLE
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 640
+    imgHeight: 320
+    width: 640
+    height: 320
+    offx: 0
+    offy: 0
+    origname: 'i2d42e256-0ca6-4bbb-838e-6058adb668bf.png}'
+    shape: rect
+    left: 0
+    right: 640
+    top: 0
+    bottom: 320
+    uid: 2d42e256-0ca6-4bbb-838e-6058adb668bf
+    padding: 1
+  - name: bread
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: i62568c1f-a667-4aa4-9129-9b199845a845.png
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: 62568c1f-a667-4aa4-9129-9b199845a845
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\bread.png'
+  - name: apple
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: i3aaa2d9f-7c45-47af-933d-772a6a440ada.png
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: 3aaa2d9f-7c45-47af-933d-772a6a440ada
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\apple.png'
+  - name: tomato
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: i157eb8b6-3e3b-44b3-b321-8428b93e3497.png
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: 157eb8b6-3e3b-44b3-b321-8428b93e3497
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\tomato.png'
+    lastmod: 1617894567136
+  - name: broccoli
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: ic7e6e5d1-11cd-4bf9-94a8-618d8e95765b.png
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: c7e6e5d1-11cd-4bf9-94a8-618d8e95765b
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\broccoli.png'
+    lastmod: 1617895979530
+  - name: counter
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 128
+    imgHeight: 128
+    width: 128
+    height: 128
+    offx: 0
+    offy: 0
+    origname: i030554f3-e4ab-4dfa-a7f4-080af368ed65.png
+    shape: rect
+    left: 0
+    right: 128
+    top: 0
+    bottom: 128
+    uid: 030554f3-e4ab-4dfa-a7f4-080af368ed65
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\counter.png'
+  - name: watermelon
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: id8a07754-e202-4c2f-ba9e-3e64c71906c5.png
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: d8a07754-e202-4c2f-ba9e-3e64c71906c5
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\watermelon.png'
+  - name: knife
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: i7e078000-9498-432a-993a-06531277427c.png
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: 7e078000-9498-432a-993a-06531277427c
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\knife.png'
+  - name: redpepper
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: i2bd8223a-61c1-46a9-8e30-2ec5ecc1f57f.png
+    shape: rect
+    left: -14
+    right: 38
+    top: -28
+    bottom: 63
+    uid: 2bd8223a-61c1-46a9-8e30-2ec5ecc1f57f
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\redpepper.png'
+    lastmod: 1617891771992
+  - name: drawers
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 128
+    imgHeight: 128
+    width: 128
+    height: 128
+    offx: 0
+    offy: 0
+    origname: i5e09e162-6fa7-46f9-8df6-23b5b3b1470b.png
+    shape: rect
+    left: 0
+    right: 128
+    top: 0
+    bottom: 128
+    uid: 5e09e162-6fa7-46f9-8df6-23b5b3b1470b
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\drawers.png'
+  - name: sink
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 256
+    imgHeight: 128
+    width: 256
+    height: 128
+    offx: 0
+    offy: 0
+    origname: i56ff517e-c300-45ba-b7a3-1878b0525c20.png
+    shape: rect
+    left: 0
+    right: 256
+    top: 0
+    bottom: 128
+    uid: 56ff517e-c300-45ba-b7a3-1878b0525c20
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\sink.png'
+  - name: KnifeLabel
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: 'i42ed82d2-2dd0-47a9-b87f-24bf55895c2f.png}'
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: 42ed82d2-2dd0-47a9-b87f-24bf55895c2f
+    padding: 1
+  - name: MelonLabel
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 136
+    imgHeight: 72
+    width: 136
+    height: 72
+    offx: 0
+    offy: 0
+    origname: 'i509c4246-fec6-4c10-8b27-0b1615657f98.png}'
+    shape: rect
+    left: 0
+    right: 136
+    top: 0
+    bottom: 72
+    uid: 509c4246-fec6-4c10-8b27-0b1615657f98
+    padding: 1
+    lastmod: 1617794396318
+  - name: drawers2
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - -1
+      - 53
+    marginx: 0
+    marginy: 0
+    imgWidth: 128
+    imgHeight: 128
+    width: 128
+    height: 128
+    offx: 0
+    offy: 0
+    origname: i6c3a3d30-0fad-4b36-8689-acaee87817d9.png
+    shape: rect
+    left: 0
+    right: 128
+    top: 0
+    bottom: 128
+    uid: 6c3a3d30-0fad-4b36-8689-acaee87817d9
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\drawers2.png'
+    lastmod: 1617899677222
+  - name: fish
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: iad2f883a-7a63-41d6-bb6b-143d1fe4efce.png
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: ad2f883a-7a63-41d6-bb6b-143d1fe4efce
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\fish.png'
+  - name: freezer
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 30
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 128
+    imgHeight: 128
+    width: 128
+    height: 128
+    offx: 0
+    offy: 0
+    origname: i6cc7e9dd-9d4b-4b41-82f3-341317390dd4.png
+    shape: rect
+    left: 0
+    right: 67
+    top: -31
+    bottom: 128
+    uid: 6cc7e9dd-9d4b-4b41-82f3-341317390dd4
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\freezer.png'
+    lastmod: 1617891513842
+  - name: shelf2
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 128
+    imgHeight: 128
+    width: 128
+    height: 128
+    offx: 0
+    offy: 0
+    origname: ic4830bdd-9015-4def-b006-41d6f739a826.png
+    shape: rect
+    left: 0
+    right: 128
+    top: 0
+    bottom: 128
+    uid: c4830bdd-9015-4def-b006-41d6f739a826
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\shelf2.png'
+    lastmod: 1617965065998
+  - name: fork
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 10
+      - 59
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: i4d53219a-00ab-4029-a95a-13928828fef2.png
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: 4d53219a-00ab-4029-a95a-13928828fef2
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\fork.png'
+    lastmod: 1617891419510
+  - name: FishLabel
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: 'i9f1dd69c-bc4f-4a92-9e2e-7f5e2b3e1002.png}'
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: 9f1dd69c-bc4f-4a92-9e2e-7f5e2b3e1002
+    padding: 1
+  - name: BrocLabel
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 136
+    imgHeight: 64
+    width: 136
+    height: 64
+    offx: 0
+    offy: 0
+    origname: 'i9871f8f4-3dad-4686-a2d3-18b54e6f1995.png}'
+    shape: rect
+    left: 0
+    right: 136
+    top: 0
+    bottom: 64
+    uid: 9871f8f4-3dad-4686-a2d3-18b54e6f1995
+    padding: 1
+  - name: ForkLabel
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: 'i03af2531-71bc-4052-9f6d-6c2e8fedec86.png}'
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: 03af2531-71bc-4052-9f6d-6c2e8fedec86
+    padding: 1
+  - name: PaprikaLabel
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 96
+    imgHeight: 64
+    width: 96
+    height: 64
+    offx: 0
+    offy: 0
+    origname: 'i5c44fec4-7c12-4d96-95fe-efb25e1b25be.png}'
+    shape: rect
+    left: 0
+    right: 96
+    top: 0
+    bottom: 64
+    uid: 5c44fec4-7c12-4d96-95fe-efb25e1b25be
+    padding: 1
+  - name: golden
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: i4c26ad8e-2fe4-4949-ac1e-346483c1b1ed.png
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: 4c26ad8e-2fe4-4949-ac1e-346483c1b1ed
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\golden.png'
+    lastmod: 1617964788313
+  - name: carrot
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: ic5ef7d57-5ce7-4616-aa48-b2e9459acd34.png
+    shape: rect
+    left: 0
+    right: 64
+    top: -54
+    bottom: 64
+    uid: c5ef7d57-5ce7-4616-aa48-b2e9459acd34
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\carrot.png'
+    lastmod: 1617894342338
+  - name: flour
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: i8b885f2a-a561-4b22-8bf2-1b8a47d30d1e.png
+    shape: rect
+    left: -15
+    right: 48
+    top: -16
+    bottom: 62
+    uid: 8b885f2a-a561-4b22-8bf2-1b8a47d30d1e
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\flour.png'
+    lastmod: 1617894326734
+  - name: itembox
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 300
+    imgHeight: 200
+    width: 300
+    height: 200
+    offx: 0
+    offy: 0
+    origname: ife422ece-884c-4d60-8038-c0679892cb5a.png
+    shape: rect
+    left: 0
+    right: 300
+    top: 0
+    bottom: 200
+    uid: fe422ece-884c-4d60-8038-c0679892cb5a
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\itembox.png'
+  - name: CarrotLabel
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 80
+    imgHeight: 64
+    width: 80
+    height: 64
+    offx: 0
+    offy: 0
+    origname: 'ica497bb9-969b-4768-b4ba-5ffafbe42dea.png}'
+    shape: rect
+    left: 0
+    right: 80
+    top: 0
+    bottom: 64
+    uid: ca497bb9-969b-4768-b4ba-5ffafbe42dea
+    padding: 1
+  - name: FlourLabel
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 72
+    imgHeight: 64
+    width: 72
+    height: 64
+    offx: 0
+    offy: 0
+    origname: 'i96e35622-b0b8-4f0c-acef-ab1af9942cc5.png}'
+    shape: rect
+    left: 0
+    right: 72
+    top: 0
+    bottom: 64
+    uid: 96e35622-b0b8-4f0c-acef-ab1af9942cc5
+    padding: 1
+  - name: CloseX
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 30
+    imgHeight: 30
+    width: 30
+    height: 30
+    offx: 0
+    offy: 0
+    origname: i0490433f-8ab6-42b0-9623-d1a1548fe40f.png
+    shape: rect
+    left: 0
+    right: 30
+    top: 0
+    bottom: 30
+    uid: 0490433f-8ab6-42b0-9623-d1a1548fe40f
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\CloseX.png'
+    lastmod: 1617909811982
+  - name: title
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 320
+    imgHeight: 160
+    width: 320
+    height: 160
+    offx: 0
+    offy: 0
+    origname: ieae46cc0-392f-4671-97ed-46880dfd1897.png
+    shape: rect
+    left: 0
+    right: 320
+    top: 0
+    bottom: 160
+    uid: eae46cc0-392f-4671-97ed-46880dfd1897
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\title.png'
+    lastmod: 1617909869318
+  - name: startbutton
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 320
+    imgHeight: 64
+    width: 320
+    height: 64
+    offx: 0
+    offy: 0
+    origname: if3031683-735d-4b53-90eb-f6b04acdd887.png
+    shape: rect
+    left: 0
+    right: 320
+    top: 0
+    bottom: 64
+    uid: f3031683-735d-4b53-90eb-f6b04acdd887
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\startbutton.png'
+    lastmod: 1618163173791
+  - name: Restart
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 96
+    imgHeight: 96
+    width: 96
+    height: 96
+    offx: 0
+    offy: 0
+    origname: i0e722967-1ef6-4cd4-9fe1-07d7bea03dc1.png
+    shape: rect
+    left: 0
+    right: 96
+    top: 0
+    bottom: 96
+    uid: 0e722967-1ef6-4cd4-9fe1-07d7bea03dc1
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\Restart.png'
+    lastmod: 1618174943195
+  - name: NextLevel
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 96
+    imgHeight: 96
+    width: 96
+    height: 96
+    offx: 0
+    offy: 0
+    origname: ia777b610-5843-444b-8974-dba6ac78cb4c.png
+    shape: rect
+    left: 0
+    right: 96
+    top: 0
+    bottom: 96
+    uid: a777b610-5843-444b-8974-dba6ac78cb4c
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\NextLevel.png'
+  - name: chef
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 50
+    imgHeight: 90
+    width: 50
+    height: 90
+    offx: 0
+    offy: 0
+    origname: i5074c4a3-d5f9-4cb3-99f1-a2e299d95289.png
+    shape: rect
+    left: -6
+    right: 42
+    top: 0
+    bottom: 90
+    uid: 5074c4a3-d5f9-4cb3-99f1-a2e299d95289
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\chef.png'
+    lastmod: 1617955802001
+  - name: chefwalking
+    untill: 0
+    grid:
+      - 3
+      - 1
+    axis:
+      - 7
+      - 4
+    marginx: 0
+    marginy: 0
+    imgWidth: 150
+    imgHeight: 90
+    width: 50
+    height: 90
+    offx: 0
+    offy: 0
+    origname: i8d24a9e5-e89e-4fdb-960d-de004aff061a.png
+    shape: rect
+    left: 0
+    right: 34
+    top: 0
+    bottom: 90
+    uid: 8d24a9e5-e89e-4fdb-960d-de004aff061a
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\chefwalking.png'
+    lastmod: 1617955599768
+  - name: hanger
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 128
+    imgHeight: 128
+    width: 128
+    height: 128
+    offx: 0
+    offy: 0
+    origname: i39d77618-1806-4189-b068-fd0c8a9aaae7.png
+    shape: rect
+    left: 0
+    right: 128
+    top: 0
+    bottom: 128
+    uid: 39d77618-1806-4189-b068-fd0c8a9aaae7
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\hanger.png'
+  - name: goldknife
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: ie59635d1-6b58-44f2-83dc-cb9732849731.png
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: e59635d1-6b58-44f2-83dc-cb9732849731
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\goldknife.png'
+  - name: goldpot
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: i53d84750-b0e6-4bfe-9f8b-56e4a0efe00e.png
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: 53d84750-b0e6-4bfe-9f8b-56e4a0efe00e
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\Js Games\Kitchen game\goldpot.png'
+  - name: GoldenLabel
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 208
+    imgHeight: 64
+    width: 208
+    height: 64
+    offx: 0
+    offy: 0
+    origname: 'i9342de03-7901-4d96-936a-4584ade77aab.png}'
+    shape: rect
+    left: 0
+    right: 208
+    top: 0
+    bottom: 64
+    uid: 9342de03-7901-4d96-936a-4584ade77aab
+    padding: 1
+  - name: TimeScore
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: 'i176fb3b1-39e7-4b49-b04e-1d1453d2c862.png}'
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: 176fb3b1-39e7-4b49-b04e-1d1453d2c862
+    padding: 1
+  - name: ScoreLabel
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 320
+    imgHeight: 64
+    width: 320
+    height: 64
+    offx: 0
+    offy: 0
+    origname: ia9022b0a-e4ab-497c-b2cf-b4f3597bbbb0.png
+    shape: rect
+    left: 0
+    right: 320
+    top: 0
+    bottom: 64
+    uid: a9022b0a-e4ab-497c-b2cf-b4f3597bbbb0
+    padding: 1
+  - name: HighScore1
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 120
+    imgHeight: 64
+    width: 120
+    height: 64
+    offx: 0
+    offy: 0
+    origname: i2c42d139-7fff-48ea-8f73-2ef82d30d399.png
+    shape: rect
+    left: 0
+    right: 120
+    top: 0
+    bottom: 64
+    uid: 2c42d139-7fff-48ea-8f73-2ef82d30d399
+    padding: 1
+    lastmod: 1618161917911
+  - name: HighScore2
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 120
+    imgHeight: 64
+    width: 120
+    height: 64
+    offx: 0
+    offy: 0
+    origname: i1c8527f0-57ef-449c-aed2-a78dd25a2166.png
+    shape: rect
+    left: 0
+    right: 120
+    top: 0
+    bottom: 64
+    uid: 1c8527f0-57ef-449c-aed2-a78dd25a2166
+    padding: 1
+  - name: HighScore3
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 120
+    imgHeight: 64
+    width: 120
+    height: 64
+    offx: 0
+    offy: 0
+    origname: i7c7537e7-5855-493d-9533-10ad077a57de.png
+    shape: rect
+    left: 0
+    right: 120
+    top: 0
+    bottom: 64
+    uid: 7c7537e7-5855-493d-9533-10ad077a57de
+    padding: 1
+  - name: ScoreDisplay1
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: i0cd69dfb-0a0f-4011-bd5c-6f64bd502e07.png
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: 0cd69dfb-0a0f-4011-bd5c-6f64bd502e07
+    padding: 1
+  - name: HighScoreBut
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 320
+    imgHeight: 64
+    width: 320
+    height: 64
+    offx: 0
+    offy: 0
+    origname: id33cca0a-005a-4494-a866-ad5126da13cd.png
+    shape: rect
+    left: 0
+    right: 320
+    top: 0
+    bottom: 64
+    uid: d33cca0a-005a-4494-a866-ad5126da13cd
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\HighScoreBut.png'
+  - name: hint
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: i84b485cc-2dcc-427b-b40a-5931d4bfaa1c.png
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: 84b485cc-2dcc-427b-b40a-5931d4bfaa1c
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\hint.png'
+  - name: star
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: i84846d2e-4edf-4597-99e0-a7aba56cdb1e.png
+    shape: rect
+    left: 0
+    right: 64
+    top: 0
+    bottom: 64
+    uid: 84846d2e-4edf-4597-99e0-a7aba56cdb1e
+    padding: 1
+    source: 'C:\Users\Denis\Desktop\star.png'
+  - name: wine
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 64
+    imgHeight: 64
+    width: 64
+    height: 64
+    offx: 0
+    offy: 0
+    origname: i3db4e0ad-0879-4927-84ff-fa6b36a771cc.png
+    shape: rect
+    left: -15
+    right: 48
+    top: -5
+    bottom: 64
+    uid: 3db4e0ad-0879-4927-84ff-fa6b36a771cc
+    padding: 1
+    source: 'D:\RepositoryGIT\Deniksb\Kitchen Game\Kitchen game\wine.png'
+    lastmod: 1618307448102
+  - name: WineLabel
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 128
+    imgHeight: 64
+    width: 128
+    height: 64
+    offx: 0
+    offy: 0
+    origname: id67db23e-7859-4851-8c8c-052f0cec9cc5.png
+    shape: rect
+    left: 0
+    right: 128
+    top: 0
+    bottom: 64
+    uid: d67db23e-7859-4851-8c8c-052f0cec9cc5
+    padding: 1
+skeletons: []
+types:
+  - name: stove
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 0b407511-7cd7-4a50-bfdc-5de8983526ae
+    extends: {}
+    uid: 8fe409b8-62ba-481c-9cb8-7a103e1c8722
+    lastmod: 1617730079990
+  - name: drawers
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 5e09e162-6fa7-46f9-8df6-23b5b3b1470b
+    extends:
+      ctype: Objective
+    uid: 300af250-e4b6-4fbe-a39f-eb27e092759b
+    lastmod: 1617979424472
+  - name: fridge
+    depth: 0
+    oncreate: |-
+      this.tomato = false;
+      this.popup = false;
+    onstep: |+
+      this.move();
+
+      var player = ct.types.list['chef'];  
+      var newCloseX;
+
+      var label = ct.types.list['TomatoLabel'];
+
+
+
+       if(ct.actions.Interact.down &&  (ct.place.occupied(this, 'Cursor') &&  ct.place.occupied(this, 'Player'))){
+                  this.popup = true;
+                  ct.types.copy('ItemBox',200,50);
+                  newCloseX = ct.types.copy('CloseX',500,50);
+                  
+                  if(this.tomato == false && label[0] != undefined){
+                    ct.types.copy('tomato',230,60);
+                  }
+                  else {
+                    this.tomato = true;
+                  }
+                   var cursor = ct.types.list['cursor'];
+           cursor[0].clicks--;
+                                   
+                
+           
+      }
+
+
+
+
+
+
+
+    ondraw: ''
+    ondestroy: ''
+    texture: 09f0c6f0-f945-4bf3-856b-a8b901957f4f
+    extends:
+      ctype: Objective
+    uid: ae5a1d65-62b2-4ed2-802d-14f17816f5ca
+    lastmod: 1617979342074
+  - name: counter
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 030554f3-e4ab-4dfa-a7f4-080af368ed65
+    extends:
+      ctype: Background
+    uid: 0da7c1d4-ce88-42c1-bae2-b144734d7dbe
+    lastmod: 1617794669918
+  - name: shelf
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: c6fc2ee2-afa1-4541-8baa-ff0648c19551
+    extends:
+      ctype: ''
+    uid: 6ffe8465-21ff-4e82-83ef-8f5d0b7e91c9
+    lastmod: 1617794089209
+  - name: chef
+    depth: 0
+    oncreate: |+
+      this.gravity = 0.5;
+      this.animationSpeed = 0.2;
+      this.hspeed = 0; // Horizontal speed
+
+
+      this.heart = 0;
+      this.health = 3;
+
+    onstep: |+
+      this.movespeed = 2 * ct.delta; // Max horizontal speed
+
+      if (ct.actions.MoveLeft.down) {
+          // If the A key or left arrow on a keyboard is down, then move to left
+          this.hspeed = -this.movespeed;
+
+          
+          this.scale.x = -1;
+           if (this.tex !== 'chefwalking') {
+              this.tex = 'chefwalking';
+              this.y += 5;
+              this.play();
+          }
+      } else if (ct.actions.MoveRight.down) {
+          // If the D key or right arrow on a keyboard is down, then move to right
+          this.hspeed = this.movespeed;
+
+          
+          this.scale.x = 1;
+           if (this.tex !== 'chefwalking') {
+              this.tex = 'chefwalking';
+              this.y += 5;
+              this.play();
+          }
+      } else {
+          // Don't move horizontally if no input
+          this.hspeed = 0;
+          
+            if (this.tex !== 'chef') {
+                this.y -= 5;
+              this.tex = 'chef';
+              
+            }
+          
+      }
+
+      // Move by horizontal axis, pixel by pixel
+      for (var i = 0; i < Math.abs(this.hspeed); i++) {
+          if (ct.place.free(this, this.x + Math.sign(this.hspeed), this.y, 'Solid')) {
+              this.x += Math.sign(this.hspeed);
+          } else {
+              break;
+          }
+      }
+      // Do the same for vertical speed
+      for (var i = 0; i < Math.abs(this.vspeed); i++) {
+          if (ct.place.free(this, this.x, this.y + Math.sign(this.vspeed), 'Solid')) {
+              this.y += Math.sign(this.vspeed);
+          } else {
+              break;
+          }
+      }
+
+
+
+
+    ondraw: ''
+    ondestroy: ''
+    texture: 5074c4a3-d5f9-4cb3-99f1-a2e299d95289
+    extends:
+      ctype: Player
+    uid: d01d06e9-6d72-4790-a0eb-8e2b405328db
+    lastmod: 1617977555971
+  - name: bread
+    depth: 0
+    oncreate: ''
+    onstep: |+
+
+
+      var player = ct.types.list['chef'];    
+      var breads = ct.types.list['bread'];
+      var label = ct.types.list['BreadLabel'];
+       if(ct.actions.Interact.down &&  (ct.place.occupied(this, 'Cursor') && (player[0].x > this.x + 30 || player[0].x > this.x - 30))){
+          
+                 breads[0].kill = true;
+                 label[0].kill = true;
+         
+                //code to recognise successful click
+                
+                  
+                  
+           
+      }
+
+
+
+
+
+    ondraw: ''
+    ondestroy: |2-
+       var cursor = ct.types.list['cursor'];
+           cursor[0].clicks--;
+    texture: 62568c1f-a667-4aa4-9129-9b199845a845
+    extends:
+      ctype: Objective
+    uid: a3e6382e-a65e-4376-9cdc-e2479407a7f0
+    lastmod: 1617979395937
+  - name: apple
+    depth: 0
+    oncreate: ''
+    onstep: |+
+      this.move();
+      var player = ct.types.list['chef'];  
+      var apples = ct.types.list['apple'];
+      var label = ct.types.list['AppleLabel'];
+       if(ct.actions.Interact.down &&   (ct.place.occupied(this, 'Cursor') && (player[0].x > this.x + 30  || player[0].x > this.x - 30))){
+            
+           apples[0].kill = true;
+          label[0].kill = true;
+           
+           //code to recognise successful click (reducing unsuccessful click by one since the player code will add it)
+          
+      }
+
+    ondraw: ''
+    ondestroy: |2-
+       var cursor = ct.types.list['cursor'];
+           cursor[0].clicks--;
+    texture: 3aaa2d9f-7c45-47af-933d-772a6a440ada
+    extends:
+      ctype: Objective
+    uid: 85eff87a-e91d-4313-a30a-a71b693a56c5
+    lastmod: 1617979266180
+  - name: tomato
+    depth: 0
+    oncreate: ''
+    onstep: |2+
+          this.move();
+
+          
+          
+          if (ct.actions.Interact.down && (ct.place.occupied(this, 'Cursor'))) {
+
+              for (var label of ct.types.list['TomatoLabel']) {
+                  label.kill = true;
+              }
+          
+              for (var mato of ct.types.list['tomato']) {
+                  mato.kill = true;
+              }
+          
+              
+          }
+
+
+
+    ondraw: ''
+    ondestroy: |2-
+       var cursor = ct.types.list['cursor'];
+           cursor[0].clicks--;
+    texture: 157eb8b6-3e3b-44b3-b321-8428b93e3497
+    extends:
+      ctype: Objective
+      visible: true
+    uid: 98b3923c-a72e-41d4-aac8-b1dd61c2f921
+    lastmod: 1618170454506
+  - name: ItemBox
+    depth: 0
+    oncreate: ''
+    onstep: |+
+      this.move();
+
+
+
+
+
+
+
+
+    ondraw: ''
+    ondestroy: ''
+    texture: fe422ece-884c-4d60-8038-c0679892cb5a
+    extends:
+      ctype: Background
+    uid: 2a4f827c-9955-488d-93f8-5870c0bf3d60
+    lastmod: 1617977773101
+  - name: AppleLabel
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: a8b68844-bbd4-467a-bc12-ca22beb5aef2
+    extends: {}
+    uid: 16866b98-35fc-4036-be72-1b1c08f36d37
+    lastmod: 1617800749562
+  - name: BreadLabel
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: c4dc718f-586a-48c7-b68c-90735e62d6eb
+    extends: {}
+    uid: 4493d35e-a6bb-4c7a-82a7-52751560f718
+    lastmod: 1617979412639
+  - name: heart
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: ecad7779-d143-45d1-a50a-9aa1ac30b87a
+    extends: {}
+    uid: 4a9b6205-7ab2-4c88-8d71-5f99e04e0b38
+    lastmod: 1617895691279
+  - name: cursor
+    depth: 1
+    oncreate: |
+      this.clicks = 0;
+      this.hearts = 3;
+    onstep: |+
+
+      this.x = ct.mouse.x;
+      this.y = ct.mouse.y;
+
+      var heart = ct.types.list['heart'];
+      if(ct.actions.Interact.released){
+          console.log(this.clicks);
+          if(this.clicks == 3){
+              heart[0].kill = true;
+              this.clicks = 0;
+              this.hearts--;
+              localStorage.setItem("CurrentHearts","2");
+          }
+          if(this.clicks < 0){
+              this.clicks = 0;
+          }
+          
+          this.clicks++;
+
+      }
+
+
+
+
+
+
+
+
+
+    ondraw: ''
+    ondestroy: ''
+    texture: a7ea379a-44c3-4c4a-8bbf-751becc13ff4
+    extends:
+      ctype: Cursor
+    uid: bc64e3ea-1e21-4179-93c6-1e02568bb896
+    lastmod: 1618181798812
+  - name: TomatoLabel
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 5511cf1b-509f-4ef8-b5ab-e44b3be065e1
+    extends: {}
+    uid: dacf29c2-4e3f-44fc-ba90-c444b6781709
+    lastmod: 1617895653642
+  - name: BG
+    depth: -10
+    oncreate: ''
+    onstep: |+
+
+
+    ondraw: ''
+    ondestroy: ''
+    texture: 0196e9b3-3e32-4541-98df-e8d5bfad693c
+    extends:
+      ctype: Background
+    uid: 9062c1c9-ec8c-4fa4-ba37-e849dae1fa1d
+    lastmod: 1618047230439
+  - name: CloseX
+    depth: 0
+    oncreate: ''
+    onstep: |+
+
+      if(ct.actions.Interact.down && ct.place.occupied(this,'Cursor')){
+           for (var box of ct.types.list['ItemBox']) {
+                  box.kill = true;
+              }
+               for (var tomato of ct.types.list['tomato']) {
+                  tomato.kill = true;
+              }
+              for (var fish of ct.types.list['fish']) {
+                  fish.kill = true;
+              }
+
+      for (var broc of ct.types.list['broccoli']) {
+                  broc.kill = true;
+              }
+
+
+              this.kill = true;
+      }
+
+
+
+
+
+         
+
+    ondraw: ''
+    ondestroy: |2-
+       var cursor = ct.types.list['cursor'];
+           cursor[0].clicks--;
+    texture: 0490433f-8ab6-42b0-9623-d1a1548fe40f
+    extends:
+      ctype: CloseX
+    uid: 36da2a61-74a3-4b2e-8049-a893dd7e3727
+    lastmod: 1617979334979
+  - name: Clock
+    depth: 0
+    oncreate: |+
+      this.timer = ct.timer.add(60000, 'time');
+
+      localStorage.setItem("Hint1","no");
+      localStorage.setItem("CurrentHearts","3");
+
+      this.timer.then(() => {
+          console.log('Done!');
+      })
+      // The `catch` part is not necessary. Without it, though, you will
+      // see errors in the console when timers got interrupted,
+      // either manually or when you switch rooms
+      .catch(e => {
+          
+          console.log('Timer removed', e);
+
+      });
+
+
+
+      this.text = new PIXI.Text('100');
+      this.text.x = 32;
+      this.text.anchor.y = 0.5;
+
+
+      this.addChild(this.text);
+
+
+
+
+
+      //code for checking if all items collected
+      this.tomato = false;
+      this.apple = false;
+      this.bread = false;
+      this.knife = false;
+      this.melon = false;
+
+      this.timeScore = 0;
+
+
+      this.stars = 3;
+      this.heartsChecked = false;
+      this.hintChecked = false;
+
+    onstep: |2+
+          var timerText = (Math.ceil(this.timer.timeLeft / 1000)).toString();
+          this.text.text = timerText;
+
+          var cursor = ct.types.list['cursor'];
+
+
+
+
+          if (Math.ceil(this.timer.timeLeft / 1000) == 0) {
+              ct.rooms.switch('You Lose');
+          }
+
+
+
+
+          //code for checking if all items collected
+          var tomato = ct.types.list['TomatoLabel'];
+          var apple = ct.types.list['AppleLabel'];
+          var bread = ct.types.list['BreadLabel'];
+          var knife = ct.types.list['KnifeLabel'];
+          var melon = ct.types.list['MelonLabel'];
+
+
+
+          if (apple[0] == undefined) {
+              this.apple = true;
+
+          }
+          if (tomato[0] == undefined) {
+              this.tomato = true;
+
+          }
+          if (bread[0] == undefined) {
+              this.bread = true;
+
+          }
+          if (knife[0] == undefined) {
+              this.knife = true;
+
+          }
+          if (melon[0] == undefined) {
+              this.melon = true;
+
+          }
+
+
+
+          var TimeScore = ct.types.list['TimeScore'];
+
+          //go to end screen if completed objective
+          if (this.apple == true && this.bread == true && this.tomato == true && this.melon == true && this.knife == true) {
+
+              this.timeScore = timerText;
+              localStorage.setItem("CurrentScore1", this.timeScore);
+              if (localStorage.getItem('HighScore1') == undefined) {
+                  localStorage.setItem('HighScore1', this.timeScore);
+              }
+              else {
+                  if (Number(localStorage.getItem('HighScore1')) < Number(this.timeScore)) {
+                      var scoreToAdd = Number(this.timeScore) - 1;
+                      localStorage.setItem('HighScore1', scoreToAdd.toString());
+                  }
+              }
+              var timer2 = ct.timer.add(600, 'timeout');
+
+
+              timer2.then(function () {
+                  
+                  
+                  ct.rooms.switch('You Win 1');
+              }).catch(e => {
+                  
+                  console.log('Timer removed', e);
+
+              });
+
+          }
+
+
+
+          if (cursor[0].hearts == 0) {
+              ct.rooms.switch('You Lose');
+          }
+
+
+
+
+
+
+
+
+    ondraw: ''
+    ondestroy: |2+
+                 
+
+    texture: d6e4a031-9835-474a-a055-44ae4673ba92
+    extends: {}
+    uid: e62794a5-a026-4cd6-9dce-5e4d16fbd025
+    lastmod: 1618181771578
+  - name: Start Button
+    depth: 1
+    oncreate: ''
+    onstep: |2+
+
+
+       if(ct.actions.Interact.down &&  (ct.place.occupied(this, 'Cursor'))){
+            ct.rooms.switch('Level 1');
+       }
+
+
+    ondraw: ''
+    ondestroy: ''
+    texture: f3031683-735d-4b53-90eb-f6b04acdd887
+    extends:
+      ctype: StartButton
+    uid: a281c3ca-e7ca-4637-97a2-578a56b52604
+    lastmod: 1618163243470
+  - name: Restart
+    depth: 1
+    oncreate: ''
+    onstep: |2-
+       if(ct.actions.Interact.down &&  (ct.place.occupied(this, 'Cursor'))){
+            ct.rooms.switch('Level 1');
+       }
+    ondraw: ''
+    ondestroy: ''
+    texture: 0e722967-1ef6-4cd4-9fe1-07d7bea03dc1
+    extends:
+      ctype: Restart
+    uid: 3ce16b7a-cdb5-42f8-907a-260a89d3cc91
+    lastmod: 1617979775982
+  - name: BG_INVISIBLE
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 2d42e256-0ca6-4bbb-838e-6058adb668bf
+    extends:
+      ctype: Background
+    uid: 010fffa9-c869-4e89-af09-e15ca97daf08
+    lastmod: 1617895637664
+  - name: watermelon
+    depth: 0
+    oncreate: ''
+    onstep: |-
+      var player = ct.types.list['chef'];    
+      var melons = ct.types.list['watermelon'];
+      var label = ct.types.list['MelonLabel'];
+       if(ct.actions.Interact.down &&  (ct.place.occupied(this, 'Cursor') && (player[0].x > this.x + 30 || player[0].x > this.x - 30))){
+          
+                 melons[0].kill = true;
+                 label[0].kill = true;
+         
+                //code to recognise successful click
+                
+                  
+                  
+           
+      }this.move();
+    ondraw: ''
+    ondestroy: |2-
+       var cursor = ct.types.list['cursor'];
+           cursor[0].clicks--;
+    texture: d8a07754-e202-4c2f-ba9e-3e64c71906c5
+    extends:
+      ctype: Objective
+    uid: 738366f5-d15a-4cda-9987-b28ceb230093
+    lastmod: 1618176479234
+  - name: knife
+    depth: 0
+    oncreate: ''
+    onstep: |-
+      var player = ct.types.list['chef'];    
+      var knives = ct.types.list['knife'];
+      var label = ct.types.list['KnifeLabel'];
+       if(ct.actions.Interact.down &&  (ct.place.occupied(this, 'Cursor') && (player[0].x > this.x + 30 || player[0].x > this.x - 30))){
+          
+                 knives[0].kill = true;
+                 label[0].kill = true;
+         
+                //code to recognise successful click
+                
+                  
+                  
+           
+      }
+    ondraw: ''
+    ondestroy: |2-
+       var cursor = ct.types.list['cursor'];
+           cursor[0].clicks--;
+    texture: 7e078000-9498-432a-993a-06531277427c
+    extends:
+      ctype: Objective
+    uid: b05f4f16-2eaa-4108-a6a8-6b2f02bd2050
+    lastmod: 1617979400906
+  - name: MelonLabel
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 509c4246-fec6-4c10-8b27-0b1615657f98
+    extends: {}
+    uid: 450d52ab-2672-40e8-b735-15d04caa6693
+    lastmod: 1617794404657
+  - name: KnifeLabel
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 42ed82d2-2dd0-47a9-b87f-24bf55895c2f
+    extends: {}
+    uid: 647eba09-9d81-4523-885d-3b1c04346079
+    lastmod: 1617794414091
+  - name: redpepper
+    depth: 0
+    oncreate: ''
+    onstep: |
+      var player = ct.types.list['chef'];    
+      var paprika = ct.types.list['redpepper'];
+      var label = ct.types.list['PaprikaLabel'];
+       if(ct.actions.Interact.down &&  (ct.place.occupied(this, 'Cursor') && (player[0].x > this.x + 30 || player[0].x > this.x - 30))){
+          
+                 paprika[0].kill = true;
+                 label[0].kill = true;
+         
+                //code to recognise successful click
+                
+                  
+                  
+           
+      }
+    ondraw: ''
+    ondestroy: |2-
+       var cursor = ct.types.list['cursor'];
+           cursor[0].clicks--;
+    texture: 2bd8223a-61c1-46a9-8e30-2ec5ecc1f57f
+    extends:
+      ctype: Objective
+    uid: 46c13196-ba53-4c01-9815-11cac7bb2c88
+    lastmod: 1617979405436
+  - name: fish
+    depth: 0
+    oncreate: ''
+    onstep: |2-
+       this.move();
+
+          
+          
+          if (ct.actions.Interact.down && (ct.place.occupied(this, 'Cursor'))) {
+
+              for (var label of ct.types.list['FishLabel']) {
+                  label.kill = true;
+              }
+          
+              for (var fish of ct.types.list['fish']) {
+                  fish.kill = true;
+              }
+          
+              
+          }
+    ondraw: ''
+    ondestroy: |2-
+       var cursor = ct.types.list['cursor'];
+           cursor[0].clicks--;
+    texture: ad2f883a-7a63-41d6-bb6b-143d1fe4efce
+    extends:
+      ctype: Objective
+    uid: bce86b72-2617-488d-af64-174a7b631bbf
+    lastmod: 1617979316257
+  - name: freezer
+    depth: 0
+    oncreate: |-
+      this.fish = false;
+      this.popup = false;
+    onstep: |-
+      this.move();
+
+      var player = ct.types.list['chef'];  
+      var newCloseX;
+
+      var label = ct.types.list['FishLabel'];
+
+      var fish = ct.types.list['fish'];
+
+         
+
+
+
+       if(ct.actions.Interact.down &&  (ct.place.occupied(this, 'Cursor') &&  ct.place.occupied(this, 'Player'))){
+                     this.popup = true;
+                  ct.types.copy('ItemBox',200,50);
+                  newCloseX = ct.types.copy('CloseX',500,50);
+                  
+                  if(this.fish == false && label[0] != undefined){
+                    ct.types.copy('fish',230,70);
+                  }
+                  else {
+                    this.fish = true;
+                  }
+                   var cursor = ct.types.list['cursor'];
+           cursor[0].clicks--;
+                                   
+                
+           
+      }
+    ondraw: ''
+    ondestroy: ''
+    texture: 6cc7e9dd-9d4b-4b41-82f3-341317390dd4
+    extends:
+      ctype: Objective
+    uid: ddeab318-701d-4e6a-b2cb-952b71cdcf6a
+    lastmod: 1617979321497
+  - name: shelf2
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: c4830bdd-9015-4def-b006-41d6f739a826
+    extends: {}
+    uid: df1f5d44-fa7b-469f-a988-56998018b070
+    lastmod: 1617799987419
+  - name: fork
+    depth: 0
+    oncreate: ''
+    onstep: |-
+      var player = ct.types.list['chef'];    
+      var forks = ct.types.list['fork'];
+      var label = ct.types.list['ForkLabel'];
+       if(ct.actions.Interact.released &&  (ct.place.occupied(this, 'Cursor') && (player[0].x > this.x + 30 || player[0].x > this.x - 30))){
+          
+                 forks[0].kill = true;
+                 label[0].kill = true;
+         
+                //code to recognise successful click
+                
+                  
+                  
+           
+      }this.move();
+    ondraw: ''
+    ondestroy: |2-
+       var cursor = ct.types.list['cursor'];
+           cursor[0].clicks--;
+    texture: 4d53219a-00ab-4029-a95a-13928828fef2
+    extends:
+      ctype: Objective
+    uid: c908d3c7-0f25-4261-afdd-fd0b07d87aed
+    lastmod: 1617979436093
+  - name: drawers2
+    depth: 0
+    oncreate: |-
+      this.broccoli = false;
+      this.popup = false;
+    onstep: |-
+      this.move();
+
+      var player = ct.types.list['chef'];  
+      var newCloseX;
+
+      var label = ct.types.list['BrocLabel'];
+
+
+
+       if(ct.actions.Interact.down &&  (ct.place.occupied(this, 'Cursor') &&  ct.place.occupied(this, 'Player'))){
+                  this.popup = true;
+                  ct.types.copy('ItemBox',200,50);
+                  newCloseX = ct.types.copy('CloseX',500,50);
+                  
+                  if(this.broccoli == false && label[0] != undefined){
+                    ct.types.copy('broccoli',230,70);
+                  }
+                  else {
+                    this.broccoli = true;
+                  }
+                   var cursor = ct.types.list['cursor'];
+           cursor[0].clicks--;
+                                   
+                
+           
+      }this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 6c3a3d30-0fad-4b36-8689-acaee87817d9
+    extends:
+      ctype: Objective
+    uid: c53fe2dd-be93-4d18-bc4c-c58303a670e3
+    lastmod: 1617979304186
+  - name: sink
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 56ff517e-c300-45ba-b7a3-1878b0525c20
+    extends: {}
+    uid: f0021262-fe8e-4118-bd9e-ef7b71980132
+    lastmod: 1617894670460
+  - name: broccoli
+    depth: 0
+    oncreate: ''
+    onstep: |-
+      this.move();
+
+          
+          
+          if (ct.actions.Interact.down && (ct.place.occupied(this, 'Cursor'))) {
+
+              for (var label of ct.types.list['BrocLabel']) {
+                  label.kill = true;
+              }
+          
+              for (var broc of ct.types.list['broccoli']) {
+                  broc.kill = true;
+              }
+          
+              
+          }
+    ondraw: ''
+    ondestroy: |2-
+       var cursor = ct.types.list['cursor'];
+           cursor[0].clicks--;
+    texture: c7e6e5d1-11cd-4bf9-94a8-618d8e95765b
+    extends:
+      ctype: Objective
+    uid: f549e2b6-3632-4720-9294-b18c7dad84e5
+    lastmod: 1617979269727
+  - name: FishLabel
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 9f1dd69c-bc4f-4a92-9e2e-7f5e2b3e1002
+    extends: {}
+    uid: fc6ac1bd-ecd9-4307-b4d1-3516a007652b
+    lastmod: 1617895642683
+  - name: BrocLabel
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 9871f8f4-3dad-4686-a2d3-18b54e6f1995
+    extends: {}
+    uid: 88d07d6d-6505-4f67-984c-6c7dcec5b1d7
+    lastmod: 1617800746840
+  - name: ForkLabel
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 03af2531-71bc-4052-9f6d-6c2e8fedec86
+    extends: {}
+    uid: 693aff8c-05a3-4872-9708-fad11d700f45
+    lastmod: 1617891676066
+  - name: PaprikaLabel
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 5c44fec4-7c12-4d96-95fe-efb25e1b25be
+    extends: {}
+    uid: c5def472-5d56-4732-91c0-8073b4399988
+    lastmod: 1618163372072
+  - name: flour
+    depth: 0
+    oncreate: ''
+    onstep: |-
+
+
+      var player = ct.types.list['chef'];    
+      var flour = ct.types.list['flour'];
+      var label = ct.types.list['FlourLabel'];
+       if(ct.actions.Interact.down &&  (ct.place.occupied(this, 'Cursor') && (player[0].x > this.x + 30 || player[0].x > this.x - 30))){
+          
+                 flour[0].kill = true;
+                 label[0].kill = true;
+         
+                //code to recognise successful click
+                
+                  
+                  
+           
+      }this.move();
+    ondraw: ''
+    ondestroy: |2-
+       var cursor = ct.types.list['cursor'];
+           cursor[0].clicks--;
+    texture: 8b885f2a-a561-4b22-8bf2-1b8a47d30d1e
+    extends:
+      ctype: Objective
+    uid: 53eb5fd9-37b9-4f26-8558-b1238abbfb94
+    lastmod: 1617979360711
+  - name: golden
+    depth: 0
+    oncreate: ''
+    onstep: |-
+      this.move();
+      var player = ct.types.list['chef'];  
+      var golden = ct.types.list['golden'];
+      var label = ct.types.list['GoldenLabel'];
+       if(ct.actions.Interact.down &&   (ct.place.occupied(this, 'Cursor') && (player[0].x > this.x + 30  || player[0].x > this.x - 30))){
+            
+           golden[0].kill = true;
+          label[0].kill = true;
+           
+           //code to recognise successful click (reducing unsuccessful click by one since the player code will add it)
+          
+      }
+    ondraw: ''
+    ondestroy: |2-
+       var cursor = ct.types.list['cursor'];
+           cursor[0].clicks--;
+    texture: 4c26ad8e-2fe4-4949-ac1e-346483c1b1ed
+    extends:
+      ctype: Objective
+    uid: e639d209-2516-4d9e-8218-f6d3ab1af0e9
+    lastmod: 1617979364186
+  - name: wine
+    depth: 0
+    oncreate: ''
+    onstep: |-
+
+
+      var player = ct.types.list['chef'];    
+      var wines = ct.types.list['wine'];
+      var label = ct.types.list['WineLabel'];
+       if(ct.actions.Interact.down &&  (ct.place.occupied(this, 'Cursor') && (player[0].x > this.x + 30 || player[0].x > this.x - 30))){
+          
+                 wines[0].kill = true;
+                 label[0].kill = true;
+         
+                //code to recognise successful click
+                
+                  
+                  
+           
+      }this.move();
+    ondraw: ''
+    ondestroy: |2-
+       var cursor = ct.types.list['cursor'];
+           cursor[0].clicks--;
+    texture: 3db4e0ad-0879-4927-84ff-fa6b36a771cc
+    extends:
+      ctype: Objective
+    uid: 8ca895d5-f446-4176-8fa2-ea3bf81fe64c
+    lastmod: 1618307262497
+  - name: carrot
+    depth: 0
+    oncreate: ''
+    onstep: |-
+
+
+      var player = ct.types.list['chef'];    
+      var carrot = ct.types.list['carrot'];
+      var label = ct.types.list['CarrotLabel'];
+       if(ct.actions.Interact.down &&  (ct.place.occupied(this, 'Cursor') && (player[0].x > this.x + 30 || player[0].x > this.x - 30))){
+          
+                 carrot[0].kill = true;
+                 label[0].kill = true;
+         
+                //code to recognise successful click
+                
+                  
+                  
+           
+      }this.move()
+    ondraw: ''
+    ondestroy: |2-
+       var cursor = ct.types.list['cursor'];
+           cursor[0].clicks--;
+    texture: c5ef7d57-5ce7-4616-aa48-b2e9459acd34
+    extends:
+      ctype: Objective
+    uid: acfb2ca7-d1bb-49a9-a81f-c5121afdc355
+    lastmod: 1617979330930
+  - name: CarrotLabel
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: ca497bb9-969b-4768-b4ba-5ffafbe42dea
+    extends: {}
+    uid: 2852758f-601c-4a9a-8d63-1275826319e2
+    lastmod: 1617899521816
+  - name: WineLabel
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: d67db23e-7859-4851-8c8c-052f0cec9cc5
+    extends: {}
+    uid: cea5e574-3bc8-4158-9ad5-7fd5b53c8e2f
+    lastmod: 1618307368706
+  - name: FlourLabel
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 96e35622-b0b8-4f0c-acef-ab1af9942cc5
+    extends: {}
+    uid: 96ba3321-652e-42c7-9605-d6e7c171f956
+    lastmod: 1617899556498
+  - name: title
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: eae46cc0-392f-4671-97ed-46880dfd1897
+    extends: {}
+    uid: 1b975f97-175a-4598-ac08-8302a6d52f1e
+    lastmod: 1617909877261
+  - name: NextLevel
+    depth: 0
+    oncreate: ''
+    onstep: |2-
+       if(ct.actions.Interact.down &&  (ct.place.occupied(this, 'Cursor'))){
+            ct.rooms.switch('Level2');
+       }
+    ondraw: ''
+    ondestroy: ''
+    texture: a777b610-5843-444b-8974-dba6ac78cb4c
+    extends: {}
+    uid: 34fdb1d8-1eb5-4c0b-90f1-eacd7841cd96
+    lastmod: 1617975986412
+  - name: Clock2
+    depth: 0
+    oncreate: |-
+      this.timer = ct.timer.add(50000, 'time');
+
+      localStorage.setItem("Hint2","no");
+      localStorage.setItem("CurrentHearts","3");
+
+      this.timer.then(() => {
+          console.log('Done!');
+      })
+      // The `catch` part is not necessary. Without it, though, you will
+      // see errors in the console when timers got interrupted,
+      // either manually or when you switch rooms
+      .catch(e => {
+          console.log('Timer removed', e);
+
+      });
+
+
+
+      this.text = new PIXI.Text('100');
+      this.text.x = 32;
+      this.text.anchor.y = 0.5;
+
+
+      this.addChild(this.text);
+
+
+
+
+
+      //code for checking if all items collected
+      this.fish = false;
+      this.broccoli = false;
+      this.fork = false;
+      this.flour = false;
+      this.wine = false;
+      this.carrot = false;
+      this.paprika = false;
+
+      this.timeScore = 0;
+    onstep: |2+
+          var timerText = (Math.ceil(this.timer.timeLeft / 1000)).toString();
+          this.text.text = (Math.ceil(this.timer.timeLeft / 1000)).toString();
+
+
+          if (Math.ceil(this.timer.timeLeft / 1000) == 0) {
+              ct.rooms.switch('You Lose2');
+          }
+
+
+
+
+          //code for checking if all items collected
+          var fish = ct.types.list['FishLabel'];
+          var broccoli = ct.types.list['BrocLabel'];
+          var fork = ct.types.list['ForkLabel'];
+          var flour = ct.types.list['FlourLabel'];
+          var wine = ct.types.list['WineLabel'];
+          var carrot = ct.types.list['CarrotLabel'];
+          var paprika = ct.types.list['PaprikaLabel'];
+
+          
+         
+          
+
+          if (fish[0] == undefined) {
+              this.fish = true;
+            
+          }
+          if (broccoli[0] == undefined) {
+              this.broccoli = true;
+             
+          }
+          if (fork[0] == undefined) {
+              this.fork = true;
+            
+          }
+          if (flour[0] == undefined) {
+              this.flour = true;
+              
+          }
+          if (wine[0] == undefined) {
+              this.wine = true;
+              
+          }
+           if (carrot[0] == undefined) {
+              this.carrot = true;
+              
+          }
+          if (paprika[0] == undefined) {
+              this.paprika = true;
+              
+          }
+
+
+
+          //go to end screen if completed objective
+          if (this.fish == true && this.fork == true && this.broccoli == true && this.flour == true && this.wine == true && this.carrot == true && this.paprika == true) {
+              var timer2 = ct.timer.add(600, 'timeout');
+
+
+                      this.timeScore = timerText;
+              localStorage.setItem("CurrentScore2",this.timeScore);
+              if(localStorage.getItem('HighScore2') == undefined){
+                  localStorage.setItem('HighScore2',this.timeScore);
+              }
+              else{
+                  if(Number(localStorage.getItem('HighScore2')) < Number(this.timeScore)){
+                      var scoreToAdd = Number(this.timeScore) - 1;
+                       localStorage.setItem('HighScore2',scoreToAdd.toString());
+                  }
+              }
+
+
+
+              timer2.then(function () {
+                 
+                  ct.rooms.switch('You Win 2');
+              }).catch(e => {
+          console.log('Timer removed', e);
+
+      });
+
+
+          }
+
+
+       var cursor = ct.types.list['cursor'];
+          if(cursor[0].hearts == 0){
+                ct.rooms.switch('You Lose2');
+          }
+         
+
+    ondraw: ''
+    ondestroy: ''
+    texture: d6e4a031-9835-474a-a055-44ae4673ba92
+    extends: {}
+    uid: 8ffa4540-a079-4e01-a304-faa2ebed1ff6
+    lastmod: 1618181783620
+  - name: Restart2
+    depth: 1
+    oncreate: ''
+    onstep: |2-
+       if(ct.actions.Interact.down &&  (ct.place.occupied(this, 'Cursor'))){
+            ct.rooms.switch('Level2');
+       }
+    ondraw: ''
+    ondestroy: ''
+    texture: 0e722967-1ef6-4cd4-9fe1-07d7bea03dc1
+    extends:
+      ctype: Restart
+    uid: 76c72ed0-c2c5-4c5c-b8ec-047b843aa998
+    lastmod: 1617911561569
+  - name: goldknife
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: e59635d1-6b58-44f2-83dc-cb9732849731
+    extends: {}
+    uid: e3f3f39b-2eaa-4237-898c-3ea2fce0cc4d
+    lastmod: 1617979439060
+  - name: hanger
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 39d77618-1806-4189-b068-fd0c8a9aaae7
+    extends: {}
+    uid: 1b2270fe-3a50-4e0c-9a9e-6db15142a426
+    lastmod: 1617965396404
+  - name: goldpot
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 53d84750-b0e6-4bfe-9f8b-56e4a0efe00e
+    extends: {}
+    uid: 920c4583-817b-4f17-abd9-7ea0d315eece
+    lastmod: 1617977030028
+  - name: GoldenLabel
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 9342de03-7901-4d96-936a-4584ade77aab
+    extends: {}
+    uid: 5c80402f-188e-4837-956d-6a0432ac73e1
+    lastmod: 1617965735092
+  - name: Restart3
+    depth: 1
+    oncreate: ''
+    onstep: |2-
+       if(ct.actions.Interact.down &&  (ct.place.occupied(this, 'Cursor'))){
+            ct.rooms.switch('Level 3');
+       }
+    ondraw: ''
+    ondestroy: ''
+    texture: 0e722967-1ef6-4cd4-9fe1-07d7bea03dc1
+    extends:
+      ctype: Restart
+    uid: 4ffbe8ee-18a7-4f7b-be18-619f99b2745e
+    lastmod: 1617965882049
+  - name: Clock3
+    depth: 0
+    oncreate: |-
+      this.timer = ct.timer.add(15000, 'time');
+
+      localStorage.setItem("Hint3","no");
+      localStorage.setItem("CurrentHearts","3");
+
+      this.timer.then(() => {
+          console.log('Done!');
+      })
+      // The `catch` part is not necessary. Without it, though, you will
+      // see errors in the console when timers got interrupted,
+      // either manually or when you switch rooms
+      .catch(e => {
+          console.log('Timer removed', e);
+
+      });
+
+
+
+      this.text = new PIXI.Text('100');
+      this.text.x = 32;
+      this.text.anchor.y = 0.5;
+
+
+      this.addChild(this.text);
+
+
+
+
+
+      //code for checking if all items collected
+      this.golden = false;
+
+
+      this.timeScore = 0;
+    onstep: |2
+          var timerText = (Math.ceil(this.timer.timeLeft / 1000)).toString();
+          this.text.text = (Math.ceil(this.timer.timeLeft / 1000)).toString();
+
+
+          if (Math.ceil(this.timer.timeLeft / 1000) == 0) {
+              ct.rooms.switch('You Lose3');
+          }
+
+
+
+
+          //code for checking if all items collected
+          
+          var golden = ct.types.list['GoldenLabel'];
+
+          
+          
+
+
+          if (golden[0] == undefined) {
+              this.golden = true;
+              
+          }
+
+
+
+
+          //go to end screen if completed objective
+          if (this.golden == true ) {
+              var timer2 = ct.timer.add(600, 'timeout');
+
+                       this.timeScore = timerText;
+              localStorage.setItem("CurrentScore3",this.timeScore);
+              if(localStorage.getItem('HighScore3') == undefined){
+                  localStorage.setItem('HighScore3',this.timeScore);
+              }
+              else{
+                  if(Number(localStorage.getItem('HighScore3')) < Number(this.timeScore)){
+                      var scoreToAdd = Number(this.timeScore) - 1;
+                       localStorage.setItem('HighScore3',scoreToAdd.toString());
+                  }
+              }
+
+
+          
+              timer2.then(function () {
+                 
+                  ct.rooms.switch('You Win 3');
+              }).catch(e => {
+          console.log('Timer removed', e);
+
+      });
+
+          }
+
+
+          var cursor = ct.types.list['cursor'];
+          if(cursor[0].hearts == 0){
+                ct.rooms.switch('You Lose3');
+          }
+    ondraw: ''
+    ondestroy: ''
+    texture: d6e4a031-9835-474a-a055-44ae4673ba92
+    extends: {}
+    uid: ddc5824e-d5cc-40cd-a8a5-19f293e65d07
+    lastmod: 1618181980446
+  - name: NextLevel2
+    depth: 0
+    oncreate: ''
+    onstep: |2-
+       if(ct.actions.Interact.down &&  (ct.place.occupied(this, 'Cursor'))){
+            ct.rooms.switch('Level 3');
+       }
+    ondraw: ''
+    ondestroy: ''
+    texture: a777b610-5843-444b-8974-dba6ac78cb4c
+    extends: {}
+    uid: 894344ae-0676-42b5-ba26-4c9618192fa1
+    lastmod: 1617975994048
+  - name: ReturnMenu
+    depth: 0
+    oncreate: ''
+    onstep: |+
+
+      if(ct.actions.Interact.down && ct.place.occupied(this,'Cursor')){
+              
+               ct.rooms.switch('Intro');
+      }
+
+
+
+
+
+         
+
+    ondraw: ''
+    ondestroy: |2-
+       var cursor = ct.types.list['cursor'];
+           cursor[0].clicks--;
+    texture: 0490433f-8ab6-42b0-9623-d1a1548fe40f
+    extends:
+      ctype: CloseX
+    uid: 1092ea0c-de4e-4192-9d0e-7eb46dfdfff5
+    lastmod: 1617980499885
+  - name: TimeScore
+    depth: 0
+    oncreate: |-
+      this.text = new PIXI.Text('100');
+      this.text.x = 20;
+      this.text.anchor.y = -0.5;
+
+      this.text.text = localStorage.getItem("CurrentScore1");
+
+
+      this.addChild(this.text);
+
+      var stars = 3;
+      var hint = localStorage.getItem("Hint1");
+      var hearts = localStorage.getItem("CurrentHearts");
+
+      if(hint == "used"){
+          stars--;
+      }
+      if(Number(hearts) < 3){
+          stars--;
+      }
+
+
+      if(stars == 2){
+           ct.types.copy('star1',210,230);
+            ct.types.copy('star1',270,230);
+            console.log("USED");
+      // localStorage.setItem("Hint1","no");
+      // localStorage.setItem("CurrentHearts","3");
+      }
+      else if(stars == 1){
+          ct.types.copy('star1',210,230);
+      // localStorage.setItem("Hint1","no");
+      // localStorage.setItem("CurrentHearts","3");
+      }
+      else if(stars == 3){
+          ct.types.copy('star1',210,230);
+            ct.types.copy('star1',270,230);
+            ct.types.copy('star1',330,230);
+      // localStorage.setItem("Hint1","no");
+      // localStorage.setItem("CurrentHearts","3");
+
+      }
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 176fb3b1-39e7-4b49-b04e-1d1453d2c862
+    extends: {}
+    uid: c38596bb-f951-4719-8434-bd2ca217acdd
+    lastmod: 1618181918917
+  - name: TimeScore2
+    depth: 0
+    oncreate: |-
+      this.text = new PIXI.Text('100');
+      this.text.x = 20;
+      this.text.anchor.y = -0.5;
+
+      this.text.text = localStorage.getItem("CurrentScore2");
+
+
+      this.addChild(this.text);
+
+      var stars = 3;
+      var hint = localStorage.getItem("Hint2");
+      var hearts = localStorage.getItem("CurrentHearts");
+
+      if(hint == "used"){
+          stars--;
+      }
+      if(Number(hearts) < 3){
+          stars--;
+      }
+
+
+      if(stars == 2){
+           ct.types.copy('star1',210,230);
+            ct.types.copy('star1',270,230);
+            console.log("USED");
+      // localStorage.setItem("Hint1","no");
+      // localStorage.setItem("CurrentHearts","3");
+      }
+      else if(stars == 1){
+          ct.types.copy('star1',210,230);
+      // localStorage.setItem("Hint1","no");
+      // localStorage.setItem("CurrentHearts","3");
+      }
+      else if(stars == 3){
+          ct.types.copy('star1',210,230);
+            ct.types.copy('star1',270,230);
+            ct.types.copy('star1',330,230);
+      // localStorage.setItem("Hint1","no");
+      // localStorage.setItem("CurrentHearts","3");
+
+      }
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 176fb3b1-39e7-4b49-b04e-1d1453d2c862
+    extends: {}
+    uid: b17c714f-147d-4d1c-a634-1618446b805b
+    lastmod: 1618181958520
+  - name: TimeScore3
+    depth: 0
+    oncreate: |-
+      this.text = new PIXI.Text('100');
+      this.text.x = 20;
+      this.text.anchor.y = -0.5;
+
+      this.text.text = localStorage.getItem("CurrentScore3");
+
+
+      this.addChild(this.text);
+
+      var stars = 3;
+      var hearts = localStorage.getItem("CurrentHearts");
+
+
+      if(Number(hearts) < 3){
+          stars--;
+      }
+
+
+      if(stars == 2){
+           ct.types.copy('star1',210,230);
+            ct.types.copy('star1',270,230);
+            console.log("USED");
+      // localStorage.setItem("Hint1","no");
+      // localStorage.setItem("CurrentHearts","3");
+      }
+      else if(stars == 1){
+          ct.types.copy('star1',210,230);
+      // localStorage.setItem("Hint1","no");
+      // localStorage.setItem("CurrentHearts","3");
+      }
+      else if(stars == 3){
+          ct.types.copy('star1',210,230);
+            ct.types.copy('star1',270,230);
+            ct.types.copy('star1',330,230);
+      // localStorage.setItem("Hint1","no");
+      // localStorage.setItem("CurrentHearts","3");
+
+      }
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 176fb3b1-39e7-4b49-b04e-1d1453d2c862
+    extends: {}
+    uid: 4c9da257-7b56-4020-8eff-b19be2620bb8
+    lastmod: 1618161245230
+  - name: ScoreLabel
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: a9022b0a-e4ab-497c-b2cf-b4f3597bbbb0
+    extends: {}
+    uid: 857b6826-6482-494e-9485-1d7d8231ebfb
+    lastmod: 1618161693808
+  - name: HighScore1
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 2c42d139-7fff-48ea-8f73-2ef82d30d399
+    extends: {}
+    uid: ab6f1680-a435-4e13-894a-7691b29a28a2
+    lastmod: 1618161990416
+  - name: HighScore2
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 1c8527f0-57ef-449c-aed2-a78dd25a2166
+    extends: {}
+    uid: 67890c56-fb1b-45fa-9783-9deed51538a7
+    lastmod: 1618161996290
+  - name: HighScore3
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 7c7537e7-5855-493d-9533-10ad077a57de
+    extends: {}
+    uid: 73ec1b73-4cab-498f-963c-598c4c308ca2
+    lastmod: 1618162000666
+  - name: ScoreDisplay1
+    depth: 0
+    oncreate: |-
+      this.text = new PIXI.Text('100');
+      this.text.x = 20;
+      this.text.anchor.y = -0.5;
+
+      this.text.text = localStorage.getItem("HighScore1");
+
+
+      this.addChild(this.text);
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 0cd69dfb-0a0f-4011-bd5c-6f64bd502e07
+    extends: {}
+    uid: 926b25e8-4b85-4ebc-a0c2-7e569b351c94
+    lastmod: 1618162413676
+  - name: ScoreDisplay2
+    depth: 0
+    oncreate: |-
+      this.text = new PIXI.Text('100');
+      this.text.x = 20;
+      this.text.anchor.y = -0.5;
+
+      this.text.text = localStorage.getItem("HighScore2");
+
+
+      this.addChild(this.text);
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 0cd69dfb-0a0f-4011-bd5c-6f64bd502e07
+    extends: {}
+    uid: 22c22c5d-2b10-4796-aea0-759c43722eb0
+    lastmod: 1618162424884
+  - name: ScoreDisplay3
+    depth: 0
+    oncreate: |-
+      this.text = new PIXI.Text('100');
+      this.text.x = 20;
+      this.text.anchor.y = -0.5;
+
+      this.text.text = localStorage.getItem("HighScore3");
+
+
+      this.addChild(this.text);
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 0cd69dfb-0a0f-4011-bd5c-6f64bd502e07
+    extends: {}
+    uid: 67165d91-d2e6-44ae-b5b0-30da5db80309
+    lastmod: 1618162431499
+  - name: HighScoreBut
+    depth: 0
+    oncreate: ''
+    onstep: |2-
+       if(ct.actions.Interact.down &&  (ct.place.occupied(this, 'Cursor'))){
+            ct.rooms.switch('High Scores');
+       }
+    ondraw: ''
+    ondestroy: ''
+    texture: d33cca0a-005a-4494-a866-ad5126da13cd
+    extends: {}
+    uid: 73e86ac8-6252-4746-a745-1510042b6c80
+    lastmod: 1618163260218
+  - name: hint1
+    depth: 0
+    oncreate: ''
+    onstep: |-
+      this.move();
+
+      var tomato = ct.types.list['TomatoLabel'];
+      var bread = ct.types.list['BreadLabel'];
+      var apple = ct.types.list['AppleLabel'];
+      var knife = ct.types.list['KnifeLabel'];
+      var melon = ct.types.list['MelonLabel'];
+
+      var breadObj = ct.types.list['bread'];
+      var appleObj = ct.types.list['apple'];
+      var knifeObj = ct.types.list['knife'];
+      var melonObj = ct.types.list['watermelon'];
+
+
+
+       if (ct.actions.Interact.down && (ct.place.occupied(this, 'Cursor'))) {
+
+             if(tomato[0] != undefined){
+                 localStorage.setItem("Hint1","used");
+                 tomato[0].kill = true;
+                 this.kill = true;
+             }
+             else if(bread[0] != undefined){
+                 localStorage.setItem("Hint1","used");
+                 bread[0].kill = true;
+                 breadObj[0].kill = true;
+                 this.kill = true;
+             }
+             else if(apple[0] != undefined){
+                 localStorage.setItem("Hint1","used");
+                 apple[0].kill = true;
+                 appleObj[0].kill = true;
+                 this.kill = true;
+             }
+             else if(knife[0] != undefined){
+                 localStorage.setItem("Hint1","used");
+                 knife[0].kill = true;
+                 knifeObj[0].kill = true;
+                 this.kill = true;
+             }
+             else if(melon[0] != undefined){
+                 localStorage.setItem("Hint1","used");
+                 melon[0].kill = true;
+                 melonObj[0].kill = true;
+                 this.kill = true;
+             }
+
+             
+          
+              
+          }
+    ondraw: ''
+    ondestroy: ''
+    texture: 84b485cc-2dcc-427b-b40a-5931d4bfaa1c
+    extends: {}
+    uid: 32823c0b-b2db-4936-8088-43bdb5facc47
+    lastmod: 1618181833831
+  - name: hint2
+    depth: 0
+    oncreate: ''
+    onstep: |-
+      this.move();
+
+      var fork = ct.types.list['ForkLabel'];
+      var paprika = ct.types.list['PaprikaLabel'];
+      var flour = ct.types.list['FlourLabel'];
+      var broccoli = ct.types.list['BrocLabel'];
+      var wine = ct.types.list['WineLabel'];
+      var fish = ct.types.list['FishLabel'];
+      var carrot = ct.types.list['CarrotLabel'];
+
+      var paprikaObj = ct.types.list['redpepper'];
+      var flourObj = ct.types.list['flour'];
+      var wineObj = ct.types.list['wine'];
+      var carrotObj = ct.types.list['carrot'];
+      var forkObj = ct.types.list['fork'];
+
+
+
+       if (ct.actions.Interact.down && (ct.place.occupied(this, 'Cursor'))) {
+
+             if(fork[0] != undefined){
+                 localStorage.setItem("Hint2","used");
+                 fork[0].kill = true;
+                 forkObj[0].kill = true;
+                 this.kill = true;
+             }
+             else if(paprika[0] != undefined){
+                 localStorage.setItem("Hint2","used");
+                 paprika[0].kill = true;
+                 paprikaObj[0].kill = true;
+                 this.kill = true;
+             }
+             else if(flour[0] != undefined){
+                 localStorage.setItem("Hint2","used");
+                 flour[0].kill = true;
+                 flourObj[0].kill = true;
+                 this.kill = true;
+             }
+             else if(broccoli[0] != undefined){
+                 localStorage.setItem("Hint2","used");
+                 broccoli[0].kill = true;
+                 
+                 this.kill = true;
+             }
+             else if(wine[0] != undefined){
+                 localStorage.setItem("Hint2","used");
+                 wine[0].kill = true;
+                 wineObj[0].kill = true;
+                 this.kill = true;
+             }
+             else if(fish[0] != undefined){
+                 localStorage.setItem("Hint2","used");
+                 fish[0].kill = true;
+                  this.kill = true;
+             }
+                 else if(carrot[0] != undefined){
+                     localStorage.setItem("Hint2","used");
+                 carrot[0].kill = true;
+                 carrotObj[0].kill = true;
+                  this.kill = true;
+             }
+          
+              
+          }
+    ondraw: ''
+    ondestroy: 'localStorage.setItem("Hint2","used");'
+    texture: 84b485cc-2dcc-427b-b40a-5931d4bfaa1c
+    extends: {}
+    uid: 25014770-e147-47b0-b0d3-e4550e72236a
+    lastmod: 1618181903256
+  - name: star1
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 84846d2e-4edf-4597-99e0-a7aba56cdb1e
+    extends: {}
+    uid: afd44b2b-5e00-4b54-b9b3-23accafb8e47
+    lastmod: 1618175716924
+  - name: star2
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 84846d2e-4edf-4597-99e0-a7aba56cdb1e
+    extends: {}
+    uid: 6e5952bb-7efe-47c9-a4a3-c0a3a2403096
+    lastmod: 1618175716924
+  - name: star3
+    depth: 0
+    oncreate: ''
+    onstep: this.move();
+    ondraw: ''
+    ondestroy: ''
+    texture: 84846d2e-4edf-4597-99e0-a7aba56cdb1e
+    extends: {}
+    uid: cda58a97-4413-45d2-a9ee-4b81befc11d0
+    lastmod: 1618175716924
+sounds:
+  - name: Wrong
+    uid: 5c6c2559-9759-488c-96fc-695d57b7ede7
+    origname: s5c6c2559-9759-488c-96fc-695d57b7ede7.mp3
+    lastmod: 1617648400826
+    poolSize: 5
+styles: []
+rooms:
+  - name: Level 1
+    oncreate: ''
+    onstep: ''
+    ondraw: ''
+    onleave: ''
+    width: 640
+    height: 320
+    backgrounds:
+      - depth: -1
+        texture: 0196e9b3-3e32-4541-98df-e8d5bfad693c
+        extends:
+          repeat: no-repeat
+    copies:
+      - x: 0
+        'y': 0
+        uid: 010fffa9-c869-4e89-af09-e15ca97daf08
+        exts: {}
+      - x: 127
+        'y': 193
+        uid: ae5a1d65-62b2-4ed2-802d-14f17816f5ca
+        exts: {}
+      - x: 215
+        'y': 192
+        uid: 8fe409b8-62ba-481c-9cb8-7a103e1c8722
+        exts: {}
+      - x: -5
+        'y': -18
+        uid: dacf29c2-4e3f-44fc-ba90-c444b6781709
+        exts: {}
+      - x: -6
+        'y': 1
+        uid: 16866b98-35fc-4036-be72-1b1c08f36d37
+        exts: {}
+      - x: -6
+        'y': 22
+        uid: 4493d35e-a6bb-4c7a-82a7-52751560f718
+        exts: {}
+      - x: 521
+        'y': 3
+        uid: 4a9b6205-7ab2-4c88-8d71-5f99e04e0b38
+        exts: {}
+      - x: 560
+        'y': 3
+        uid: 4a9b6205-7ab2-4c88-8d71-5f99e04e0b38
+        exts: {}
+      - x: 599
+        'y': 3
+        uid: 4a9b6205-7ab2-4c88-8d71-5f99e04e0b38
+        exts: {}
+      - x: 87
+        'y': 24
+        uid: e62794a5-a026-4cd6-9dce-5e4d16fbd025
+        exts: {}
+      - x: 230
+        'y': 166
+        uid: a3e6382e-a65e-4376-9cdc-e2479407a7f0
+        exts: {}
+      - x: 357
+        'y': 192
+        uid: 300af250-e4b6-4fbe-a39f-eb27e092759b
+        exts: {}
+      - x: 356
+        'y': 103
+        uid: 6ffe8465-21ff-4e82-83ef-8f5d0b7e91c9
+        exts: {}
+      - x: 430
+        'y': 160
+        uid: 738366f5-d15a-4cda-9987-b28ceb230093
+        exts: {}
+      - x: 473
+        'y': 256
+        uid: b05f4f16-2eaa-4108-a6a8-6b2f02bd2050
+        exts: {}
+      - x: -6
+        'y': 41
+        uid: 647eba09-9d81-4523-885d-3b1c04346079
+        exts: {}
+      - x: -12
+        'y': 56
+        uid: 450d52ab-2672-40e8-b735-15d04caa6693
+        exts: {}
+      - x: 512
+        'y': 192
+        uid: 0da7c1d4-ce88-42c1-bae2-b144734d7dbe
+        exts: {}
+      - x: 589
+        'y': 184
+        uid: 85eff87a-e91d-4313-a30a-a71b693a56c5
+        exts: {}
+      - x: 10
+        'y': 230
+        uid: d01d06e9-6d72-4790-a0eb-8e2b405328db
+        exts: {}
+      - x: 75
+        'y': 146
+        uid: bc64e3ea-1e21-4179-93c6-1e02568bb896
+        exts: {}
+      - x: 448
+        'y': -0.0
+        uid: 32823c0b-b2db-4936-8088-43bdb5facc47
+        exts: {}
+    tiles:
+      - depth: -10
+        tiles: []
+        extends: {}
+    uid: f6b5370c-585b-42b2-9b04-f4ef6c3eb09d
+    thumbnail: f4ef6c3eb09d
+    extends: {}
+    gridX: 32
+    gridY: 32
+    lastmod: 1618308390119
+    backgroundColor: 'rgba(133,94,66,0)'
+  - name: You Win 1
+    oncreate: ''
+    onstep: ''
+    ondraw: ''
+    onleave: ''
+    width: 640
+    height: 320
+    backgrounds:
+      - depth: -1
+        texture: 0196e9b3-3e32-4541-98df-e8d5bfad693c
+        extends:
+          repeat: no-repeat
+    copies:
+      - x: 160
+        'y': 128
+        uid: 3ce16b7a-cdb5-42f8-907a-260a89d3cc91
+        exts: {}
+      - x: 384
+        'y': 128
+        uid: 34fdb1d8-1eb5-4c0b-90f1-eacd7841cd96
+        exts: {}
+      - x: 81
+        'y': 72
+        uid: bc64e3ea-1e21-4179-93c6-1e02568bb896
+        exts: {}
+      - x: 608
+        'y': 288
+        uid: 1092ea0c-de4e-4192-9d0e-7eb46dfdfff5
+        exts: {}
+      - x: 288
+        'y': 48
+        uid: c38596bb-f951-4719-8434-bd2ca217acdd
+        exts: {}
+    tiles:
+      - depth: -10
+        tiles: []
+        extends: {}
+    uid: 05930065-341a-4cc1-b010-3c20c4b41ee4
+    thumbnail: 3c20c4b41ee4
+    extends: {}
+    gridX: 16
+    gridY: 16
+    lastmod: 1618177833254
+  - name: Intro
+    oncreate: ''
+    onstep: ''
+    ondraw: ''
+    onleave: ''
+    width: 640
+    height: 320
+    backgrounds:
+      - depth: -1
+        texture: 0196e9b3-3e32-4541-98df-e8d5bfad693c
+        extends:
+          repeat: no-repeat
+    copies:
+      - x: 161
+        'y': -24
+        uid: 1b975f97-175a-4598-ac08-8302a6d52f1e
+        exts: {}
+      - x: 160
+        'y': 128
+        uid: a281c3ca-e7ca-4637-97a2-578a56b52604
+        exts: {}
+      - x: 64
+        'y': 192
+        uid: bc64e3ea-1e21-4179-93c6-1e02568bb896
+        exts: {}
+      - x: 160
+        'y': 224
+        uid: 73e86ac8-6252-4746-a745-1510042b6c80
+        exts: {}
+    tiles:
+      - depth: -10
+        tiles: []
+        extends: {}
+    uid: 773c7aa7-b4df-46d2-aeeb-df5b5b783846
+    thumbnail: df5b5b783846
+    extends: {}
+    gridX: 32
+    gridY: 32
+    lastmod: 1618307428769
+  - name: Level2
+    oncreate: ''
+    onstep: ''
+    ondraw: ''
+    onleave: ''
+    width: 640
+    height: 320
+    backgrounds:
+      - depth: -1
+        texture: 0196e9b3-3e32-4541-98df-e8d5bfad693c
+        extends:
+          repeat: no-repeat
+    copies:
+      - x: 218
+        'y': 192
+        uid: f0021262-fe8e-4118-bd9e-ef7b71980132
+        exts: {}
+      - x: 434
+        'y': 82
+        uid: df1f5d44-fa7b-469f-a988-56998018b070
+        exts: {}
+      - x: -2
+        'y': -10
+        uid: fc6ac1bd-ecd9-4307-b4d1-3516a007652b
+        exts: {}
+      - x: -12
+        'y': 15
+        uid: 88d07d6d-6505-4f67-984c-6c7dcec5b1d7
+        exts: {}
+      - x: -5
+        'y': 41
+        uid: 693aff8c-05a3-4872-9708-fad11d700f45
+        exts: {}
+      - x: -10
+        'y': 63
+        uid: c5def472-5d56-4732-91c0-8073b4399988
+        exts: {}
+      - x: 426
+        'y': 227
+        uid: c908d3c7-0f25-4261-afdd-fd0b07d87aed
+        exts: {}
+      - x: 498
+        'y': 192
+        uid: ddeab318-701d-4e6a-b2cb-952b71cdcf6a
+        exts: {}
+      - x: 598
+        'y': 3
+        uid: 4a9b6205-7ab2-4c88-8d71-5f99e04e0b38
+        exts: {}
+      - x: 562
+        'y': 3
+        uid: 4a9b6205-7ab2-4c88-8d71-5f99e04e0b38
+        exts: {}
+      - x: 526
+        'y': 2
+        uid: 4a9b6205-7ab2-4c88-8d71-5f99e04e0b38
+        exts: {}
+      - x: 419
+        'y': 98
+        uid: 46c13196-ba53-4c01-9815-11cac7bb2c88
+        exts: {}
+      - x: 265
+        'y': 169
+        uid: 8ca895d5-f446-4176-8fa2-ea3bf81fe64c
+        exts: {}
+      - x: 520
+        'y': 97
+        uid: acfb2ca7-d1bb-49a9-a81f-c5121afdc355
+        exts: {}
+      - x: -8
+        'y': 86
+        uid: 96ba3321-652e-42c7-9605-d6e7c171f956
+        exts: {}
+      - x: -12
+        'y': 110
+        uid: cea5e574-3bc8-4158-9ad5-7fd5b53c8e2f
+        exts: {}
+      - x: -10
+        'y': 130
+        uid: 2852758f-601c-4a9a-8d63-1275826319e2
+        exts: {}
+      - x: 72
+        'y': 245
+        uid: c53fe2dd-be93-4d18-bc4c-c58303a670e3
+        exts: {}
+      - x: 152
+        'y': 160
+        uid: 53eb5fd9-37b9-4f26-8558-b1238abbfb94
+        exts: {}
+      - x: 192
+        'y': 64
+        uid: 8ffa4540-a079-4e01-a304-faa2ebed1ff6
+        exts: {}
+      - x: 448
+        'y': 0
+        uid: 25014770-e147-47b0-b0d3-e4550e72236a
+        exts: {}
+      - x: 12
+        'y': 231
+        uid: d01d06e9-6d72-4790-a0eb-8e2b405328db
+        exts: {}
+      - x: 71
+        'y': 140
+        uid: bc64e3ea-1e21-4179-93c6-1e02568bb896
+        exts: {}
+    tiles:
+      - depth: -10
+        tiles: []
+        extends: {}
+    uid: b01a33e1-2812-4d7a-8763-ade8652337f2
+    thumbnail: ade8652337f2
+    extends: {}
+    gridX: 64
+    gridY: 64
+    lastmod: 1618307885002
+  - name: You Win 2
+    oncreate: ''
+    onstep: ''
+    ondraw: ''
+    onleave: ''
+    width: 640
+    height: 320
+    backgrounds:
+      - depth: -1
+        texture: 0196e9b3-3e32-4541-98df-e8d5bfad693c
+        extends:
+          repeat: no-repeat
+    copies:
+      - x: 160
+        'y': 128
+        uid: 76c72ed0-c2c5-4c5c-b8ec-047b843aa998
+        exts: {}
+      - x: 75
+        'y': 72
+        uid: bc64e3ea-1e21-4179-93c6-1e02568bb896
+        exts: {}
+      - x: 384
+        'y': 128
+        uid: 894344ae-0676-42b5-ba26-4c9618192fa1
+        exts: {}
+      - x: 608
+        'y': 288
+        uid: 1092ea0c-de4e-4192-9d0e-7eb46dfdfff5
+        exts: {}
+      - x: 288
+        'y': 48
+        uid: b17c714f-147d-4d1c-a634-1618446b805b
+        exts: {}
+    tiles:
+      - depth: -10
+        tiles: []
+        extends: {}
+    uid: baed7b3e-3627-4e5c-a373-39d6308b9255
+    thumbnail: 39d6308b9255
+    extends: {}
+    gridX: 16
+    gridY: 16
+    lastmod: 1618182557242
+  - name: You Lose
+    oncreate: ''
+    onstep: ''
+    ondraw: ''
+    onleave: ''
+    width: 640
+    height: 320
+    backgrounds:
+      - depth: -1
+        texture: 0196e9b3-3e32-4541-98df-e8d5bfad693c
+        extends:
+          repeat: no-repeat
+    copies:
+      - x: 272
+        'y': 144
+        uid: 3ce16b7a-cdb5-42f8-907a-260a89d3cc91
+        exts: {}
+      - x: 157
+        'y': 119
+        uid: bc64e3ea-1e21-4179-93c6-1e02568bb896
+        exts: {}
+      - x: 608
+        'y': 288
+        uid: 1092ea0c-de4e-4192-9d0e-7eb46dfdfff5
+        exts: {}
+    tiles:
+      - depth: -10
+        tiles: []
+        extends: {}
+    uid: 265c8cc6-1772-45f2-bd5d-774624e77ff7
+    thumbnail: 774624e77ff7
+    extends: {}
+    gridX: 16
+    gridY: 16
+    lastmod: 1618307888032
+  - name: You Lose2
+    oncreate: ''
+    onstep: ''
+    ondraw: ''
+    onleave: ''
+    width: 640
+    height: 320
+    backgrounds:
+      - depth: -1
+        texture: 0196e9b3-3e32-4541-98df-e8d5bfad693c
+        extends:
+          repeat: no-repeat
+    copies:
+      - x: 272
+        'y': 144
+        uid: 76c72ed0-c2c5-4c5c-b8ec-047b843aa998
+        exts: {}
+      - x: 108
+        'y': 155
+        uid: bc64e3ea-1e21-4179-93c6-1e02568bb896
+        exts: {}
+      - x: 608
+        'y': 288
+        uid: 36da2a61-74a3-4b2e-8049-a893dd7e3727
+        exts: {}
+    tiles:
+      - depth: -10
+        tiles: []
+        extends: {}
+    uid: ae5ae062-393b-4741-84e4-b2772aa42b95
+    thumbnail: b2772aa42b95
+    extends: {}
+    gridX: 16
+    gridY: 16
+    lastmod: 1617980755409
+  - name: Level 3
+    oncreate: ''
+    onstep: ''
+    ondraw: ''
+    onleave: ''
+    width: 640
+    height: 320
+    backgrounds:
+      - depth: -1
+        texture: 0196e9b3-3e32-4541-98df-e8d5bfad693c
+        extends:
+          repeat: no-repeat
+    copies:
+      - x: 512
+        'y': 192
+        uid: 300af250-e4b6-4fbe-a39f-eb27e092759b
+        exts: {}
+      - x: -2
+        'y': 244
+        uid: c53fe2dd-be93-4d18-bc4c-c58303a670e3
+        exts: {}
+      - x: 114
+        'y': 192
+        uid: 8fe409b8-62ba-481c-9cb8-7a103e1c8722
+        exts: {}
+      - x: 42
+        'y': 76
+        uid: 6ffe8465-21ff-4e82-83ef-8f5d0b7e91c9
+        exts: {}
+      - x: 483
+        'y': 74
+        uid: df1f5d44-fa7b-469f-a988-56998018b070
+        exts: {}
+      - x: 140
+        'y': 196
+        uid: 920c4583-817b-4f17-abd9-7ea0d315eece
+        exts: {}
+      - x: 97
+        'y': 79
+        uid: e3f3f39b-2eaa-4237-898c-3ea2fce0cc4d
+        exts: {}
+      - x: 322
+        'y': 95
+        uid: 1b2270fe-3a50-4e0c-9a9e-6db15142a426
+        exts: {}
+      - x: 602
+        'y': 6
+        uid: 4a9b6205-7ab2-4c88-8d71-5f99e04e0b38
+        exts: {}
+      - x: 563
+        'y': 6
+        uid: 4a9b6205-7ab2-4c88-8d71-5f99e04e0b38
+        exts: {}
+      - x: 524
+        'y': 5
+        uid: 4a9b6205-7ab2-4c88-8d71-5f99e04e0b38
+        exts: {}
+      - x: -14
+        'y': -13
+        uid: 5c80402f-188e-4837-956d-6a0432ac73e1
+        exts: {}
+      - x: 182
+        'y': 20
+        uid: ddc5824e-d5cc-40cd-a8a5-19f293e65d07
+        exts: {}
+      - x: 316
+        'y': -111
+        uid: ddc5824e-d5cc-40cd-a8a5-19f293e65d07
+        exts: {}
+      - x: 58
+        'y': -167
+        uid: ddc5824e-d5cc-40cd-a8a5-19f293e65d07
+        exts: {}
+      - x: 242
+        'y': 289
+        uid: e639d209-2516-4d9e-8218-f6d3ab1af0e9
+        exts: {}
+      - x: 254
+        'y': 193
+        uid: f0021262-fe8e-4118-bd9e-ef7b71980132
+        exts: {}
+      - x: -6
+        'y': 231
+        uid: d01d06e9-6d72-4790-a0eb-8e2b405328db
+        exts: {}
+      - x: 10
+        'y': 155
+        uid: bc64e3ea-1e21-4179-93c6-1e02568bb896
+        exts: {}
+    tiles:
+      - depth: -10
+        tiles: []
+        extends: {}
+    uid: d6f385d2-f03a-4898-a07f-8771db94df88
+    thumbnail: 8771db94df88
+    extends: {}
+    gridX: 0
+    gridY: 0
+    lastmod: 1618308382351
+  - name: You Lose3
+    oncreate: ''
+    onstep: ''
+    ondraw: ''
+    onleave: ''
+    width: 640
+    height: 320
+    backgrounds:
+      - depth: -1
+        texture: 0196e9b3-3e32-4541-98df-e8d5bfad693c
+        extends:
+          repeat: no-repeat
+    copies:
+      - x: 108
+        'y': 155
+        uid: bc64e3ea-1e21-4179-93c6-1e02568bb896
+        exts: {}
+      - x: 288
+        'y': 128
+        uid: 4ffbe8ee-18a7-4f7b-be18-619f99b2745e
+        exts: {}
+      - x: 608
+        'y': 288
+        uid: 1092ea0c-de4e-4192-9d0e-7eb46dfdfff5
+        exts: {}
+    tiles:
+      - depth: -10
+        tiles: []
+        extends: {}
+    uid: a10e4189-90bf-4232-a76c-dee5251e2c93
+    thumbnail: dee5251e2c93
+    extends: {}
+    gridX: 16
+    gridY: 16
+    lastmod: 1617980940984
+  - name: You Win 3
+    oncreate: ''
+    onstep: ''
+    ondraw: ''
+    onleave: ''
+    width: 640
+    height: 320
+    backgrounds:
+      - depth: -1
+        texture: 0196e9b3-3e32-4541-98df-e8d5bfad693c
+        extends:
+          repeat: no-repeat
+    copies:
+      - x: 608
+        'y': 288
+        uid: 1092ea0c-de4e-4192-9d0e-7eb46dfdfff5
+        exts: {}
+      - x: 288
+        'y': 48
+        uid: 4c9da257-7b56-4020-8eff-b19be2620bb8
+        exts: {}
+      - x: 272
+        'y': 128
+        uid: 4ffbe8ee-18a7-4f7b-be18-619f99b2745e
+        exts: {}
+      - x: 80
+        'y': 128
+        uid: bc64e3ea-1e21-4179-93c6-1e02568bb896
+        exts: {}
+    tiles:
+      - depth: -10
+        tiles: []
+        extends: {}
+    uid: eeeafecc-c462-446b-bd43-26c17a6d4f9e
+    thumbnail: 26c17a6d4f9e
+    extends: {}
+    gridX: 16
+    gridY: 16
+    lastmod: 1618182579567
+  - name: High Scores
+    oncreate: ''
+    onstep: ''
+    ondraw: ''
+    onleave: ''
+    width: 640
+    height: 320
+    backgrounds:
+      - depth: -1
+        texture: 0196e9b3-3e32-4541-98df-e8d5bfad693c
+        extends:
+          repeat: no-repeat
+    copies:
+      - x: 160
+        'y': 32
+        uid: 857b6826-6482-494e-9485-1d7d8231ebfb
+        exts: {}
+      - x: -0.0
+        'y': 192
+        uid: ab6f1680-a435-4e13-894a-7691b29a28a2
+        exts: {}
+      - x: 128
+        'y': 192
+        uid: 926b25e8-4b85-4ebc-a0c2-7e569b351c94
+        exts: {}
+      - x: 224
+        'y': 192
+        uid: 67890c56-fb1b-45fa-9783-9deed51538a7
+        exts: {}
+      - x: 352
+        'y': 192
+        uid: 22c22c5d-2b10-4796-aea0-759c43722eb0
+        exts: {}
+      - x: 448
+        'y': 192
+        uid: 73ec1b73-4cab-498f-963c-598c4c308ca2
+        exts: {}
+      - x: 576
+        'y': 192
+        uid: 67165d91-d2e6-44ae-b5b0-30da5db80309
+        exts: {}
+      - x: 32
+        'y': 96
+        uid: bc64e3ea-1e21-4179-93c6-1e02568bb896
+        exts: {}
+      - x: 608
+        'y': 288
+        uid: 1092ea0c-de4e-4192-9d0e-7eb46dfdfff5
+        exts: {}
+    tiles:
+      - depth: -10
+        tiles: []
+        extends: {}
+    uid: eb6b5c06-ccc9-47cb-84c3-b93ece94735b
+    thumbnail: b93ece94735b
+    extends: {}
+    gridX: 32
+    gridY: 32
+    lastmod: 1618163263198
+actions:
+  - name: MoveLeft
+    methods:
+      - code: keyboard.KeyA
+      - code: keyboard.ArrowLeft
+  - name: MoveRight
+    methods:
+      - code: keyboard.KeyD
+      - code: keyboard.ArrowRight
+  - name: Interact
+    methods:
+      - code: mouse.Left
+  - name: Close
+    methods:
+      - code: mouse.Right
+emitterTandems: []
+scripts:
+  - name: ''
+    code: |+
+      /* Use scripts to define frequent functions and import small libraries */
+
+starting: 0
+settings:
+  authoring:
+    author: Denislav Berberov
+    site: ''
+    title: Dikpar Kitchen Escape
+    version:
+      - 0
+      - 0
+      - 0
+    versionPostfix: ''
+  rendering:
+    usePixiLegacy: true
+    maxFPS: 60
+    pixelatedrender: false
+    highDensity: true
+    desktopMode: maximized
+    hideCursor: true
+  export:
+    windows: true
+    linux: true
+    mac: true
+    functionWrap: false
+    codeModifier: none
+  branding:
+    icon: 4c26ad8e-2fe4-4949-ac1e-346483c1b1ed
+    accent: '#DB4444'
+    invertPreloaderScheme: true
+    hideLoadingLogo: true
+  fps: 30
+fonts: []
+palette: []
+startroom: 773c7aa7-b4df-46d2-aeeb-df5b5b783846
