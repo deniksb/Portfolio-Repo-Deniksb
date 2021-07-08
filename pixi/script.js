@@ -1,4 +1,5 @@
 //VARIALBE DECLARATIONS
+
 let app;
 
 let player;
@@ -20,6 +21,9 @@ let bgBack;
 let bgMidBack;
 let bgX = 0;
 let bgSpeed = 1;
+
+
+
 
 //function to spawn ground enemies 
 function spawnGroundEnemy() {
@@ -56,6 +60,8 @@ keys.set('68', false); //d
 
 //MAIN FUNCTION THAT RUNS THE GAME
 window.onload = function () {
+
+
     app = new PIXI.Application(
         {
             width: 1000,
@@ -80,7 +86,11 @@ window.onload = function () {
     scoreLabel.y = 0;
     scoreLabel.depth = 1000;
 
-    document.body.appendChild(app.view);
+
+  
+       document.body.appendChild(app.view); 
+    
+    
 
     //CREATING THE PLAYER
     player = new PIXI.Sprite.from("plane.png");
@@ -171,14 +181,17 @@ window.onload = function () {
             if (Number(highScore) < score) {
                 localStorage.setItem('HighScore', JSON.stringify(score));
             }
-            window.location.href = "start.html";
+            localStorage.setItem('Score', JSON.stringify(score));
+            window.location.href = "end.html";
         }
         enemyGroundArr.forEach((item) => {
             if (Math.abs(player.x - item.x) < 45 && Math.abs(player.y - item.y) < 55) {
                 if (Number(highScore) < score) {
                     localStorage.setItem('HighScore', JSON.stringify(score));
+                    
                 }
-                window.location.href = "start.html";
+                localStorage.setItem('Score', JSON.stringify(score));
+                window.location.href = "end.html";
             }
 
 
@@ -189,7 +202,8 @@ window.onload = function () {
                 if (Number(highScore) < score) {
                     localStorage.setItem('HighScore', JSON.stringify(score));
                 }
-                window.location.href = "start.html";
+                localStorage.setItem('Score', JSON.stringify(score));
+                window.location.href = "end.html";
             }
         });
 
