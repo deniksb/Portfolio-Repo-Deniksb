@@ -4,8 +4,10 @@
 }
 
 body{
-    background-color: #434a4e !important;
+    background-color: #292b2c !important;
     font-family: 'Orbitron', sans-serif !important;
+    text-align: center !important;
+    color: #d6d6d6 !important;
 }
 
 #home{
@@ -17,7 +19,34 @@ body{
     margin:auto;
 }
 
-#carousel{
-    z-index: 10 !important;
+
+
+#post-div{
+    margin:auto;
+    width:75%;
+    border-style: solid !important;
+    border-color: #0275d8 !important;
+    font-size: 20px !important;
+
 }
+
+#post-content{
+    width:75%;
+    margin:auto;
+}
+
+#carousel{
+    width:70% !important;
+    margin:auto;
+    opacity:85%;
+    border-style: solid !important;
+    border-color: #0275d8 !important;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #carousel{
+        width:100% !important;
+    }
+  }
 
