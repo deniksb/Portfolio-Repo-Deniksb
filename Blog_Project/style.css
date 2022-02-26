@@ -1,0 +1,23 @@
+#navbar{
+    font-family: 'Orbitron', sans-serif;
+    z-index: 10 !important
+}
+
+body{
+    background-color: #434a4e !important;
+    font-family: 'Orbitron', sans-serif !important;
+}
+
+#home{
+    
+    text-align: center !important;
+    font-size: 25px !important;
+    width: 60%;
+    opacity: 100% !important;
+    margin:auto;
+}
+
+#carousel{
+    z-index: 10 !important;
+}
+
