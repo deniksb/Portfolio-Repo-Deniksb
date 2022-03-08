@@ -81,10 +81,10 @@
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2022
-    <a href="https://www.linkedin.com/in/denislav-berberov/" target="_blank"> Denislav Berberov</a>
+    <a class="float-none "href="https://www.linkedin.com/in/denislav-berberov/" target="_blank"> Denislav Berberov</a>
   </div>
   <!-- Copyright -->
-
+  <a href="admin.php" class="btn btn-primary">Admin</a>
 </footer>
 <!-- Footer -->
 <!-- Footer -->
