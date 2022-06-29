@@ -1,0 +1,62 @@
+html,body{
+  font-family: 'Ubuntu', sans-serif;
+   overflow-x: hidden !important;
+}
+.table {
+     max-width: none;
+     table-layout: fixed;
+     word-wrap: break-word;
+ }
+
+ #communication-cards{
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+ }
+
+ #accordion{
+   text-align:center;
+ }
+
+
+ .carousel-inner{
+   width:100%;
+
+ }
+
+
+.crsl-image{
+  object-fit:cover !important;
+  object-position: center !important;
+  height: 100vh !important;
+  overflow:hidden !important;
+}
+
+
+@media screen and (max-width: 768px) {
+  /* phones */
+  .crsl-image{
+    object-fit:cover !important;
+    object-position: center !important;
+    height: 50vh !important;
+    overflow:hidden !important;
+  }
+}
+
+#welcome-img{
+  max-height: 100px !important;
+}
+
+.description-form{
+  width:60%;
+}
+
+
+p{
+    word-wrap: break-word;
+}
+.modal-open[style] {
+padding-right: 0px !important;
+}
