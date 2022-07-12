@@ -16,18 +16,38 @@ Serv! offers the ability to browse, filter and create posts which act as your ow
 As a user requests can be made towards service providers which can then be accepted or declined. Once an order is accepted and created the customer and worker can communicate via the messaging system and arrange whatever they need to accomplish their tasks on the platform. Once the work on an order has been completed the user is provided with the option to pay via card using Stripe which is secure and no credit card details are stored on the platform. 
 
 ## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+Some visuals from the platform.
+
+This is the home screen where you can browse posts!
+<p align="center">
+<img src="serv_home.PNG"
+     alt="Home" />
+</p>
+
+This is the chat screen!
+<p align="center">
+<img src="serv_chat.PNG"
+     alt="Chat" />
+</p>
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+The backend of the platform is built using Java Spring and Maven as the aim is to be deployed using Heroku. Building it on your machine should be easy as all that is needed is included in the pom.xml file and after downloading all the needed dependencies it should be smooth sailing from then on. The application.properties file should be configured to point to your local repository. This particular build uses Hybernate and MySQL to create the necessary tables.
+
+The fronted is built using HTML, CSS, JavaScript and the Bootstrap library for styling. For communication with the REST API we are utilizing Axios.
+During the development the fronted was hosted using XAMPP with an Apache server.
+
+All the ports are included in the respective files and can be altered based on your configuration on your local machine.
 
 
 ## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+The project was built by Denislav Berberov with the help of other fellow bootcamp colleagues.
 
 ## License
-For open source projects, say how it is licensed.
+MIT License
 
 ## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
-
+The project is in a working state but other features were planned which could not be implemented at this point.
+Such features are:
+- Reporting users and sellers who are trying to scam others
+- Admin panel where admins can check out reports and contact possible mischievous users
+- Search bar to find posts based on keywords which might be included in the description or title
