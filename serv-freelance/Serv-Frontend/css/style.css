@@ -1,0 +1,30 @@
+body{
+  text-align: center;
+  background-color: #E84A5F !important;
+}
+
+#nav-bar{
+   background-color: #2A363B  !important;
+
+}
+
+a{
+  color: #99B898 !important;
+}
+
+.card-body{
+  background-color: #2A363B   !important;
+  color: #FECEAB !important;
+}
+
+.btn{
+  background-color: #FECEAB   !important;
+}
+
+.btn:hover{
+background-color: #99B898   !important;
+}
+
+.card-header{
+  background-color: #FECEAB   !important;
+}
