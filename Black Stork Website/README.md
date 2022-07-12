@@ -11,5 +11,9 @@ The simple website was built using HTML, CSS, JS and Bootstrap.
 
 The website can be viewed by just downloading the files and opening index.html.
 
+## Preview
+
+![alt text](preview-blackstork.PNG)
+
 
 Denislav Berberov
