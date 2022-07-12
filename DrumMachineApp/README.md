@@ -6,6 +6,10 @@ This is a simple frontend application built with HTML, CSS and JS. It is a fun d
 
 All you need to do is to download the files and open index.html and you are good to go.
 
+## Preview
+
+![alt text](preview-drummachine.PNG)
+
 Have fun!
 
 Denislav Berberov
