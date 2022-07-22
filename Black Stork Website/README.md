@@ -13,7 +13,7 @@ The website can be viewed by just downloading the files and opening index.html.
 
 ## Preview
 
-![alt text](preview-blackstork.PNG)
+![alt text](img/preview-blackstork.PNG)
 
 
 Denislav Berberov
