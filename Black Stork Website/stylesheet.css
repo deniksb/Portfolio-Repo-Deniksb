@@ -1,5 +1,5 @@
 body{
-  background-image: url("background.jpg");
+  background-image: url("img/background.jpg");
   background-repeat: no-repeat;
  background-attachment: fixed;
     -moz-background-size: cover;
@@ -28,20 +28,12 @@ p{
   color:white;
   font-family: 'Russo One', sans-serif;
 }
-.info-text{
 
-
-}
 .info-text-div{
   text-align: center;
     width: 60%;
 }
 
-#pictures-home{
-
-
-
-}
 img {
  margin: 5px;
 }
@@ -72,17 +64,4 @@ img {
   color: white;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {...}
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {...}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {...}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {...}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...}
