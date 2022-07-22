@@ -1,8 +1,8 @@
 
 //audio objects
-var audio = new Audio("kick1.wav");
-var audioLayered = new Audio("openhat.wav");
-var audioBasses = new Audio("808.wav");
+var audio = new Audio("sounds/kick1.wav");
+var audioLayered = new Audio("sounds/openhat.wav");
+var audioBasses = new Audio("sounds/808.wav");
 
 audio.volume = 0.5;
 audioBasses.volume = 0.5;
@@ -46,13 +46,13 @@ var libraryOfChoice = soundArray;
 function playSample(index, audioElement, library) {
 
     if (audio.paused) {
-        audioElement.src = library[index];
+        audioElement.src = "sounds/" + library[index];
         audioElement.play();
     }
     else {
         audioElement.pause();
         audioElement.currentTime = 0;
-        audioElement.src = library[index];
+        audioElement.src = "sounds/" + library[index];
         audioElement.play();
     }
 
