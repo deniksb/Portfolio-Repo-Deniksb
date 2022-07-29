@@ -8,7 +8,7 @@ The project includes all necessary files to run it using - npm start.
 
 ## Preview
 
-![alt text](pf-pic.png)
+![preview pic](pf-pic.PNG)
 
 Have fun!
 
