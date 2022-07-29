@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  font-family: 'Oswald', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0b111d !important;
+  color:#bbb !important;
+  font-size: x-large !important;
+  letter-spacing: 0.07rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
