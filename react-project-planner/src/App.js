@@ -14,11 +14,13 @@ function App() {
 
   const [tasks, setTasks] = useState([]);
   const tasksCollectionRef = collection(db, "tasks");
-
+  
   const createTask = async () => {
-    console.log(newTaskProgress);
-    await addDoc(tasksCollectionRef, {content: newContent, taskProgress: newTaskProgress})
-    .then(() => {window.location.reload();});
+    if(newContent != ""){
+      await addDoc(tasksCollectionRef, {content: newContent, taskProgress: newTaskProgress})
+      .then(() => {window.location.reload();});
+    }
+
   }
 
   const updateTask = async (id, taskProgress, sumNumber) => {
