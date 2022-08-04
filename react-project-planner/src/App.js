@@ -1,7 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import { db } from './firebase-config'
-import { collection, getDocs, addDoc, updateDoc, doc } from 'firebase/firestore'
+import { collection, getDocs, addDoc, updateDoc, doc, deleteDoc } from 'firebase/firestore'
 import ListGroup from 'react-bootstrap/ListGroup';
 import Card from 'react-bootstrap/Card';
 import { CardItem } from './components/CardItem'
@@ -28,6 +28,11 @@ function App() {
       await updateDoc(taskDoc, newFields).then(() => {window.location.reload();});
     }
   };
+
+  const deleteTask = async (id) => {
+    const userDoc = doc(db, "tasks", id);
+    await deleteDoc(userDoc).then(() => {window.location.reload();});
+  }
 
   useEffect(() => {
 
@@ -69,7 +74,15 @@ function App() {
           <ListGroup variant="flush">
             {tasks.map((task) => {
               if (task.taskProgress === "1")
-                return (<div className='task-subcontainer'><button onClick={() => {updateTask(task.id,task.taskProgress,-1)}}>L</button><CardItem data={{ content: task.content }}></CardItem><button onClick={() => {updateTask(task.id,task.taskProgress,1)}}>R</button></div>)
+                return (
+                  <div className='task-container'>
+                  <div className='task-subcontainer'>
+                  <button onClick={() => {updateTask(task.id,task.taskProgress,-1)}}>L</button>
+                  <CardItem data={{ content: task.content }}></CardItem>
+                  <button onClick={() => {updateTask(task.id,task.taskProgress,1)}}>R</button>
+                  </div>
+                  <button onClick={() => {deleteTask(task.id)}}>Del</button>
+                  </div>)
             })}
           </ListGroup>
         </Card>
@@ -79,7 +92,15 @@ function App() {
           <ListGroup variant="flush">
             {tasks.map((task) => {
               if (task.taskProgress === "2")
-              return (<div className='task-subcontainer'><button onClick={() => {updateTask(task.id,task.taskProgress,-1)}}>L</button><CardItem data={{ content: task.content }}></CardItem><button onClick={() => {updateTask(task.id,task.taskProgress,1)}}>R</button></div>)
+              return (
+                <div className='task-container'>
+                <div className='task-subcontainer'>
+                <button onClick={() => {updateTask(task.id,task.taskProgress,-1)}}>L</button>
+                <CardItem data={{ content: task.content }}></CardItem>
+                <button onClick={() => {updateTask(task.id,task.taskProgress,1)}}>R</button>
+                </div>
+                <button onClick={() => {deleteTask(task.id)}}>Del</button>
+                </div>)
             })}
           </ListGroup>
         </Card>
@@ -89,7 +110,15 @@ function App() {
           <ListGroup variant="flush">
             {tasks.map((task) => {
               if (task.taskProgress === "3")
-              return (<div className='task-subcontainer'><button onClick={() => {updateTask(task.id,task.taskProgress,-1)}}>L</button><CardItem data={{ content: task.content }}></CardItem><button onClick={() => {updateTask(task.id,task.taskProgress,1)}}>R</button></div>)
+              return (
+                <div className='task-container'>
+                <div className='task-subcontainer'>
+                <button onClick={() => {updateTask(task.id,task.taskProgress,-1)}}>L</button>
+                <CardItem data={{ content: task.content }}></CardItem>
+                <button onClick={() => {updateTask(task.id,task.taskProgress,1)}}>R</button>
+                </div>
+                <button onClick={() => {deleteTask(task.id)}}>Del</button>
+                </div>)
             })}
           </ListGroup>
         </Card>
@@ -99,7 +128,15 @@ function App() {
           <ListGroup variant="flush">
             {tasks.map((task) => {
               if (task.taskProgress === "4")
-              return (<div className='task-subcontainer'><button onClick={() => {updateTask(task.id,task.taskProgress,-1)}}>L</button><CardItem data={{ content: task.content }}></CardItem><button onClick={() => {updateTask(task.id,task.taskProgress,1)}}>R</button></div>)
+              return (
+                <div className='task-container'>
+                <div className='task-subcontainer'>
+                <button onClick={() => {updateTask(task.id,task.taskProgress,-1)}}>L</button>
+                <CardItem data={{ content: task.content }}></CardItem>
+                <button onClick={() => {updateTask(task.id,task.taskProgress,1)}}>R</button>
+                </div>
+                <button onClick={() => {deleteTask(task.id)}}>Del</button>
+                </div>)
             })}
           </ListGroup>
         </Card>
@@ -109,7 +146,15 @@ function App() {
           <ListGroup variant="flush">
             {tasks.map((task) => {
               if (task.taskProgress === "5")
-              return (<div className='task-subcontainer'><button onClick={() => {updateTask(task.id,task.taskProgress,-1)}}>L</button><CardItem data={{ content: task.content }}></CardItem><button onClick={() => {updateTask(task.id,task.taskProgress,1)}}>R</button></div>)
+              return (
+                <div className='task-container'>
+                <div className='task-subcontainer'>
+                <button onClick={() => {updateTask(task.id,task.taskProgress,-1)}}>L</button>
+                <CardItem data={{ content: task.content }}></CardItem>
+                <button onClick={() => {updateTask(task.id,task.taskProgress,1)}}>R</button>
+                </div>
+                <button onClick={() => {deleteTask(task.id)}}>Del</button>
+                </div>)
             })}
           </ListGroup>
         </Card>
