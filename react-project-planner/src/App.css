@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .task-subcontainer{
@@ -11,7 +12,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .App-logo {
